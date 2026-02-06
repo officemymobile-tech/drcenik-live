@@ -1,0 +1,9 @@
+# robots.txt for https://www.drcenik.at/
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.drcenik.at/sitemap.xml
+
+# Optional: exclude prototype/test pages from indexing
+Disallow: /prototype-apple.html

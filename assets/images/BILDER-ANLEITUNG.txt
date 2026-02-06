@@ -1,0 +1,14 @@
+Echte Fotos für die Website
+===========================
+
+HERO-BEREICH: Auf der Startseite wird Ihr Logo (assets/logo.jpg) professionell mit Rahmen und „Geöffnet“-Badge angezeigt – kein separates Bild nötig.
+
+ARTIKEL-BILDER (Sektion „Aktuelle Medizinische Erkenntnisse 2026“)
+   Ort:    assets/images/erkenntnisse/
+   Dateien:
+   - ai-physio.jpg    (z. B. Thema KI/Physiotherapie)
+   - gen-therapie.jpg (z. B. Thema Schmerztherapie)
+   - neuroreha.jpg   (z. B. Thema Rehabilitation)
+   Empfohlen: Querformat 16:9, z. B. 800 x 450 px oder 1200 x 675 px (JPEG)
+
+Wenn eine Datei fehlt, wird ein neutraler Platzhalter-Hintergrund angezeigt; die Seite funktioniert trotzdem.

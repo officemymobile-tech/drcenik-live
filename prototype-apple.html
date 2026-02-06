@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Fadime Cenik | Wo Bewegung beginnt.</title>
+  <meta name="description" content="Fachärztin für Physikalische Medizin und allgemeine Rehabilitation. Wien.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* =========================================================
+       APPLE-ESQUE PROTOTYPE — UI/UX Architecture
+       Bento Grid • Glassmorphism • State Persistence • Scroll UX
+       ========================================================= */
+
+    /* --- Design Tokens --- */
+    :root {
+      --navy-900: #1A3844;
+      --navy-800: #234B5E;
+      --navy-600: #3A6B82;
+      --bronze-700: #B89968;
+      --cream-100: #F4F1ED;
+      --cream-200: #E8E4DF;
+      --white: #ffffff;
+      --gray-700: #4A5568;
+      --gray-500: #6B7280;
+      --radius-sm: 24px;
+      --radius-lg: 32px;
+      --shadow-soft: 0 4px 24px rgba(35, 75, 94, 0.08), 0 0 0 1px rgba(35, 75, 94, 0.04);
+      --shadow-card: 0 8px 40px rgba(35, 75, 94, 0.1), 0 0 0 1px rgba(255,255,255,0.6);
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --duration: 300ms;
+      --blur-glass: 20px;
+      --lh-tight: 1.2;
+      --lh-body: 1.6;
+    }
+
+    /* --- Reset (CLS-safe: dimensions where needed) --- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: var(--lh-body);
+      color: var(--gray-700);
+      background: var(--cream-100);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; vertical-align: middle; }
+    a { color: inherit; }
+    ul { list-style: none; margin: 0; padding: 0; }
+
+    /* --- Typographic Hierarchy: Extra Bold headings, Medium body --- */
+    .heading-hero {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: var(--lh-tight);
+      letter-spacing: -0.02em;
+      color: var(--navy-800);
+      margin: 0;
+    }
+    .heading-section {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      line-height: var(--lh-tight);
+      letter-spacing: -0.02em;
+      color: var(--navy-800);
+      margin: 0;
+    }
+    .heading-card {
+      font-size: 1.25rem;
+      font-weight: 800;
+      line-height: var(--lh-tight);
+      color: var(--navy-800);
+      margin: 0 0 0.5rem;
+    }
+    .body-text {
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: var(--lh-body);
+      color: var(--gray-700);
+      margin: 0;
+    }
+    .overline {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bronze-700);
+      margin-bottom: 0.75rem;
+    }
+
+    /* --- Glassmorphism Navigation --- */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: 72px;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(244, 241, 237, 0.72);
+      backdrop-filter: blur(var(--blur-glass));
+      -webkit-backdrop-filter: blur(var(--blur-glass));
+      border-bottom: 1px solid rgba(232, 228, 223, 0.8);
+      transition: background var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+    }
+    .nav.scrolled {
+      background: rgba(244, 241, 237, 0.9);
+      box-shadow: var(--shadow-soft);
+    }
+    .nav-logo {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--navy-800);
+      text-decoration: none;
+      position: relative;
+      transition: color var(--duration) var(--ease);
+    }
+    .nav-links a:hover { color: var(--bronze-700); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--bronze-700);
+      transition: width var(--duration) var(--ease);
+    }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-phone {
+      font-weight: 500;
+      color: var(--navy-800);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      transition: color var(--duration) var(--ease);
+    }
+    .nav-phone:hover { color: var(--bronze-700); }
+    .nav-lang {
+      display: flex;
+      gap: 0.25rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .nav-lang a {
+      color: var(--gray-500);
+      text-decoration: none;
+      padding: 0.25rem 0.5rem;
+      transition: color var(--duration) var(--ease);
+    }
+    .nav-lang a:hover,
+    .nav-lang a.is-active { color: var(--navy-800); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--navy-800), var(--navy-600));
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease), opacity var(--duration) var(--ease);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(35, 75, 94, 0.25);
+    }
+    .btn:focus-visible {
+      outline: 2px solid var(--navy-800);
+      outline-offset: 2px;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy-800);
+      border: 1.5px solid var(--navy-800);
+    }
+    .btn-secondary:hover {
+      background: var(--navy-800);
+      color: var(--white);
+    }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      padding: 10px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .nav-toggle span {
+      width: 22px;
+      height: 2px;
+      background: var(--navy-800);
+      border-radius: 1px;
+      transition: transform var(--duration) var(--ease), opacity var(--duration) var(--ease);
+    }
+
+    /* --- Hero --- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 5% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(244,241,237,1) 0%, rgba(232,241,245,0.95) 50%, rgba(245,239,230,0.95) 100%);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      text-align: center;
+    }
+    .hero-logo {
+      max-width: 280px;
+      height: auto;
+      margin: 0 auto 2rem;
+      display: block;
+    }
+    .hero .overline { display: block; }
+    .hero-subtitle {
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-style: italic;
+      color: var(--bronze-700);
+      margin: 0.5rem 0 1.5rem;
+      font-weight: 500;
+    }
+    .hero .body-text { margin-bottom: 2rem; }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* --- Bento Grid: 24–32px radius, soft shadow --- */
+    .section {
+      padding: clamp(4rem, 10vw, 6rem) 5%;
+    }
+    .section-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .section-head {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+    }
+    .section-head .overline { display: block; }
+    .section-head .heading-section { margin-bottom: 1rem; }
+    .section-head .body-text { color: var(--gray-500); }
+
+    .bento {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+    .bento-cell {
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(var(--blur-glass));
+      -webkit-backdrop-filter: blur(var(--blur-glass));
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+      overflow: hidden;
+    }
+    .bento-cell:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 48px rgba(35, 75, 94, 0.12), 0 0 0 1px rgba(255,255,255,0.8);
+    }
+    /* GPU-only: transform + opacity for scroll reveal (no layout shift) */
+    .bento-cell.reveal {
+      opacity: 0;
+      transform: scale(0.96) translateY(20px);
+      transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+    }
+    .bento-cell.reveal.is-visible {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+    .bento-cell.span-2 { grid-column: span 2; }
+    .bento-cell.span-2-row { grid-row: span 2; }
+    .bento-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--navy-800), var(--navy-600));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: var(--white);
+    }
+    .bento-cell .body-text { color: var(--gray-500); font-size: 0.9375rem; }
+
+    @media (max-width: 1024px) {
+      .bento { grid-template-columns: repeat(2, 1fr); }
+      .bento-cell.span-2 { grid-column: span 1; }
+      .bento-cell.span-2-row { grid-row: span 1; }
+    }
+    @media (max-width: 768px) {
+      .bento { grid-template-columns: 1fr; }
+      .nav-links,
+      .nav-actions { display: none; }
+      .nav-toggle { display: flex; }
+      .nav.open .nav-links {
+        display: flex;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(244, 241, 237, 0.98);
+        backdrop-filter: blur(var(--blur-glass));
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+      }
+      .nav.open .nav-actions { display: flex; position: fixed; top: 1rem; right: 1rem; flex-direction: column; }
+    }
+
+    /* --- Contact Form: A11y focus + persistence-ready --- */
+    .form-block {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(var(--blur-glass));
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--navy-800);
+      margin-bottom: 0.5rem;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: var(--lh-body);
+      color: var(--navy-800);
+      background: var(--white);
+      border: 1.5px solid var(--cream-200);
+      border-radius: var(--radius-sm);
+      transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+    }
+    .form-group input:hover,
+    .form-group textarea:hover {
+      border-color: var(--navy-600);
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--navy-800);
+      box-shadow: 0 0 0 3px rgba(35, 75, 94, 0.15);
+    }
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--gray-500);
+    }
+    .btn--full { width: 100%; }
+    .body-text--center {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: var(--gray-500);
+    }
+
+    /* --- Footer --- */
+    .footer {
+      background: var(--navy-900);
+      color: var(--white);
+      padding: 4rem 5% 2rem;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+    .footer h4 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--bronze-700);
+      margin: 0 0 1rem;
+    }
+    .footer p,
+    .footer a {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      margin: 0 0 0.5rem;
+      text-decoration: none;
+      transition: color var(--duration) var(--ease);
+    }
+    .footer a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.5);
+    }
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* --- Heilgymnastik Methoden (Detail-Karten) --- */
+    .therapy-subsection {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--cream-200);
+    }
+    .therapy-subtitle {
+      font-size: clamp(1.5rem, 2.5vw, 1.75rem);
+      font-weight: 800;
+      color: var(--navy-800);
+      margin: 0 0 0.5rem;
+      text-align: center;
+    }
+    .therapy-intro {
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      color: var(--gray-500);
+      font-size: 0.9375rem;
+    }
+    .therapy-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .therapy-detail-card .bento-icon { display: none; }
+    .therapy-detail-title {
+      font-size: 1.125rem;
+      font-weight: 800;
+      color: var(--navy-800);
+      margin: 0 0 0.5rem;
+    }
+    .therapy-detail-card .body-text { margin: 0 0 0.5rem; font-size: 0.9375rem; }
+    .therapy-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--bronze-700);
+      margin: 0.75rem 0 0.25rem;
+      letter-spacing: 0.04em;
+    }
+    .therapy-list {
+      list-style: none;
+      margin: 0 0 0.5rem;
+      padding: 0;
+    }
+    .therapy-list li {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      padding: 2px 0;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .therapy-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--bronze-700);
+      font-weight: bold;
+    }
+    .therapy-ziel { margin: 0 !important; font-weight: 500; color: var(--navy-800); }
+    .therapy-disclaimer {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: var(--cream-100);
+      border-radius: 12px;
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      text-align: center;
+      border: 1px solid var(--cream-200);
+    }
+
+    /* --- A11y: High contrast focus (no outline removal) --- */
+    :focus-visible {
+      outline: 2px solid var(--navy-800);
+      outline-offset: 2px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Glassmorphism Nav -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
+    <a href="#top" class="nav-logo-link">
+      <img src="assets/logo.jpg" alt="Dr. Fadime Cenik" class="nav-logo" width="180" height="44">
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#therapieangebot">Therapieangebot</a></li>
+      <li><a href="#r-force">R-Force</a></li>
+      <li><a href="#wissen-news">Wissen & News</a></li>
+      <li><a href="#faq">Häufige Fragen</a></li>
+      <li><a href="#ueber-uns">Über uns</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="tel:+4317692991" class="nav-phone">01 / 769 29 91</a>
+      <div class="nav-lang" role="group" aria-label="Sprache">
+        <a href="#" class="nav-lang-link is-active" hreflang="de">DE</a>
+        <a href="#" class="nav-lang-link" hreflang="tr">TR</a>
+        <a href="#" class="nav-lang-link" hreflang="en">EN</a>
+      </div>
+      <a href="#kontakt" class="btn">Termin buchen</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <img src="assets/logo.jpg" alt="" class="hero-logo" width="280" height="70">
+        <span class="overline">Medizinische Expertise</span>
+        <h1 class="heading-hero">Dr. Fadime Cenik</h1>
+        <p class="hero-subtitle">Wo Bewegung beginnt.</p>
+        <p class="body-text">Fachärztin für Physikalische Medizin und allgemeine Rehabilitation – für Ihren Weg zurück in die Bewegung.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn">Termin buchen</a>
+          <a href="#therapieangebot" class="btn btn-secondary">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento: Therapieangebot -->
+    <section class="section" id="therapieangebot">
+      <div class="section-inner">
+        <header class="section-head">
+          <span class="overline">Therapieangebot</span>
+          <h2 class="heading-section">Unsere Leistungen</h2>
+          <p class="body-text">Kassenleistungen und weitere Behandlungen – für Ihre individuelle Genesung.</p>
+        </header>
+        <div class="bento">
+          <article class="bento-cell reveal span-2">
+            <div class="bento-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="6" width="16" height="12" rx="1"/><path d="M4 10h16M8 14h8"/></svg>
+            </div>
+            <h3 class="heading-card">Kassenleistung</h3>
+            <p class="body-text">Von der Österreichischen Gesundheitskasse (ÖGK) ganz oder teilweise übernommene Behandlungen – u. a. Physiotherapie, Heilmassage und medizinische Rehabilitation.</p>
+          </article>
+          <article class="bento-cell reveal">
+            <div class="bento-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="6"/><path d="M12 8v4l2 2"/><path d="M8 14q2-2 4 0"/></svg>
+            </div>
+            <h3 class="heading-card">Massage</h3>
+            <p class="body-text">Therapeutische Massage zur Lockerung der Muskulatur und Schmerzlinderung.</p>
+          </article>
+          <article class="bento-cell reveal">
+            <div class="bento-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="1.5"/><path d="M12 6.5v5"/><path d="M12 11.5l-4 6"/><path d="M12 11.5l4 6"/><path d="M8 10h8"/></svg>
+            </div>
+            <h3 class="heading-card">Heilgymnastik</h3>
+            <p class="body-text">Gezielte krankengymnastische Übungen für Beweglichkeit, Kraft und Koordination.</p>
+          </article>
+          <article class="bento-cell reveal span-2">
+            <div class="bento-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 12l6-6 6 6-6 6z"/><path d="M12 6v12M6 12h12"/></svg>
+            </div>
+            <h3 class="heading-card">Sonstige Behandlungen</h3>
+            <p class="body-text">Spezialisierte Therapien, die sich mit besonderen Problemen befassen und über Massage und therapeutische Übungen hinausgehen.</p>
+          </article>
+        </div>
+
+        <!-- Kassenleistung – was die ÖGK übernimmt -->
+        <div class="therapy-subsection">
+          <h3 class="therapy-subtitle">Kassenleistung – was die ÖGK übernimmt</h3>
+          <p class="body-text therapy-intro">Die Österreichische Gesundheitskasse (ÖGK) übernimmt die Kosten für folgende therapeutischen Leistungen ganz oder teilweise – sofern ärztlich verordnet und ein Kassenvertrag besteht. Die genaue Kostentragung kann je nach Bundesland und Vertrag variieren.</p>
+          <div class="therapy-detail-grid">
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Physiotherapie</h4>
+              <p class="body-text">Hilft, die Bewegungs- und Funktionsfähigkeit des Körpers zu erhalten, zu verbessern oder wiederherzustellen – besonders bei Beschwerden des Bewegungsapparats und neurologischen Problemen.</p>
+              <p class="therapy-label">Quelle:</p>
+              <p class="body-text therapy-ziel">ÖGK – Therapie und Rehabilitation</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Heilmassage</h4>
+              <p class="body-text">Heilmasseurinnen und Heilmasseure mit ÖGK-Vertrag bieten u. a. Massagen, Packungsanwendungen und manuelle Lymphdrainage an.</p>
+              <p class="therapy-label">Quelle:</p>
+              <p class="body-text therapy-ziel">ÖGK – Heilmassage</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Medizinische Rehabilitation</h4>
+              <p class="body-text">Schließt meist an Spitalsaufenthalte nach schweren Erkrankungen oder Unfällen an – zur Wiederherstellung der Leistungsfähigkeit.</p>
+              <p class="therapy-label">Quelle:</p>
+              <p class="body-text therapy-ziel">ÖGK – Medizinische Rehabilitation</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Ergotherapie</h4>
+              <p class="body-text">Unterstützt Menschen, die in ihrer Handlungsfreiheit eingeschränkt sind und Alltagstätigkeiten nicht selbstständig durchführen können.</p>
+              <p class="therapy-label">Quelle:</p>
+              <p class="body-text therapy-ziel">ÖGK – Ergotherapie</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Logopädie</h4>
+              <p class="body-text">Behandlung von Störungen beim Sprechen, Hören, Schlucken und in der Sprachfähigkeit.</p>
+              <p class="therapy-label">Quelle:</p>
+              <p class="body-text therapy-ziel">ÖGK – Logopädie</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Kuraufenthalt</h4>
+              <p class="body-text">Freiwillige Leistung der Sozialversicherung. Die Höchstaufenthaltsdauer beträgt grundsätzlich 22 Tage.</p>
+              <p class="therapy-label">Quelle:</p>
+              <p class="body-text therapy-ziel">ÖGK – Kur und Erholung</p>
+            </article>
+          </div>
+          <p class="therapy-disclaimer body-text">Bitte erkundigen Sie sich bei Ihrer ÖGK und bei uns, welche Leistungen in Ihrem Fall und in Ihrer Region von der Kasse übernommen werden.</p>
+        </div>
+
+        <!-- Heilgymnastik – Methoden im Detail -->
+        <div class="therapy-subsection">
+          <h3 class="therapy-subtitle">Heilgymnastik – unsere Methoden</h3>
+          <div class="therapy-detail-grid">
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Atemgymnastik</h4>
+              <p class="body-text">Gezielte Atemübungen zur Verbesserung der Atemfunktion.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Atemwegserkrankungen</li><li>Stressabbau</li><li>Entspannung</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Verbesserung der Atemfunktion</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Bewegungstherapie</h4>
+              <p class="body-text">Systematische Bewegungsübungen zur Verbesserung der Mobilität.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Mobilitätseinschränkungen</li><li>Rehabilitation</li><li>Prävention</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Verbesserung der Beweglichkeit</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Dehnübungen</h4>
+              <p class="body-text">Spezielle Dehnübungen zur Verbesserung der Flexibilität.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Muskelverspannungen</li><li>Bewegungseinschränkungen</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Verbesserung der Flexibilität</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Krafttraining</h4>
+              <p class="body-text">Gezieltes Krafttraining zur Muskelstärkung.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Muskelschwäche</li><li>Rehabilitation</li><li>Prävention</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Muskelaufbau und Stärkung</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Koordinationstraining</h4>
+              <p class="body-text">Übungen zur Verbesserung der Koordination.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Koordinationsstörungen</li><li>Gleichgewichtsprobleme</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Verbesserung der Koordination</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Gleichgewichtstraining</h4>
+              <p class="body-text">Spezielle Übungen zur Verbesserung des Gleichgewichts.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Gleichgewichtsstörungen</li><li>Sturzprävention</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Verbesserung des Gleichgewichts</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Propriozeptives Training</h4>
+              <p class="body-text">Training zur Verbesserung der Körperwahrnehmung.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Propriozeptive Störungen</li><li>Rehabilitation</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Verbesserung der Körperwahrnehmung</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Wirbelsäulengymnastik</h4>
+              <p class="body-text">Spezielle Übungen für die Wirbelsäulengesundheit.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Rückenschmerzen</li><li>Wirbelsäulenprobleme</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Wirbelsäulenstabilisierung</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Sonstige Behandlungen – im Detail -->
+        <div class="therapy-subsection">
+          <h3 class="therapy-subtitle">Sonstige Behandlungen – im Detail</h3>
+          <p class="body-text therapy-intro">Spezialisierte Therapien, die sich mit besonderen Problemen befassen und über Massage und therapeutische Übungen hinausgehen.</p>
+          <div class="therapy-detail-grid">
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Indiba</h4>
+              <p class="body-text">Radiofrequenz-Therapie zur Tiefenerwärmung von Geweben.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Muskelschmerzen</li><li>Gelenkentzündungen</li><li>Verletzungen</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Tiefenerwärmung und Schmerzlinderung</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Lasertherapie</h4>
+              <p class="body-text">Laserbehandlung zur Schmerzlinderung und Gewebeheilung.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Wunden</li><li>Schmerzlinderung</li><li>Entzündungen</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Gewebeheilung und Schmerzlinderung</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Magnetfeldtherapie</h4>
+              <p class="body-text">Behandlung mit Magnetfeldern zur Verbesserung der Zellenfunktion.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Schmerzen</li><li>Durchblutungsstörungen</li><li>Entzündungen</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Verbesserung der Zellenfunktion</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Medi-Taping</h4>
+              <p class="body-text">Spezielle Kinesiologie-Tapes zur Unterstützung von Bewegungen.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Muskelverspannungen</li><li>Gelenkverletzungen</li><li>Unterstützung</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Unterstützung von Bewegungen</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Paraffinbad</h4>
+              <p class="body-text">Wärmetherapie mit Paraffinwachs zur Entspannung.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Arthritis</li><li>Steifheit</li><li>Entspannung</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Wärmebehandlung und Entspannung</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Stoßwellentherapie</h4>
+              <p class="body-text">Behandlung mit Stoßwellen zur Geweberegeneration.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Sehnenreizungen</li><li>Knochenbrüche</li><li>Chronische Schmerzen</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Geweberegeneration</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Hochton</h4>
+              <p class="body-text">Hochfrequenz-Therapie zur Schmerzlinderung.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Schmerzlinderung</li><li>Entzündungen</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Schmerzlinderung</p>
+            </article>
+            <article class="bento-cell therapy-detail-card reveal">
+              <h4 class="therapy-detail-title">Achtsamkeit-Workshop</h4>
+              <p class="body-text">Workshops zur Förderung von Achtsamkeit und Wohlbefinden.</p>
+              <p class="therapy-label">Anwendungsgebiete:</p>
+              <ul class="therapy-list"><li>Stressabbau</li><li>Entspannung</li><li>Wohlbefinden</li></ul>
+              <p class="therapy-label">Ziel:</p>
+              <p class="body-text therapy-ziel">Förderung von Achtsamkeit</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento: R-Force, Wissen, FAQ -->
+    <section class="section" id="r-force">
+      <div class="section-inner">
+        <header class="section-head">
+          <span class="overline">R-Force</span>
+          <h2 class="heading-section">R-Force</h2>
+          <p class="body-text">Informationen zu R-Force folgen in Kürze.</p>
+        </header>
+      </div>
+    </section>
+
+    <section class="section" id="wissen-news">
+      <div class="section-inner">
+        <header class="section-head">
+          <span class="overline">Wissen & News</span>
+          <h2 class="heading-section">Wissen & News</h2>
+          <p class="body-text">Aktuelles und Wissenswertes aus Praxis und Rehabilitation.</p>
+        </header>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="section-inner">
+        <header class="section-head">
+          <span class="overline">Häufige Fragen</span>
+          <h2 class="heading-section">Häufige Fragen</h2>
+          <p class="body-text">Antworten auf die wichtigsten Fragen zu Terminen, Ablauf und Therapie.</p>
+        </header>
+      </div>
+    </section>
+
+    <section class="section" id="ueber-uns">
+      <div class="section-inner">
+        <header class="section-head">
+          <span class="overline">Über uns</span>
+          <h2 class="heading-section">Ihre Ärztin</h2>
+          <p class="body-text">Fachärztin für Physikalische Medizin und allgemeine Rehabilitation mit Fokus auf patientenzentrierte Versorgung.</p>
+        </header>
+      </div>
+    </section>
+
+    <!-- Kontakt: Form mit State-Persistence (localStorage) -->
+    <section class="section" id="kontakt">
+      <div class="section-inner">
+        <header class="section-head">
+          <span class="overline">Kontakt</span>
+          <h2 class="heading-section">Termin vereinbaren</h2>
+          <p class="body-text">Vereinbaren Sie einen Termin oder schreiben Sie uns. Ihre Eingaben werden lokal gespeichert.</p>
+        </header>
+        <div class="form-block">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="persist-name">Name</label>
+              <input type="text" id="persist-name" name="name" placeholder="Ihr Name" autocomplete="name" data-persist="contact.name">
+            </div>
+            <div class="form-group">
+              <label for="persist-email">E-Mail</label>
+              <input type="email" id="persist-email" name="email" placeholder="ihre@email.at" autocomplete="email" data-persist="contact.email">
+            </div>
+            <div class="form-group">
+              <label for="persist-phone">Telefon</label>
+              <input type="tel" id="persist-phone" name="phone" placeholder="01 / 123 45 67" autocomplete="tel" data-persist="contact.phone">
+            </div>
+            <div class="form-group">
+              <label for="persist-message">Nachricht</label>
+              <textarea id="persist-message" name="message" placeholder="Ihre Nachricht…" data-persist="contact.message"></textarea>
+            </div>
+            <button type="submit" class="btn btn--full">Nachricht senden</button>
+          </form>
+        </div>
+        <p class="body-text body-text--center">
+          Oder rufen Sie an: <a href="tel:+4317692991" class="nav-phone">01 / 769 29 91</a> · Kaiser-Ebersdorfer-Str. 328, 1110 Wien
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <h4>Dr. Fadime Cenik</h4>
+          <p>Fachärztin für Physikalische Medizin und allgemeine Rehabilitation. Wo Bewegung beginnt.</p>
+          <p>Kaiser-Ebersdorfer-Straße 328, 1110 Wien</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <a href="#therapieangebot">Therapieangebot</a><br>
+          <a href="#ueber-uns">Über uns</a><br>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+        <div>
+          <h4>Kontakt</h4>
+          <a href="tel:+4317692991">01 / 769 29 91</a><br>
+          <a href="mailto:office@drcenik.at">office@drcenik.at</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Dr. Fadime Cenik. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      const STORAGE_KEY = 'drcenik_app_state';
+
+      // ---------- State Management (No-Server: localStorage as DB) ----------
+      function loadState() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          return raw ? JSON.parse(raw) : {};
+        } catch (e) {
+          return {};
+        }
+      }
+
+      function saveState(state) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        } catch (e) {}
+      }
+
+      function getNested(obj, path) {
+        return path.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : undefined), obj);
+      }
+
+      function setNested(obj, path, value) {
+        const keys = path.split('.');
+        let cur = obj;
+        for (let i = 0; i < keys.length - 1; i++) {
+          const k = keys[i];
+          if (!(k in cur) || typeof cur[k] !== 'object') cur[k] = {};
+          cur = cur[k];
+        }
+        cur[keys[keys.length - 1]] = value;
+      }
+
+      // Persistence: every input event updates localStorage (async, no layout shift)
+      document.querySelectorAll('[data-persist]').forEach(function (el) {
+        const key = el.getAttribute('data-persist');
+        if (!key) return;
+        const state = loadState();
+        const val = getNested(state, key);
+        if (val != null && typeof val === 'string') el.value = val;
+
+        function persist() {
+          const next = loadState();
+          setNested(next, key, el.value);
+          saveState(next);
+        }
+
+        el.addEventListener('input', function () {
+          requestAnimationFrame(persist);
+        });
+        el.addEventListener('change', persist);
+      });
+
+      // ---------- Nav: scroll class + mobile toggle ----------
+      const nav = document.getElementById('nav');
+      if (nav) {
+        window.addEventListener('scroll', function () {
+          nav.classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+
+        const toggle = document.getElementById('nav-toggle');
+        if (toggle) {
+          toggle.addEventListener('click', function () {
+            nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
+          });
+          document.querySelectorAll('.nav-links a').forEach(function (a) {
+            a.addEventListener('click', function () {
+              nav.classList.remove('open');
+              toggle.setAttribute('aria-expanded', 'false');
+            });
+          });
+        }
+      }
+
+      // ---------- Scroll-Driven Animations (GPU: transform + opacity only) ----------
+      const reveal = document.querySelectorAll('.bento-cell.reveal');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!prefersReducedMotion && reveal.length) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        reveal.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        reveal.forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+      }
+
+      // ---------- Form submit (no server: store last "sent" state, reset optional) ----------
+      const form = document.getElementById('contact-form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const state = loadState();
+          state.contactLastSent = {
+            name: (document.getElementById('persist-name') || {}).value,
+            email: (document.getElementById('persist-email') || {}).value,
+            phone: (document.getElementById('persist-phone') || {}).value,
+            message: (document.getElementById('persist-message') || {}).value,
+            at: new Date().toISOString()
+          };
+          saveState(state);
+          alert('Vielen Dank. Ihre Nachricht wurde lokal gespeichert. Wir melden uns bei Ihnen.'); // No server: demo feedback
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

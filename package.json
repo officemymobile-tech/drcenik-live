@@ -1,0 +1,10 @@
+{
+  "name": "dr-fadime-cenik-website",
+  "private": true,
+  "scripts": {
+    "optimize-images": "node scripts/optimize-images.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

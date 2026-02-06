@@ -1,0 +1,15 @@
+Logo-Dateien für die Website
+============================
+
+Bitte legen Sie Ihre Logo-Dateien in diesen Ordner:
+
+  • logo.jpg   – wird in Navigation und Hero-Bereich angezeigt (Hauptlogo)
+  • logo@2x.jpg – optional, gleiches Logo in doppelter Auflösung (z. B. 360×360 px)
+                  für schärfere Darstellung auf Retina/HD-Bildschirmen.
+                  Wenn vorhanden, wird es automatisch auf hochauflösenden Displays geladen.
+
+  • logo.png   – alternative Version mit transparentem Hintergrund (mind. 160×200 px)
+  • logo.pdf   – optional, z.B. für Download oder Druck
+
+Die Website verweist auf assets/logo.jpg.
+Für beste Schärfe im Internet: Logo in hoher Auflösung bereitstellen oder logo@2x.jpg ergänzen.
