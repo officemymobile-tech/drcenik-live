@@ -1,8 +1,12 @@
 /**
  * Mobil-Navbar: lädt nach main.css, garantiert sichtbarer Toggle + DE|TR|EN + Menü öffnet
- * Cache-Buster: ?v=3 beim Ändern erhöhen
+ * Cache-Buster: ?v=4 beim Ändern erhöhen
  */
 @media (max-width: 768px) {
+  /* Geschlossenes Menü blockiert keine Klicks auf Toggle */
+  body .navbar .navbar-links:not(.active) {
+    pointer-events: none !important;
+  }
   body .navbar .navbar-toggle,
   body.theme-ref .navbar .navbar-toggle,
   body.page-home .navbar .navbar-toggle {
