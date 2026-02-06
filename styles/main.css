@@ -2718,7 +2718,7 @@ body.theme-ref {
 @media (max-width: 480px) { .google-business-actions { flex-direction: column; } .google-business-actions .btn { width: 100%; } .google-business-map-wrap { max-height: 240px; } }
 /* Kontakt-Seite Layout wie Referenzbild */
 .section-contact-layout .container-contact { max-width: 1200px; }
-.contact-page-header { margin-bottom: var(--space-6); text-align: left; }
+.contact-page-header { margin-bottom: var(--space-6); text-align: center; }
 /* Kontakt: Başlık = Cormorant Garamond (italik, hafif büyük); Alt metin = Tenor Sans, letter-spacing */
 .contact-page-title {
   margin-bottom: var(--space-2);
@@ -2734,7 +2734,7 @@ body.theme-ref {
 .section-contact .contact-zeiten-title {
   letter-spacing: 0.04em;
 }
-.contact-page-intro { margin: 0; color: var(--ref-text-muted); max-width: 60ch; }
+.contact-page-intro { margin: 0 auto; color: var(--ref-text-muted); max-width: 60ch; text-align: center; }
 
 .contact-cards-row {
   display: grid;
