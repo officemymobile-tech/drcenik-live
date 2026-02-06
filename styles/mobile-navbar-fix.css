@@ -1,0 +1,50 @@
+/**
+ * Mobil-Navbar: lädt nach main.css, garantiert sichtbarer Toggle + DE|TR|EN
+ * Cache-Buster: ?v=2 beim Ändern erhöhen
+ */
+@media (max-width: 768px) {
+  body .navbar .navbar-toggle,
+  body.theme-ref .navbar .navbar-toggle,
+  body.page-home .navbar .navbar-toggle {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  body .navbar .navbar-actions,
+  body.theme-ref .navbar .navbar-actions,
+  body.page-home .navbar .navbar-actions {
+    display: flex !important;
+    visibility: visible !important;
+  }
+  body .navbar .navbar-actions .navbar-lang,
+  body.theme-ref .navbar .navbar-actions .navbar-lang {
+    display: flex !important;
+    visibility: visible !important;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+  body .navbar .navbar-actions .navbar-lang-link,
+  body.theme-ref .navbar .navbar-actions .navbar-lang-link {
+    display: inline-flex !important;
+    min-width: 32px;
+    padding: 6px 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a3844;
+    background: #E8E4DF;
+    border-radius: 6px;
+    min-height: 44px;
+  }
+  body .navbar .navbar-actions .navbar-lang-link.is-active {
+    background: #1a3844 !important;
+    color: #fff !important;
+  }
+  body .navbar .navbar-logo-icon {
+    max-width: 100px !important;
+  }
+}
+@media (max-width: 480px) {
+  body .navbar .navbar-logo-icon {
+    max-width: 90px !important;
+  }
+}
