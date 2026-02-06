@@ -2198,6 +2198,36 @@ body.theme-ref {
 .hero-ref-right .doctor-card .title { color: var(--gray-700); margin: 0 0 var(--space-3); font-size: 15px; }
 .hero-ref-right .doctor-card .spec { color: var(--gray-700); font-size: 14px; margin: 0; }
 .theme-ref .hero-ref-right .doctor-card .title, .theme-ref .hero-ref-right .doctor-card .spec { margin: 0 0 var(--space-2); }
+/* Hero: Alle Kassen & Privat + Logos in der Arztkarte */
+.doctor-card-kassen {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--cream-200);
+}
+.doctor-card-kassen-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-600);
+  margin: 0 0 var(--space-2);
+}
+.doctor-card-kassen-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+.doctor-card-kassen-logo {
+  height: 24px;
+  width: auto;
+  max-width: 56px;
+  object-fit: contain;
+  filter: grayscale(0.2);
+  opacity: 0.9;
+}
+.theme-ref .doctor-card-kassen { border-top-color: var(--cream-200); }
+.theme-ref .doctor-card-kassen-label { color: var(--gray-600); }
 /* Hero: Logo professionell */
 .hero-ref-right {
   display: flex;
