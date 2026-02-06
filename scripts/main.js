@@ -64,12 +64,20 @@
         var s = links.style;
         s.setProperty('left', '0', 'important');
         s.setProperty('right', '0', 'important');
+        s.setProperty('top', '64px', 'important');
+        s.setProperty('bottom', '0', 'important');
+        s.setProperty('width', '100%', 'important');
+        s.setProperty('min-height', 'calc(100vh - 64px)', 'important');
         s.setProperty('transform', 'none', 'important');
         s.setProperty('visibility', 'visible', 'important');
         s.setProperty('clip-path', 'none', 'important');
         s.setProperty('z-index', '2000', 'important');
         s.setProperty('pointer-events', 'auto', 'important');
         s.setProperty('display', 'flex', 'important');
+        s.setProperty('flex-direction', 'column', 'important');
+        s.setProperty('justify-content', 'flex-start', 'important');
+        s.setProperty('overflow-y', 'auto', 'important');
+        s.setProperty('overflow-x', 'hidden', 'important');
       } else {
         links.style.cssText = '';
       }

@@ -1,6 +1,6 @@
 /**
  * Mobil-Navbar: lädt nach main.css, garantiert sichtbarer Toggle + DE|TR|EN + Menü öffnet
- * Cache-Buster: ?v=6 beim Ändern erhöhen
+ * Cache-Buster: ?v=7 beim Ändern erhöhen
  */
 @media (max-width: 768px) {
   /* Geschlossenes Menü blockiert keine Klicks auf Toggle */
@@ -48,20 +48,37 @@
   body .navbar .navbar-logo-icon {
     max-width: 100px !important;
   }
-  /* Menü-Overlay: sichtbar + gut lesbar (fester Hintergrund, dunkle Schrift) */
+  /* Menü-Overlay: volle Höhe, alle Einträge sichtbar, scrollbar falls nötig */
   body.nav-menu-open .navbar .navbar-links,
   body .navbar .navbar-links.active,
   body.theme-ref .navbar .navbar-links.active,
   body.page-home .navbar .navbar-links.active {
     left: 0 !important;
+    right: 0 !important;
+    top: 64px !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    min-height: calc(100vh - 64px) !important;
     transform: translateX(0) !important;
     visibility: visible !important;
     clip-path: none !important;
     z-index: 2000 !important;
     pointer-events: auto !important;
     display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
     background: #ffffff !important;
     backdrop-filter: none !important;
+    padding: 24px 20px 40px !important;
+  }
+  /* Alle Menüpunkte anzeigen (nicht nur Startseite) */
+  body.nav-menu-open .navbar .navbar-links > li,
+  body .navbar .navbar-links.active > li {
+    display: block !important;
+    visibility: visible !important;
+    margin: 8px 0 !important;
   }
   /* Menü-Links: gut lesbar, dunkel auf weiß */
   body.nav-menu-open .navbar .navbar-links a,
