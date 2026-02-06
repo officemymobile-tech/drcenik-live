@@ -6,6 +6,8 @@
 (function () {
   'use strict';
 
+  function init() {
+
   // --- Splash Screen: Intro-Logo 2 Sekunden (nur einmal pro Session) ---
   (function () {
     var splash = document.getElementById('splash-screen');
@@ -59,7 +61,15 @@
       links.classList.toggle('active', menuOpen);
       links.setAttribute('aria-hidden', menuOpen ? 'false' : 'true');
       if (menuOpen) {
-        links.style.cssText = 'left:0 !important;right:0 !important;transform:none !important;visibility:visible !important;clip-path:none !important;z-index:2000 !important;pointer-events:auto !important;display:flex !important;';
+        var s = links.style;
+        s.setProperty('left', '0', 'important');
+        s.setProperty('right', '0', 'important');
+        s.setProperty('transform', 'none', 'important');
+        s.setProperty('visibility', 'visible', 'important');
+        s.setProperty('clip-path', 'none', 'important');
+        s.setProperty('z-index', '2000', 'important');
+        s.setProperty('pointer-events', 'auto', 'important');
+        s.setProperty('display', 'flex', 'important');
       } else {
         links.style.cssText = '';
       }
@@ -279,5 +289,13 @@
     }
     banner.querySelector('.cookie-consent-accept').addEventListener('click', function () { closeBanner('accepted'); });
     banner.querySelector('.cookie-consent-necessary').addEventListener('click', function () { closeBanner('necessary'); });
+  }
+
+  } // end init()
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 })();
