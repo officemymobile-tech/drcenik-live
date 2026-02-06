@@ -190,6 +190,12 @@ Detaillierte Prüfpunkte mit **Was**, **Warum**, **Wie testen** und **Idealer Zu
 - **Touch**: In CSS min-height für Buttons/Nav (z. B. 44px) gesetzt – gut.
 - **CWV**: Erst nach Deployment mit PageSpeed Insights (echte URL) messen; Bilder mit width/height und lazy loading bereits vorbereitet.
 
+### Performance-Optimierungen (umgesetzt für Core Web Vitals)
+- **LCP**: Hero-Logo mit `<link rel="preload" href="./assets/logo.jpg" as="image">` und `fetchpriority="high"` auf Startseiten (DE/EN/TR); width/height 400×400 gesetzt (CLS).
+- **Fonts**: Google Fonts mit `display=swap` geladen; preconnect für fonts.googleapis.com und fonts.gstatic.com.
+- **Skripte**: `main.js` mit `defer` eingebunden.
+- **Test**: Nach Go-Live [PageSpeed Insights](https://pagespeed.web.dev/) für https://www.drcenik.at/ (Mobile + Desktop) ausführen; GSC „Core Web Vitals“ beobachten.
+
 ---
 
 ## 7. Strukturierte Daten (Schema Markup)

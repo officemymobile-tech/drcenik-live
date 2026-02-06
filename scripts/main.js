@@ -30,9 +30,9 @@
     }, DURATION_MS);
   })();
 
-  // --- Mobile CTA: add body class for spacing ---
-  var mobileCta = document.getElementById('mobile-cta');
-  if (mobileCta && window.matchMedia('(max-width: 768px)').matches) {
+  // --- Sticky CTA-Bar: body class für Abstand (Desktop & Mobile) ---
+  var stickyCta = document.getElementById('sticky-cta') || document.getElementById('mobile-cta');
+  if (stickyCta) {
     document.body.classList.add('has-mobile-cta');
   }
 

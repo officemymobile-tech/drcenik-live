@@ -1048,11 +1048,13 @@ ul { list-style: none; margin: 0; padding: 0; }
   object-fit: contain;
   display: block;
 }
-/* Visitenkarte (Querformat) statt nur QR-Quadrat */
+/* Visitenkarte: Oberkante = Oberkante erster Gold-Box (Ausbildung); Offset = Spalte „Beruflicher Werdegang“ */
 .about-ref-visitenkarte-box {
+  --about-visitenkarte-offset: calc(1.1rem * 1.35 + var(--space-4)); /* Überschrift Höhe + Abstand wie .about-ref-heading */
   aspect-ratio: 1.55;
   max-width: 320px;
   border-radius: 16px;
+  margin-top: var(--about-visitenkarte-offset);
 }
 .about-ref-visitenkarte-img {
   object-fit: contain;
@@ -1658,6 +1660,12 @@ ul { list-style: none; margin: 0; padding: 0; }
   font-size: 14px;
 }
 .footer-bottom p { margin: 0; }
+.footer-since {
+  font-size: 13px;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+.theme-ref .footer-since { color: var(--gray-600); }
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
@@ -1665,9 +1673,10 @@ ul { list-style: none; margin: 0; padding: 0; }
   }
 }
 
-/* --- Sticky Mobile CTA (UX: quick action for 83% who book via site) --- */
+/* --- Sticky CTA-Bar: Desktop & Mobile (Conversion-optimiert) --- */
+.sticky-cta-bar.mobile-cta,
 .mobile-cta {
-  display: none;
+  display: grid;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1682,12 +1691,33 @@ ul { list-style: none; margin: 0; padding: 0; }
   box-shadow: 0 -4px 24px rgba(35, 75, 94, 0.08);
   gap: 12px;
   grid-template-columns: 1fr 1fr;
+  transition: transform 0.3s var(--ease-standard), opacity 0.3s var(--ease-standard);
 }
 @media (min-width: 769px) {
-  .mobile-cta { display: none !important; }
+  .mobile-cta:not(.sticky-cta-bar) { display: none !important; }
+  .sticky-cta-bar.mobile-cta {
+    padding: 10px 24px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 16px;
+    max-width: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px 16px 0 0;
+    border-left: 1px solid var(--cream-200);
+    border-right: 1px solid var(--cream-200);
+  }
+  .sticky-cta-bar.mobile-cta.hidden { transform: translate(-50%, 100%); }
+  .sticky-cta-bar.mobile-cta .mobile-cta-btn {
+    min-width: 180px;
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+  body.page.has-mobile-cta > main { padding-bottom: 72px; }
 }
 @media (max-width: 768px) {
-  .mobile-cta { display: grid; transition: transform 0.3s var(--ease-standard), opacity 0.3s var(--ease-standard); }
+  body.page.has-mobile-cta > main { padding-bottom: 72px; }
 }
 .mobile-cta-btn {
   display: flex;
@@ -2183,8 +2213,38 @@ body.theme-ref {
 .theme-ref .hero-ref-contact-box { padding: var(--space-4); border-radius: 16px; }
 .hero-ref-contact-box span { display: block; font-size: 13px; color: var(--bronze-700); margin-bottom: 4px; }
 .hero-ref-contact-box a { color: var(--navy-800); text-decoration: none; }
+/* Value Proposition: kurze Benefit-Zeile für Vertrauen & Conversion */
+.hero-ref-value-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin: var(--space-3) 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy-700);
+}
+.theme-ref .hero-ref-value-line { margin: var(--space-4) 0; font-size: 15px; }
+.hero-ref-value-dot { color: var(--gray-500); font-weight: 400; user-select: none; }
+.hero-ref-trust-line {
+  margin: 0 0 var(--space-3);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  letter-spacing: 0.02em;
+}
+.theme-ref .hero-ref-trust-line { color: var(--navy-600); font-size: 14px; }
 .hero-ref-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4); }
 .theme-ref .hero-ref-actions { gap: var(--space-3); margin-top: var(--space-5); }
+.hero-ref-actions .cta-primary {
+  padding: 16px 28px;
+  min-height: 52px;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(26, 56, 68, 0.3);
+}
+.hero-ref-actions .cta-primary:hover { box-shadow: 0 6px 28px rgba(26, 56, 68, 0.4); }
+.theme-ref .hero-ref-actions .cta-primary { padding: 18px 32px; min-height: 56px; font-size: 18px; }
 .hero-ref-right .doctor-card {
   padding: var(--space-6);
   border: 1px solid var(--cream-200);

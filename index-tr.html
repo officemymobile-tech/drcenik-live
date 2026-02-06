@@ -18,6 +18,7 @@
   <link rel="alternate" hreflang="tr" href="https://www.drcenik.at/index-tr.html">
   <link rel="alternate" hreflang="en" href="https://www.drcenik.at/index-en.html">
   <link rel="canonical" href="https://www.drcenik.at/index-tr.html">
+  <link rel="preload" href="./assets/logo.jpg" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -76,19 +77,27 @@
         <span class="hero-ref-overline">SAĞLIĞINIZ ODAKTA</span>
         <h1 class="hero-ref-title">Viyana Fiziksel Tıp ve Rehabilitasyon</h1>
         <p class="hero-ref-sub body-text">Hareket sistemi bozuklukları, ağrı tedavisi ve işlevsel iyileşme için uzman tedaviler. En güncel teknolojiler.</p>
+        <div class="hero-ref-value-line" aria-hidden="true">
+          <span>Tüm kasa &amp; özel</span>
+          <span class="hero-ref-value-dot">·</span>
+          <span>Viyana 11</span>
+          <span class="hero-ref-value-dot">·</span>
+          <span>Modern ağrı tedavisi</span>
+        </div>
+        <p class="hero-ref-trust-line">Pratik 1990'dan beri · Deneyimli ekip devralındı</p>
         <blockquote class="hero-ref-quote body-text">İnsan, tüm tıbbi, ekonomik ve mesleki çabaların odağında olmalıdır.</blockquote>
         <div class="hero-ref-contact-boxes">
           <div class="hero-ref-contact-box"><span>Telefon</span><a href="tel:+4317692991">01 / 769 29 91</a></div>
           <div class="hero-ref-contact-box"><span>E-posta</span><a href="mailto:office@drcenik.at">office@drcenik.at</a></div>
         </div>
         <div class="hero-ref-actions">
-          <a href="kontakt-tr.html" class="btn btn-primary">Randevu al</a>
-          <a href="therapieangebot-tr.html" class="btn btn-secondary">Daha fazla →</a>
+          <a href="kontakt-tr.html" class="btn btn-primary cta-primary">Şimdi randevu al</a>
+          <a href="therapieangebot-tr.html" class="btn btn-secondary">Tedavileri incele</a>
         </div>
       </div>
       <div class="hero-ref-right">
         <div class="hero-ref-logo-wrap">
-          <img src="./assets/logo.jpg" onerror="this.onerror=null;this.src='./assets/Logo.png.jpg';" alt="Dr. Fadime Cenik – Fiziksel Tıp ve Rehabilitasyon Uzmanı" class="hero-ref-logo" width="400" height="400" loading="eager">
+          <img src="./assets/logo.jpg" onerror="this.onerror=null;this.src='./assets/Logo.png.jpg';" alt="Dr. Fadime Cenik – Fiziksel Tıp ve Rehabilitasyon Uzmanı" class="hero-ref-logo" width="400" height="400" loading="eager" fetchpriority="high">
           <div class="hero-ref-open-badge hero-ref-open-badge-overlay">
             <span class="open-closed-badge" data-open-closed aria-live="polite"></span>
           </div>
@@ -271,13 +280,16 @@
           </ul>
         </div>
       </div>
-      <div class="footer-bottom"><p>© 2026 Dr. Fadime Cenik. Tüm hakları saklıdır.</p></div>
+      <div class="footer-bottom">
+        <p class="footer-since">1990'dan beri sizin için.</p>
+        <p>© 2026 Dr. Fadime Cenik. Tüm hakları saklıdır.</p>
+      </div>
     </div>
   </footer>
 
-  <aside class="mobile-cta" id="mobile-cta" aria-label="Hızlı işlemler">
+  <aside class="sticky-cta-bar mobile-cta" id="sticky-cta" aria-label="Hızlı işlemler">
     <a href="tel:+4317692991" class="mobile-cta-btn mobile-cta-phone">Ara</a>
-    <a href="kontakt-tr.html" class="mobile-cta-btn mobile-cta-book">Randevu</a>
+    <a href="kontakt-tr.html" class="mobile-cta-btn mobile-cta-book">Şimdi randevu al</a>
   </aside>
 
   <script src="scripts/main.js" defer></script>
