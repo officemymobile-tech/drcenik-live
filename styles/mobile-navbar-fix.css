@@ -1,6 +1,6 @@
 /**
- * Mobil-Navbar: lädt nach main.css, garantiert sichtbarer Toggle + DE|TR|EN
- * Cache-Buster: ?v=2 beim Ändern erhöhen
+ * Mobil-Navbar: lädt nach main.css, garantiert sichtbarer Toggle + DE|TR|EN + Menü öffnet
+ * Cache-Buster: ?v=3 beim Ändern erhöhen
  */
 @media (max-width: 768px) {
   body .navbar .navbar-toggle,
@@ -41,6 +41,17 @@
   }
   body .navbar .navbar-logo-icon {
     max-width: 100px !important;
+  }
+  /* Menü-Overlay beim Tippen auf Hamburger sichtbar machen */
+  body .navbar .navbar-links.active,
+  body.theme-ref .navbar .navbar-links.active,
+  body.page-home .navbar .navbar-links.active {
+    left: 0 !important;
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    clip-path: none !important;
+    z-index: 2000 !important;
+    pointer-events: auto !important;
   }
 }
 @media (max-width: 480px) {
