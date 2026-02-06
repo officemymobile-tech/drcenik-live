@@ -1,6 +1,6 @@
 /**
  * Mobil-Navbar: lädt nach main.css, garantiert sichtbarer Toggle + DE|TR|EN + Menü öffnet
- * Cache-Buster: ?v=5 beim Ändern erhöhen
+ * Cache-Buster: ?v=6 beim Ändern erhöhen
  */
 @media (max-width: 768px) {
   /* Geschlossenes Menü blockiert keine Klicks auf Toggle */
@@ -48,7 +48,7 @@
   body .navbar .navbar-logo-icon {
     max-width: 100px !important;
   }
-  /* Menü-Overlay: sichtbar wenn body.nav-menu-open ODER .navbar-links.active */
+  /* Menü-Overlay: sichtbar + gut lesbar (fester Hintergrund, dunkle Schrift) */
   body.nav-menu-open .navbar .navbar-links,
   body .navbar .navbar-links.active,
   body.theme-ref .navbar .navbar-links.active,
@@ -60,8 +60,35 @@
     z-index: 2000 !important;
     pointer-events: auto !important;
     display: flex !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
   }
-  /* Wichtig: Wenn Menü offen, nichts abschneiden – Overflow der Eltern auf visible */
+  /* Menü-Links: gut lesbar, dunkel auf weiß */
+  body.nav-menu-open .navbar .navbar-links a,
+  body .navbar .navbar-links.active a,
+  body .navbar .navbar-links a.nav-link {
+    color: #1a3844 !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    padding: 14px 20px !important;
+  }
+  body.nav-menu-open .navbar .navbar-mobile-extra .navbar-phone,
+  body .navbar .navbar-links.active .navbar-mobile-extra .navbar-phone {
+    color: #1a3844 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+  }
+  body.nav-menu-open .navbar .navbar-mobile-extra .navbar-lang-link,
+  body .navbar .navbar-links.active .navbar-mobile-extra .navbar-lang-link {
+    color: #1a3844 !important;
+    background: #E8E4DF !important;
+  }
+  body.nav-menu-open .navbar .navbar-mobile-extra .navbar-lang-link.is-active,
+  body .navbar .navbar-links.active .navbar-mobile-extra .navbar-lang-link.is-active {
+    color: #fff !important;
+    background: #1a3844 !important;
+  }
+  /* Wenn Menü offen: nichts abschneiden */
   body.nav-menu-open .navbar,
   body.nav-menu-open .navbar .navbar-container {
     overflow: visible !important;
