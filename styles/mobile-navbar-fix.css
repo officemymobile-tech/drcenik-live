@@ -1,6 +1,6 @@
 /**
  * Mobil-Navbar: lädt nach main.css, garantiert sichtbarer Toggle + DE|TR|EN + Menü öffnet
- * Cache-Buster: ?v=7 beim Ändern erhöhen
+ * Cache-Buster: ?v=8 beim Ändern erhöhen
  */
 @media (max-width: 768px) {
   /* Geschlossenes Menü blockiert keine Klicks auf Toggle */
@@ -104,6 +104,12 @@
   body .navbar .navbar-links.active .navbar-mobile-extra .navbar-lang-link.is-active {
     color: #fff !important;
     background: #1a3844 !important;
+  }
+  /* Doppelte Sprachauswahl entfernen: nur in der Kopfzeile, nicht im Menü */
+  body .navbar .navbar-links .navbar-mobile-extra .navbar-lang,
+  body.nav-menu-open .navbar .navbar-mobile-extra .navbar-lang,
+  body .navbar .navbar-links.active .navbar-mobile-extra .navbar-lang {
+    display: none !important;
   }
   /* Wenn Menü offen: nichts abschneiden */
   body.nav-menu-open .navbar,
