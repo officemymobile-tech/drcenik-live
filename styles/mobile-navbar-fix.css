@@ -1,6 +1,6 @@
 /**
  * Mobil-Navbar: lädt nach main.css, garantiert sichtbarer Toggle + DE|TR|EN + Menü öffnet
- * Cache-Buster: ?v=4 beim Ändern erhöhen
+ * Cache-Buster: ?v=5 beim Ändern erhöhen
  */
 @media (max-width: 768px) {
   /* Geschlossenes Menü blockiert keine Klicks auf Toggle */
@@ -60,6 +60,11 @@
     z-index: 2000 !important;
     pointer-events: auto !important;
     display: flex !important;
+  }
+  /* Wichtig: Wenn Menü offen, nichts abschneiden – Overflow der Eltern auf visible */
+  body.nav-menu-open .navbar,
+  body.nav-menu-open .navbar .navbar-container {
+    overflow: visible !important;
   }
 }
 @media (max-width: 480px) {

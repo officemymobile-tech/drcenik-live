@@ -76,6 +76,12 @@
     }
     document.body.classList.toggle('nav-menu-open', menuOpen);
     document.body.style.overflow = menuOpen ? 'hidden' : '';
+    var nav = document.getElementById('navbar');
+    if (nav) {
+      nav.style.overflow = menuOpen ? 'visible' : '';
+      var container = nav.querySelector('.navbar-container');
+      if (container) container.style.overflow = menuOpen ? 'visible' : '';
+    }
   }
   if (toggle && links) {
     function onToggle(e) {
