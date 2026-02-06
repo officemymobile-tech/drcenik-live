@@ -51,17 +51,22 @@
   // --- Mobile menu toggle ---
   const toggle = document.getElementById('navbar-toggle');
   const links = document.getElementById('navbar-links');
+  function setMenuOpen(open) {
+    if (toggle) toggle.classList.toggle('active', open);
+    if (links) links.classList.toggle('active', open);
+    document.body.classList.toggle('nav-menu-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
   if (toggle && links) {
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('active');
-      links.classList.toggle('active');
-      document.body.style.overflow = links.classList.contains('active') ? 'hidden' : '';
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var isOpen = links.classList.contains('active');
+      setMenuOpen(!isOpen);
     });
-    links.querySelectorAll('a').forEach((a) => {
-      a.addEventListener('click', () => {
-        toggle.classList.remove('active');
-        links.classList.remove('active');
-        document.body.style.overflow = '';
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        setMenuOpen(false);
       });
     });
   }

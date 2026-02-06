@@ -9,6 +9,8 @@
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
+    position: relative !important;
+    z-index: 2001 !important;
   }
   body .navbar .navbar-actions,
   body.theme-ref .navbar .navbar-actions,
@@ -42,7 +44,8 @@
   body .navbar .navbar-logo-icon {
     max-width: 100px !important;
   }
-  /* Menü-Overlay beim Tippen auf Hamburger sichtbar machen */
+  /* Menü-Overlay: sichtbar wenn body.nav-menu-open ODER .navbar-links.active */
+  body.nav-menu-open .navbar .navbar-links,
   body .navbar .navbar-links.active,
   body.theme-ref .navbar .navbar-links.active,
   body.page-home .navbar .navbar-links.active {
@@ -52,6 +55,7 @@
     clip-path: none !important;
     z-index: 2000 !important;
     pointer-events: auto !important;
+    display: flex !important;
   }
 }
 @media (max-width: 480px) {
