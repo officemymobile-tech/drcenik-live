@@ -2214,17 +2214,21 @@ body.theme-ref {
 }
 .doctor-card-kassen-logos {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: var(--space-2);
+  justify-content: flex-start;
+  gap: 10px;
 }
 .doctor-card-kassen-logo {
-  height: 24px;
+  height: 22px;
   width: auto;
-  max-width: 56px;
+  max-width: 48px;
+  min-width: 0;
   object-fit: contain;
   filter: grayscale(0.2);
   opacity: 0.9;
+  flex-shrink: 0;
 }
 .theme-ref .doctor-card-kassen { border-top-color: var(--cream-200); }
 .theme-ref .doctor-card-kassen-label { color: var(--gray-600); }
