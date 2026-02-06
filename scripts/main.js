@@ -61,6 +61,7 @@
       links.classList.toggle('active', menuOpen);
       links.setAttribute('aria-hidden', menuOpen ? 'false' : 'true');
       if (menuOpen) {
+        links.scrollTop = 0;
         var s = links.style;
         s.setProperty('left', '0', 'important');
         s.setProperty('right', '0', 'important');
