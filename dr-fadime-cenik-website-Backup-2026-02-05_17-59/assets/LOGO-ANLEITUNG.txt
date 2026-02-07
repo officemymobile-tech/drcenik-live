@@ -1,0 +1,12 @@
+Logo-Dateien für die Website
+============================
+
+Bitte legen Sie Ihre Logo-Dateien in diesen Ordner:
+
+  • logo.png   – wird in Navigation und Hero-Bereich angezeigt
+    Empfohlen: mind. 160×200 px (oder 2× für Retina), transparenter Hintergrund
+
+  • logo.pdf   – optional, z.B. für Download oder Druck
+
+Die Website verweist bereits auf assets/logo.png.
+Nach dem Ablegen der Datei erscheint das Logo automatisch.

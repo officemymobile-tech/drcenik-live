@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 40" fill="none" aria-hidden="true">
+  <!-- Figur in Bewegung: Kopf, Gelenke als Kreise, Gliedma�en als Linien -->
+  <circle cx="16" cy="5" r="2.5" stroke="currentColor" stroke-width="2"/>
+  <path d="M16 7.5 L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16 14 L10 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16 14 L22 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16 14 L12 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16 14 L20 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="16" cy="14" r="2" stroke="currentColor" stroke-width="2"/>
+  <circle cx="10" cy="22" r="1.5" stroke="currentColor" stroke-width="2"/>
+  <circle cx="22" cy="20" r="1.5" stroke="currentColor" stroke-width="2"/>
+  <circle cx="12" cy="32" r="1.5" stroke="currentColor" stroke-width="2"/>
+  <circle cx="20" cy="32" r="1.5" stroke="currentColor" stroke-width="2"/>
+</svg>
