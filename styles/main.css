@@ -2333,6 +2333,12 @@ body.theme-ref {
 }
 .theme-ref .doctor-card-kassen { border-top-color: var(--cream-200); }
 .theme-ref .doctor-card-kassen-label { color: var(--gray-600); }
+.doctor-card-kassen-note {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  margin: var(--space-2) 0 0;
+  line-height: 1.45;
+}
 /* Hero: Logo professionell */
 .hero-ref-right {
   display: flex;
@@ -2428,10 +2434,25 @@ body.theme-ref {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--space-4) var(--space-6);
+  gap: var(--space-3);
+  text-align: center;
+}
+.kassen-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  text-align: center;
+}
+.kassen-subline {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  margin: 0;
+  max-width: 36ch;
+  line-height: 1.45;
 }
 .section-kassen-ref .kassen-label {
   font-size: 0.75rem;
@@ -2467,9 +2488,18 @@ body.theme-ref {
   object-fit: contain;
   display: block;
 }
+.kassen-badge-privat {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy-800);
+  letter-spacing: 0.03em;
+  border-color: var(--bronze-100);
+  background: var(--white);
+  min-height: 40px;
+}
 @media (max-width: 600px) {
   .section-kassen-ref { padding: var(--space-3) 5%; }
-  .section-kassen-ref .kassen-inner { flex-direction: column; gap: var(--space-2); }
+  .section-kassen-ref .kassen-inner { gap: var(--space-2); }
   .section-kassen-ref .kassen-badge { padding: 6px 12px; font-size: 13px; }
   .section-kassen-ref .kassen-badge img.kassen-logo { height: 32px; max-width: 100px; }
 }
