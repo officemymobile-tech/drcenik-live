@@ -1199,6 +1199,14 @@ ul { list-style: none; margin: 0; padding: 0; }
 .contact-grid-main { max-width: 960px; }
 .contact-form-block .heading-4 { margin-bottom: var(--space-3); }
 .contact-form { display: flex; flex-direction: column; gap: var(--space-2); }
+.form-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
 .form-label { font-size: 14px; font-weight: var(--weight-medium); color: var(--navy-800); display: block; margin-bottom: 4px; }
 .form-required { color: var(--error); }
 .form-input, .form-textarea {

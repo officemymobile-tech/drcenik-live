@@ -5,6 +5,8 @@
   'use strict';
 
   var CONSENT_KEY = 'drcenik-cookie-consent';
+  var FORM_MIN_MS = 3000;
+  var pageLoadedAt = Date.now();
   var MAPS_SRC_DEFAULT = 'https://www.google.com/maps?q=Kaiser-Ebersdorfer-Stra%C3%9Fe+328,+1110+Wien,+%C3%96sterreich&z=16&output=embed';
 
   function lang() {
@@ -391,6 +393,19 @@
     window.location.href = 'mailto:office@drcenik.at?subject=' + encodeURIComponent(cfg.subject) + '&body=' + encodeURIComponent(body);
   }
 
+  function ensureHoneyPot(form) {
+    if (form.querySelector('[name="_honey"]')) return;
+    var hp = document.createElement('input');
+    hp.type = 'text';
+    hp.name = '_honey';
+    hp.value = '';
+    hp.setAttribute('autocomplete', 'off');
+    hp.setAttribute('tabindex', '-1');
+    hp.setAttribute('aria-hidden', 'true');
+    hp.className = 'form-honey';
+    form.appendChild(hp);
+  }
+
   function initForms() {
     var forms = [
       { id: 'contact-form', subject: 'Kontaktanfrage drcenik.at', consentId: 'contact-consent' },
@@ -399,6 +414,7 @@
     forms.forEach(function (cfg) {
       var form = document.getElementById(cfg.id);
       if (!form) return;
+      ensureHoneyPot(form);
       var status = form.querySelector('[data-form-status]');
       if (!status) {
         status = document.createElement('p');
@@ -415,6 +431,12 @@
         var consent = document.getElementById(cfg.consentId);
         if (consent && !consent.checked) {
           consent.focus();
+          return;
+        }
+        var honey = (form.querySelector('[name="_honey"]') || {}).value || '';
+        if (honey) return;
+        if (Date.now() - pageLoadedAt < FORM_MIN_MS) {
+          status.textContent = t.formError;
           return;
         }
         var fields = {
@@ -440,7 +462,7 @@
             preferred_date: fields.date,
             preferred_time: fields.time,
             _subject: cfg.subject,
-            _captcha: 'false',
+            _honey: '',
             _template: 'table'
           })
         }).then(function (res) {

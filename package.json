@@ -22,6 +22,7 @@
     "audit-redirects": "node scripts/audit-redirects.mjs",
     "setup-cloudflare": "node scripts/setup-cloudflare-redirects.mjs",
     "fix-gbp-website": "node scripts/fix-gbp-website.mjs",
+    "fix-audit-critical": "node scripts/fix-audit-critical.mjs",
     "enable-github-https": "node scripts/enable-github-pages-https.mjs",
     "audit-indexing": "node scripts/audit-indexing.mjs",
     "audit-images": "node scripts/audit-live-images.mjs",
