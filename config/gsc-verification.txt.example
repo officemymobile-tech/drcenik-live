@@ -1,0 +1,3 @@
+# Google Search Console – Verifizierungs-Token (nur lokal, nicht committen)
+# Nach https://search.google.com/search-console → HTML-Tag → content-Wert hier einfügen:
+# Beispiel: abc123XYZ...
