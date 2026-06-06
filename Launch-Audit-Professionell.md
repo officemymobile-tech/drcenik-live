@@ -273,7 +273,7 @@ Die Website ist fachlich und rechtlich gut vorbereitet; die größte technische 
 | **Mittelfristig** | Launch-Docs aktualisieren | ✅ Dieser Abschnitt |
 | **Mittelfristig** | Logo.png.webp entfernen | ✅ Nicht mehr vorhanden; nur `logo.webp` |
 
-**Build-Skripte:** `npm run fonts`, `npm run favicons`, `npm run site-update`, `npm run sitemap`, `npm run fix-p1`
+**Build-Skripte:** `npm run fonts`, `npm run favicons`, `npm run site-update`, `npm run sitemap`, `npm run fix-p1`, `npm run fix-p2`, `npm run optimize-webp`
 
 ---
 
@@ -287,3 +287,15 @@ Die Website ist fachlich und rechtlich gut vorbereitet; die größte technische 
 | Termin-Hinweis FormSubmit | ✅ DE/TR/EN |
 | 404-Routing | ✅ `ErrorDocument 404 /404.html` in `.htaccess` |
 | SEO-Checkliste aktualisiert | ✅ Gutschein in Sitemap |
+
+---
+
+## 11. P2-Nachbesserung (Juni 2026)
+
+| Maßnahme | Status |
+|----------|--------|
+| Nav `aria-label` TR/EN Legal/Therapie | ✅ 10 Seiten |
+| `twitter:image` siteweit | ✅ Alle Produktionsseiten |
+| Gutschein `twitter:card` | ✅ |
+| WebP optimiert (logo, gutschein, kassen) | ✅ `npm run optimize-webp` |
+| `Logo.png.webp` entfernt | ✅ Nur `logo.webp` |

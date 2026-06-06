@@ -8,7 +8,9 @@
     "favicons": "node scripts/generate-favicons.mjs",
     "fonts": "node scripts/download-fonts.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
-    "fix-p1": "node scripts/fix-p1-audit.mjs"
+    "fix-p1": "node scripts/fix-p1-audit.mjs",
+    "fix-p2": "node scripts/fix-p2-audit.mjs",
+    "optimize-webp": "node scripts/optimize-webp.mjs"
   },
   "devDependencies": {
     "@fontsource/cormorant-garamond": "^5.2.5",

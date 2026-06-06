@@ -194,7 +194,7 @@ Detaillierte Prüfpunkte mit **Was**, **Warum**, **Wie testen** und **Idealer Zu
 
 ### Performance-Optimierungen (umgesetzt für Core Web Vitals)
 - **LCP**: Hero-Logo mit `<link rel="preload" href="assets/logo.webp" as="image">` und `fetchpriority="high"` auf Startseiten (DE/EN/TR); width/height 400×400 gesetzt (CLS).
-- **Fonts**: Google Fonts mit `display=swap` geladen; preconnect für fonts.googleapis.com und fonts.gstatic.com.
+- **Fonts**: Self-hosted via `styles/fonts.css` (Source Sans 3 + Cormorant Garamond, WOFF2). Kein Google Fonts CDN mehr in Produktions-HTML.
 - **Skripte**: `main.js` mit `defer` eingebunden.
 - **Test**: Nach Go-Live [PageSpeed Insights](https://pagespeed.web.dev/) für https://www.drcenik.at/ (Mobile + Desktop) ausführen; GSC „Core Web Vitals“ beobachten.
 

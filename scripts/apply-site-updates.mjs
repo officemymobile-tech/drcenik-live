@@ -34,6 +34,7 @@ function ogBlock(title, desc, url, locale = 'de_AT') {
   <meta property="og:image" content="${SITE}/assets/logo.webp">
   <meta property="og:locale" content="${locale}">
   <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="${SITE}/assets/logo.webp">
   <meta name="twitter:title" content="${t}">
   <meta name="twitter:description" content="${d}">`;
 }
