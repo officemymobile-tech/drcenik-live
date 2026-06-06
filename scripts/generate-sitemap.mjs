@@ -24,7 +24,7 @@ const clusters = [
 ];
 
 const singles = [
-  ['267059-geschenkgutschein-vorlage.html', 'monthly', '0.6'],
+  ['geschenkgutschein.html', 'monthly', '0.6'],
 ];
 
 function loc(file) {
@@ -49,7 +49,7 @@ for (const [de, tr, en] of clusters) {
 }
 
 for (const [file, freq, pri] of singles) {
-  xml += `  <url>\n    <loc>${loc(file)}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>${freq}</changefreq>\n    <priority>${pri}</priority>\n  </url>\n`;
+  xml += `  <url>\n    <loc>${loc(file)}</loc>\n    <xhtml:link rel="alternate" hreflang="de" href="${loc(file)}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${loc(file)}"/>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>${freq}</changefreq>\n    <priority>${pri}</priority>\n  </url>\n`;
 }
 
 xml += '</urlset>\n';

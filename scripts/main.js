@@ -278,7 +278,7 @@
     if (!base) base = 'index';
     var isTR = /-tr\.html$/i.test(file);
     var isEN = /-en\.html$/i.test(file);
-    var hrefDE = base + '.html';
+    var hrefDE = base === 'index' ? '/' : base + '.html';
     var hrefTR = base + '-tr.html';
     var hrefEN = base + '-en.html';
     document.querySelectorAll('.navbar-lang').forEach(function (wrap) {

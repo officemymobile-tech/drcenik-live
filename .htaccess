@@ -22,5 +22,12 @@
   AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css application/javascript application/json
 </IfModule>
 
+# SEO: Canonical-URLs erzwingen
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^index\.html$ / [R=301,L]
+  RewriteRule ^267059-geschenkgutschein-vorlage\.html$ /geschenkgutschein.html [R=301,L]
+</IfModule>
+
 # Benutzerdefinierte 404-Seite
 ErrorDocument 404 /404.html

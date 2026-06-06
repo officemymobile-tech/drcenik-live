@@ -9,6 +9,7 @@
     "fonts": "node scripts/download-fonts.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "fix-p1": "node scripts/fix-p1-audit.mjs",
+    "fix-p1-seo": "node scripts/fix-p1-seo.mjs",
     "fix-p2": "node scripts/fix-p2-audit.mjs",
     "optimize-webp": "node scripts/optimize-webp.mjs",
     "audit-images": "node scripts/audit-live-images.mjs",
