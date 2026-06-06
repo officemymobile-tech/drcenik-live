@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <title>Dr. Fadime Cenik – Physical Medicine &amp; Rehabilitation</title>
   <meta name="description" content="Dr. Fadime Cenik – Physical Medicine and Rehabilitation. Specialist in Physical Medicine and General Rehabilitation. Where movement begins. Vienna 11.">
   <meta property="og:title" content="Dr. Fadime Cenik – Physical Medicine &amp; Rehabilitation">
@@ -17,12 +20,12 @@
   <link rel="alternate" hreflang="de" href="https://www.drcenik.at/index.html">
   <link rel="alternate" hreflang="tr" href="https://www.drcenik.at/index-tr.html">
   <link rel="alternate" hreflang="en" href="https://www.drcenik.at/index-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.drcenik.at/">
   <link rel="canonical" href="https://www.drcenik.at/index-en.html">
   <link rel="preload" href="assets/logo.webp" as="image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/critical.css">
+<link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/mobile-navbar-fix.css?v=8">
 </head>
 <body class="page page-home theme-ref">
@@ -162,6 +165,53 @@
       </div>
     </section>
 
+    <section class="section-standard section-erkenntnisse-ref" aria-labelledby="erkenntnisse-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="heading-2" id="erkenntnisse-heading">Latest Medical Insights 2025</h2>
+          <p class="body-text-lg">News from physical medicine, rehabilitation and guidelines – Austria and international</p>
+        </div>
+        <div class="article-grid">
+          <article class="article-card fade-in-up">
+            <div class="article-card-image" aria-hidden="true">
+              <img src="./assets/images/wissen-news/artikel-1-medizin.webp" alt="MTD Act 2024: Dry Needling in physiotherapy" width="400" height="225" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <span class="article-card-tag">AUSTRIA · PHYSICAL MEDICINE</span>
+              <h3 class="article-card-title">MTD Act 2024 &amp; ÖGPMR: Current Physical Medicine</h3>
+              <p class="body-text">Dry Needling in physiotherapy scope, ÖGK statutory cover, ÖGPMR and Pain Society strengthen collaboration. Latest developments in physical medicine and rehabilitation in Austria.</p>
+              <p class="article-card-meta">Brief · 2024/2025</p>
+              <a href="wissen-news-en.html#news-mtd" class="article-card-link">Read →</a>
+            </div>
+          </article>
+          <article class="article-card fade-in-up">
+            <div class="article-card-image" aria-hidden="true">
+              <img src="./assets/images/wissen-news/artikel-3-bewegung.webp" alt="Guidelines 2024: Spasticity, stroke rehab and pain therapy" width="400" height="225" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <span class="article-card-tag">PAIN THERAPY</span>
+              <h3 class="article-card-title">Guidelines 2024: Spasticity, stroke rehab and pain therapy</h3>
+              <p class="body-text">Current guidelines on spasticity assessment, stroke rehabilitation with task-specific training and exercise therapy for chronic pain – guidance for practice and rehab.</p>
+              <p class="article-card-meta">Brief · 2024/2025</p>
+              <a href="wissen-news-en.html#news-leitlinien" class="article-card-link">Read →</a>
+            </div>
+          </article>
+          <article class="article-card fade-in-up">
+            <div class="article-card-image" aria-hidden="true">
+              <img src="./assets/images/wissen-news/artikel-6-therapie.webp" alt="Neurorehabilitation: holistic treatment of neuropathic pain" width="400" height="225" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <span class="article-card-tag">REHABILITATION</span>
+              <h3 class="article-card-title">Neurorehabilitation: Holistic treatment of neuropathic pain</h3>
+              <p class="body-text">Early mobilisation, task-specific training and multimodal therapy – current stroke rehab guidelines and their relevance for neuropathic pain.</p>
+              <p class="article-card-meta">7 min read · Jan 2026</p>
+              <a href="wissen-news-en.html#news-schlaganfall" class="article-card-link">Read →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section-gutscheine-ref" aria-labelledby="gutscheine-heading">
       <div class="gutscheine-visual">
         <div class="gutscheine-icon" aria-hidden="true">🎁</div>
@@ -247,6 +297,7 @@
     <a href="termin-en.html" class="mobile-cta-btn mobile-cta-book">Book appointment now</a>
   </aside>
 
-  <script src="scripts/main.js" defer></script>
+  <script src="scripts/site-i18n.js" defer></script>
+  <script src="scripts/main.js?v=9" defer></script>
 </body>
 </html>

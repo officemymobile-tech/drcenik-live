@@ -246,3 +246,31 @@
 - **Sinnvoll danach:** PageSpeed/CrUX messen, ggf. Critical CSS, einheitliche OG-Tags, 404-Handling, Cookie-Option „Nur notwendige“.
 
 Die Website ist fachlich und rechtlich gut vorbereitet; die größte technische und nutzerbezogene Wirkung hat die Bildoptimierung vor dem Livegang.
+
+---
+
+## 9. Roadmap-Umsetzung (Stand: Juni 2026)
+
+| Priorität | Maßnahme | Status |
+|-----------|----------|--------|
+| **Sofort** | Google Maps Consent-Gate | ✅ `data-maps-consent` auf Kontakt DE/TR/EN; Karte lädt erst nach Einwilligung |
+| **Sofort** | Cookie-Banner funktional | ✅ `accepted` / `necessary`, Event `drcenik:consent`, lokalisiert DE/TR/EN |
+| **Sofort** | Favicon + Apple-Touch-Icon | ✅ Aus `logo.webp` generiert (`assets/favicon-*.png`, `apple-touch-icon.png`) |
+| **Sofort** | Impressum TMG → ECG/Mediengesetz (AT) | ✅ DE/TR/EN |
+| **Sofort** | Datenschutz localStorage Auto-Save | ✅ DE/TR/EN (FormSubmit, Maps-Consent, localStorage) |
+| **Kurzfristig** | OG/Twitter-Meta TR/EN | ✅ Alle Seiten via `apply-site-updates.mjs` |
+| **Kurzfristig** | hreflang x-default + Sitemap | ✅ HTML + `sitemap.xml` mit x-default pro Cluster |
+| **Kurzfristig** | Navbar aria-expanded / aria-controls | ✅ in `main.js` |
+| **Kurzfristig** | Cookie-Banner + Splash TR/EN | ✅ `site-i18n.js` |
+| **Kurzfristig** | News-Karten → Anker/Artikel | ✅ index DE/TR/EN → `wissen-news*.html#news-*` |
+| **Kurzfristig** | TR-News an DE/EN angleichen | ✅ index-tr + Artikel-IDs |
+| **Kurzfristig** | Schema Ordinationszeiten | ✅ `openingHoursSpecification` auf Startseite |
+| **Mittelfristig** | CSS split / Critical CSS | ✅ `critical.css` + `main.css` |
+| **Mittelfristig** | Google Fonts self-hosted | ✅ `styles/fonts.css` via @fontsource |
+| **Mittelfristig** | Sticky-CTA siteweit | ✅ JS-Injection wenn fehlend |
+| **Mittelfristig** | Formular-Backend (FormSubmit) | ✅ AJAX + mailto-Fallback |
+| **Mittelfristig** | Google-Bewertungen „Stand: …“ | ✅ Kontakt DE/TR/EN (Juni 2026) |
+| **Mittelfristig** | Launch-Docs aktualisieren | ✅ Dieser Abschnitt |
+| **Mittelfristig** | Logo.png.webp entfernen | ✅ Nicht mehr vorhanden; nur `logo.webp` |
+
+**Build-Skripte:** `npm run fonts`, `npm run favicons`, `npm run site-update`, `node scripts/generate-sitemap.mjs`

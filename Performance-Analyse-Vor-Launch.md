@@ -1,5 +1,7 @@
 # Performance-Analyse vor dem Livegang – Dr. Fadime Cenik Website
 
+**Aktualisierung Juni 2026:** Bilder auf WebP migriert; Google Fonts self-hosted (`styles/fonts.css`); Critical CSS (`styles/critical.css`) für Above-the-fold; Cookie/Maps-Consent implementiert.
+
 Ausführliche Untersuchung zu Ladezeiten, Core Web Vitals, Bildoptimierung, CSS/JS, Fonts, Lazy Loading, Caching und typischen Performance-Problemen. Am Ende: **konkrete Befunde** und **Handlungsempfehlungen**.
 
 ---

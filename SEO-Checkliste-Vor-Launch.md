@@ -1,5 +1,7 @@
 # SEO-Checkliste vor dem Livegang – Dr. Fadime Cenik Website
 
+**Aktualisierung Juni 2026:** hreflang inkl. `x-default` auf allen Seiten; Sitemap mit vollständigen hreflang-Alternates; OG/Twitter auf DE/TR/EN; Favicons; News-Anker-Links; Schema mit Ordinationszeiten.
+
 Detaillierte Prüfpunkte mit **Was**, **Warum**, **Wie testen** und **Idealer Zustand**. Am Ende: **Befund Ihrer Website** in Stichpunkten.
 
 ---

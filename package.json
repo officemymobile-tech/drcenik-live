@@ -3,9 +3,15 @@
   "private": true,
   "scripts": {
     "optimize-images": "node scripts/optimize-images.js",
-    "process-images": "node scripts/process-images.mjs"
+    "process-images": "node scripts/process-images.mjs",
+    "site-update": "node scripts/apply-site-updates.mjs",
+    "favicons": "node scripts/generate-favicons.mjs",
+    "fonts": "node scripts/download-fonts.mjs",
+    "sitemap": "node scripts/generate-sitemap.mjs"
   },
   "devDependencies": {
+    "@fontsource/cormorant-garamond": "^5.2.5",
+    "@fontsource/source-sans-3": "^5.2.5",
     "sharp": "^0.33.5"
   }
 }
