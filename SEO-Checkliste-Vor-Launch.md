@@ -119,14 +119,14 @@ Detaillierte Prüfpunkte mit **Was**, **Warum**, **Wie testen** und **Idealer Zu
 ### Idealer Zustand vor dem Livegang
 - Inhaltliche Bilder: kurzer, beschreibender Alt-Text (z. B. „Physiotherapeutin bei Manueller Therapie“).
 - Dekorative Bilder: `alt=""` und ggf. `aria-hidden="true"` (z. B. Splash-Logo, Artikel-Karten-Bilder in Kacheln).
-- Dateinamen: sprechend (z. B. `artikel-1-medizin.jpg` ist in Ordnung).
+- Dateinamen: sprechend (z. B. `artikel-1-medizin.webp` ist in Ordnung).
 - Bilder: komprimiert, width/height gesetzt wo möglich (CLS vermeiden).
 
 ---
 
 ### Befund Ihre Website (Bilder)
 - **Alt-Texte**: Viele Artikelkarten-Bilder haben `alt=""` bei `aria-hidden="true"` – für dekorative Kacheln akzeptabel. **Empfehlung:** Wo Bilder inhaltlich zum Artikel gehören, kurzen beschreibenden Alt ergänzen (z. B. „MTD-Gesetz 2024 – Physiotherapie“). Logo/Splash mit `alt=""` – bei rein dekorativer Nutzung ok; auf der Startseite hat das Hero-Logo einen aussagekräftigen Alt.
-- **Dateinamen**: `artikel-1-medizin.jpg` etc. – in Ordnung. `gutschein.png`, `logo.jpg` – ok.
+- **Dateinamen**: `artikel-1-medizin.webp` etc. – in Ordnung. `gutschein.png`, `logo.jpg` – ok.
 - **Größen**: width/height bei Artikelbildern (400×225) gesetzt – gut für CLS. Ladezeit vor Live mit PageSpeed prüfen.
 
 ---
@@ -191,7 +191,7 @@ Detaillierte Prüfpunkte mit **Was**, **Warum**, **Wie testen** und **Idealer Zu
 - **CWV**: Erst nach Deployment mit PageSpeed Insights (echte URL) messen; Bilder mit width/height und lazy loading bereits vorbereitet.
 
 ### Performance-Optimierungen (umgesetzt für Core Web Vitals)
-- **LCP**: Hero-Logo mit `<link rel="preload" href="./assets/logo.jpg" as="image">` und `fetchpriority="high"` auf Startseiten (DE/EN/TR); width/height 400×400 gesetzt (CLS).
+- **LCP**: Hero-Logo mit `<link rel="preload" href="assets/logo.webp" as="image">` und `fetchpriority="high"` auf Startseiten (DE/EN/TR); width/height 400×400 gesetzt (CLS).
 - **Fonts**: Google Fonts mit `display=swap` geladen; preconnect für fonts.googleapis.com und fonts.gstatic.com.
 - **Skripte**: `main.js` mit `defer` eingebunden.
 - **Test**: Nach Go-Live [PageSpeed Insights](https://pagespeed.web.dev/) für https://www.drcenik.at/ (Mobile + Desktop) ausführen; GSC „Core Web Vitals“ beobachten.

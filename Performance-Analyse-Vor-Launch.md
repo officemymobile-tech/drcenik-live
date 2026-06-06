@@ -32,10 +32,10 @@ Ausführliche Untersuchung zu Ladezeiten, Core Web Vitals, Bildoptimierung, CSS/
 | **main.css** | ~117 KB | Einzelne, große CSS-Datei; kein kritischer Pfad optimiert |
 | **main.js** | ~10 KB | Klein, am Ende des Body – gut |
 | **Google Fonts (CSS + Fonts)** | ~30–80 KB (je nach Subset) | Render-blockierend, Third-Party |
-| **assets/gutschein.png** | **~5.300 KB (5,3 MB)** | **Kritisch** – wird auf Startseite mit `loading="lazy"` geladen |
-| **assets/images/kassen/kfa-logo.png** | **~4.410 KB (4,4 MB)** | **Kritisch** – Kassen-Logo viel zu groß |
-| **assets/logo.jpg** | ~625 KB | Eager geladen (Above-the-fold); sollte komprimiert werden |
-| **assets/visitenkarte-qr.png** | ~353 KB | Auf Über-uns; komprimieren oder verkleinern |
+| **assets/gutschein.webp** | **~5.300 KB (5,3 MB)** | **Kritisch** – wird auf Startseite mit `loading="lazy"` geladen |
+| **assets/images/kassen/kfa-logo.webp** | **~4.410 KB (4,4 MB)** | **Kritisch** – Kassen-Logo viel zu groß |
+| **assets/logo.webp** | ~625 KB | Eager geladen (Above-the-fold); sollte komprimiert werden |
+| **assets/visitenkarte-qr.webp** | ~353 KB | Auf Über-uns; komprimieren oder verkleinern |
 | **assets/images/wissen-news/*.jpg** | 38–71 KB je Bild | Bereits in Ordnung (lazy) |
 | **r-force** (falls genutzt) | JPG 5–6 MB, WebP 55–178 KB | WebP-Varianten vorhanden – nutzen |
 
@@ -124,7 +124,7 @@ Ausführliche Untersuchung zu Ladezeiten, Core Web Vitals, Bildoptimierung, CSS/
 | **gutschein.png** | **5.300 KB** | ~300 px breit | **Dringend:** Auf ~300–600 px Breite skalieren, als WebP/JPEG komprimieren. Ziel: < 150 KB. |
 | **kfa-logo.png** | **4.410 KB** | 120×40 px | **Dringend:** Auf 240×80 px (2x Retina) skalieren, PNG komprimieren oder als SVG wenn möglich. Ziel: < 30 KB. |
 | **logo.jpg** | 625 KB | Nav 58px, Hero 400px | Komprimieren (Qualität 80–85) oder WebP. Ziel: < 150 KB für Hero; Nav könnte kleinere Variante nutzen. |
-| **Logo.png.jpg** | 625 KB | Fallback | Wie logo.jpg optimieren. |
+| **logo.webp** | 625 KB | Fallback | Wie logo.jpg optimieren. |
 | **visitenkarte-qr.png** | 353 KB | Über-uns | Verkleinern/komprimieren; Ziel < 80 KB. |
 | **wissen-news/*.jpg** | 38–71 KB | 400×225 | Bereits akzeptabel; optional WebP-Varianten für bessere Ladezeit. |
 | **r-force** | JPG 5–6 MB | – | **WebP-Varianten nutzen** (55–178 KB), in HTML auf .webp verweisen mit Fallback. |

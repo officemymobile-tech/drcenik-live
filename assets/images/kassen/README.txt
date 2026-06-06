@@ -1,21 +1,21 @@
-Krankenkassen-Logos (Österreich)
-=================================
+Krankenkassen-Logos (Österreich) – WebP
+========================================
 
-kfa-logo.png
+kfa-logo.webp
+  Quelle: KFA Wien – https://www.kfawien.at/
   KFA – Krankenfürsorgeanstalt (z. B. KFA Wien für Bedienstete der Stadt Wien).
-  Verwendung: Darstellung der Kassenakzeptanz im "Alle Kassen"-Banner.
 
-oegk-logo.png
-  Quelle: Wikimedia Commons, https://commons.wikimedia.org/wiki/File:ÖGK-Logo.png
-  Lizenz: Gemeinfrei (PD-textlogo). Logo der Österreichischen Gesundheitskasse (ÖGK).
+oegk-logo.webp
+  Quelle: Wikimedia Commons – https://commons.wikimedia.org/wiki/File:ÖGK-Logo.svg
+  Lizenz: Gemeinfrei (PD-textlogo). Österreichische Gesundheitskasse (ÖGK).
 
-bvaeb-logo.png
-  Quelle: BVAEB (Versicherungsanstalt öffentlich Bediensteter, Eisenbahnen und Bergbau).
-  Verwendung: Darstellung der Kassenakzeptanz auf der Praxis-Website.
+bvaeb-logo.webp
+  Quelle: BVAEB – https://www.bvaeb.at/
+  Versicherungsanstalt öffentlich Bediensteter, Eisenbahnen und Bergbau (BVAEB).
 
-svs-logo.png
-  Quelle: Wikimedia Commons, https://commons.wikimedia.org/wiki/File:SVS-Logo.png
-  Lizenz: Creative Commons Attribution-Share Alike 4.0 (CC BY-SA 4.0).
-  Logo: Sozialversicherung der Selbständigen (SVS).
+svs-logo.webp
+  Quelle: Wikimedia Commons – https://commons.wikimedia.org/wiki/File:SVS-Logo.png
+  Lizenz: CC BY-SA 4.0. Sozialversicherung der Selbständigen (SVS).
 
-Die Logos werden im "Alle Kassen"-Banner auf der Startseite (DE/TR/EN) angezeigt: KFA, ÖGK, BVAEB, SVS.
+Verwendung: Hero-Arztkarte und „Alle Kassen“-Banner auf index.html / index-tr.html / index-en.html.
+Aktualisiert: Offizielle Quellen, konvertiert nach WebP via scripts/process-images.mjs.

@@ -2282,13 +2282,12 @@ body.theme-ref {
   gap: 10px;
 }
 .doctor-card-kassen-logo {
-  height: 22px;
+  height: 26px;
   width: auto;
-  max-width: 48px;
+  max-width: 56px;
   min-width: 0;
   object-fit: contain;
-  filter: grayscale(0.2);
-  opacity: 0.9;
+  opacity: 1;
   flex-shrink: 0;
 }
 .theme-ref .doctor-card-kassen { border-top-color: var(--cream-200); }

@@ -119,7 +119,7 @@
 | **Logo:** `alt="Dr. Fadime Cenik – Fachärztin für …"` (Nav/Footer). Splash: `alt=""` (dekorativ). | OK. | — |
 | **Artikelbilder (Wissen & News):** Alt-Texte vorhanden (z. B. „MTD-Gesetz und ÖGPMR …“). | Gut. | Alle Bilder mit inhaltlichem Bezug: beschreibenden, keyword-relevanten Alt-Text (kurz, natürlich). |
 | **Kassen-Logos:** Alt mit Kassenname. | Gut. | — |
-| **Dateinamen:** `artikel-1-medizin.jpg` etc. | Semantisch schwächer. | Optional: z. B. `physikalische-medizin-mtd-oegk.jpg`; nicht zwingend vor Launch. |
+| **Dateinamen:** `artikel-1-medizin.webp` etc. | Semantisch schwächer. | Optional: z. B. `physikalische-medizin-mtd-oegk.jpg`; nicht zwingend vor Launch. |
 | **Größen:** Siehe Performance – gutschein.png, kfa-logo.png, logo.jpg zu groß. | LCP und Datenvolumen. | Siehe Abschnitt 4. |
 
 ### 3.6 Schema.org (JSON-LD)
@@ -139,7 +139,7 @@
 
 | Problem | Warum kritisch | Empfehlung |
 |---------|----------------|------------|
-| **assets/gutschein.png** (~5,3 MB) und **kfa-logo.png** (~4,4 MB) extrem groß. | Startseite lädt mehrere MB nur durch wenige Bilder; LCP und TTI leiden stark, besonders mobil. | **P0:** Bilder auf Zielgröße skalieren (z. B. Gutschein max. 600px Breite, Kassen-Logo max. 240px) und komprimieren (PNG-Optimizer/WebP). Skript `scripts/optimize-images.js` vorhanden – nach `npm install` mit `npm run optimize-images` ausführen. |
+| **assets/gutschein.webp** (~5,3 MB) und **kfa-logo.png** (~4,4 MB) extrem groß. | Startseite lädt mehrere MB nur durch wenige Bilder; LCP und TTI leiden stark, besonders mobil. | **P0:** Bilder auf Zielgröße skalieren (z. B. Gutschein max. 600px Breite, Kassen-Logo max. 240px) und komprimieren (PNG-Optimizer/WebP). Skript `scripts/optimize-images.js` vorhanden – nach `npm install` mit `npm run optimize-images` ausführen. |
 | **logo.jpg** (~625 KB) above-the-fold. | Direkt relevant für LCP. | Komprimieren (z. B. 80–85 Qualität, max. 800px) oder WebP-Variante mit `<picture>`. |
 | **main.css** ~117 KB, eine Datei. | Render-blocking; verzögert FCP. | Vor Launch: Optional Critical CSS für Above-the-fold extrahieren, Rest asynchron laden. Oder Minify (z. B. cssnano) im Build. |
 | **main.js** ~10 KB, `defer`. | Unkritisch. | Beibehalten. |

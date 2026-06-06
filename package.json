@@ -2,7 +2,8 @@
   "name": "dr-fadime-cenik-website",
   "private": true,
   "scripts": {
-    "optimize-images": "node scripts/optimize-images.js"
+    "optimize-images": "node scripts/optimize-images.js",
+    "process-images": "node scripts/process-images.mjs"
   },
   "devDependencies": {
     "sharp": "^0.33.5"
