@@ -28,7 +28,22 @@ const KONTAKT_FILES = [
   { file: 'kontakt-tr.html', locale: 'tr' },
 ];
 
+function loadEnvFile() {
+  const envPath = path.join(ROOT, 'config/google-places.env');
+  if (!fs.existsSync(envPath)) return;
+  for (const line of fs.readFileSync(envPath, 'utf8').split('\n')) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+    const eq = trimmed.indexOf('=');
+    if (eq === -1) continue;
+    const key = trimmed.slice(0, eq).trim();
+    const value = trimmed.slice(eq + 1).trim();
+    if (key && !(key in process.env)) process.env[key] = value;
+  }
+}
+
 function readEnvKey() {
+  loadEnvFile();
   return process.env.GOOGLE_PLACES_API_KEY || process.env.GOOGLE_MAPS_API_KEY || '';
 }
 
