@@ -19,6 +19,8 @@
     "optimize-webp": "node scripts/optimize-webp.mjs",
     "audit-seo": "node scripts/audit-seo-checklist.mjs",
     "audit-seo-live": "node scripts/audit-seo-live.mjs",
+    "audit-redirects": "node scripts/audit-redirects.mjs",
+    "setup-cloudflare": "node scripts/setup-cloudflare-redirects.mjs",
     "audit-indexing": "node scripts/audit-indexing.mjs",
     "audit-images": "node scripts/audit-live-images.mjs",
     "setup-gsc": "node scripts/setup-gsc.mjs"

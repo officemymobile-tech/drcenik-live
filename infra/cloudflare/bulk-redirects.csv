@@ -1,0 +1,8 @@
+source_url,target_url,status_code,preserve_query_string
+http://www.drcenik.at/,https://www.drcenik.at/,301,true
+http://www.drcenik.at/index.html,https://www.drcenik.at/,301,true
+https://www.drcenik.at/index.html,https://www.drcenik.at/,301,true
+https://www.drcenik.at/267059-geschenkgutschein-vorlage.html,https://www.drcenik.at/geschenkgutschein.html,301,true
+http://drcenik.at/,https://www.drcenik.at/,301,true
+http://drcenik.at/index.html,https://www.drcenik.at/,301,true
+https://drcenik.at/,https://www.drcenik.at/,301,true

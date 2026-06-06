@@ -21,10 +21,11 @@ function get(url, follow = true) {
 
 const tests = [
   ['https://www.drcenik.at/index.html', 'P1 Redirect index→/', (b, s, loc) =>
-    (s === 301 && loc === 'https://www.drcenik.at/') ||
-    (s === 200 && b.includes('rel="canonical" href="https://www.drcenik.at/"') && b.includes('/index\\.html$/i.test(location.pathname)')),
+    s === 301 && (loc === 'https://www.drcenik.at/' || loc === 'https://www.drcenik.at'),
   ],
-  ['https://www.drcenik.at/267059-geschenkgutschein-vorlage.html', 'P1 Redirect Gutschein', (b, s, loc) => (s === 301 && loc?.includes('geschenkgutschein')) || (s === 200 && b.includes('geschenkgutschein.html') && b.includes('noindex'))],
+  ['https://www.drcenik.at/267059-geschenkgutschein-vorlage.html', 'P1 Redirect Gutschein', (b, s, loc) =>
+    s === 301 && loc === 'https://www.drcenik.at/geschenkgutschein.html',
+  ],
   ['https://www.drcenik.at/kontakt.html', 'P2 ContactPage + Breadcrumb', (b) => b.includes('ContactPage') && b.includes('BreadcrumbList')],
   ['https://www.drcenik.at/kontakt-tr.html', 'P2 TR ContactPage + Viyana', (b) => b.includes('ContactPage') && b.includes('Viyana 11') && !b.split('</head>')[0].includes('Wien 11')],
   ['https://www.drcenik.at/termin.html', 'P2 Termin Schema', (b) => b.includes('potentialAction') && b.includes('twitter:card')],
