@@ -27,7 +27,8 @@
   <link rel="alternate" hreflang="x-default" href="https://www.drcenik.at/">
   <link rel="canonical" href="https://www.drcenik.at/index-en.html">
   <link rel="preload" href="assets/logo.webp" as="image">
-  <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="preload" href="assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles/fonts.css">
   <link rel="stylesheet" href="styles/critical.css">
 <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/mobile-navbar-fix.css?v=8">
@@ -62,7 +63,37 @@
       { "@type": "OpeningHoursSpecification", "name": "Practice hours", "dayOfWeek": "Thursday", "opens": "07:00", "closes": "12:00" }
     ],
     "priceRange": "€€",
-    "medicalSpecialty": ["PhysicalMedicine", "Rehabilitation"]
+    "medicalSpecialty": ["PhysicalMedicine", "Rehabilitation"],
+    "image": "https://www.drcenik.at/assets/logo.webp",
+    "sameAs": [
+      "https://www.google.com/maps/search/?api=1&query=Dr.+Fadime+Cenik+Kaiser-Ebersdorfer-Straße+328+Wien"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Dr. Fadime Cenik – Physical Medicine & Rehabilitation",
+    "url": "https://www.drcenik.at/index-en.html",
+    "inLanguage": "en-AT",
+    "publisher": {
+      "@type": "Physician",
+      "name": "Dr. Fadime Cenik",
+      "url": "https://www.drcenik.at/"
+    },
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.drcenik.at/termin-en.html",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform"
+        ]
+      },
+      "name": "Request appointment"
+    }
   }
   </script>
 </head>
@@ -299,6 +330,7 @@
             <li><a href="faq-en.html">FAQ</a></li>
             <li><a href="ueber-uns-en.html">About us</a></li>
             <li><a href="kontakt-en.html">Contact</a></li>
+            <li><a href="termin-en.html">Request appointment</a></li>
           </ul>
         </div>
         <div class="footer-col">

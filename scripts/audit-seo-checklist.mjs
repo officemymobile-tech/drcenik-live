@@ -55,6 +55,33 @@ checks.push(['P3', 'og:locale:alternate index', read('index.html').includes('og:
 checks.push(['P3', '404 mehrsprachig TR/EN', read('404.html').includes('lang="tr"') && read('404.html').includes('lang="en"')]);
 checks.push(['P3', 'Consent-Analytics (bewusst aus)', read('datenschutz.html').includes('keine Analyse-') || read('datenschutz-en.html').includes('do not use any analytics')]);
 
+// P4 Enterprise
+checks.push(['P4', 'AboutPage ueber-uns-tr', read('ueber-uns-tr.html').includes('"@type": "AboutPage"')]);
+checks.push(['P4', 'WebSite + ReserveAction index', read('index.html').includes('"@type": "WebSite"') && read('index.html').includes('ReserveAction')]);
+checks.push(['P4', 'Physician sameAs GBP', read('index.html').includes('"sameAs"')]);
+checks.push(['P4', 'Font preload siteweit', fs.readdirSync(root).filter((f) => f.endsWith('.html') && !['prototype-apple.html', '267059-geschenkgutschein-vorlage.html'].includes(f)).every((f) => read(f).includes('source-sans-3-latin-400-normal.woff2'))]);
+checks.push(['P4', 'Footer Termin-Link', (() => {
+  const skip = new Set(['prototype-apple.html', '267059-geschenkgutschein-vorlage.html', 'termin.html', 'termin-tr.html', 'termin-en.html']);
+  const missing = fs.readdirSync(root).filter((f) => {
+    if (!f.endsWith('.html') || skip.has(f)) return false;
+    const footer = read(f).split('<footer')[1]?.split('</footer>')[0] || '';
+    return !/termin(-tr|-en)?\.html/.test(footer);
+  });
+  return missing.length === 0;
+})(), (() => {
+  const skip = new Set(['prototype-apple.html', '267059-geschenkgutschein-vorlage.html', 'termin.html', 'termin-tr.html', 'termin-en.html']);
+  return fs.readdirSync(root).filter((f) => {
+    if (!f.endsWith('.html') || skip.has(f)) return false;
+    const footer = read(f).split('<footer')[1]?.split('</footer>')[0] || '';
+    return !/termin(-tr|-en)?\.html/.test(footer);
+  }).join(', ') || 'ok';
+})()]);
+checks.push(['P4', 'TR Pratiden-Tippfehler behoben', !read('wissen-news-tr.html').includes('Pratiden')]);
+checks.push(['P4', '404 ohne canonical', !read('404.html').includes('rel="canonical"')]);
+checks.push(['P4', 'R-Force Meta ausführlich', read('r-force.html').includes('Antigravitations-Laufband')]);
+checks.push(['P4', 'WebPage Schema Rechtliches', read('impressum.html').includes('"@type": "WebPage"') && read('datenschutz.html').includes('"@type": "WebPage"')]);
+checks.push(['P4', 'Splash Alt index DE', read('index.html').includes('splash-screen__logo') && !read('index.html').match(/splash-screen__logo[^>]*alt=""/)]);
+
 console.log('=== SEO CHECKLIST ===\n');
 let fail = 0;
 for (const [prio, label, ok, note] of checks) {

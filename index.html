@@ -30,7 +30,8 @@
     if (/\/index\.html$/i.test(location.pathname)) location.replace('https://www.drcenik.at/');
   </script>
   <link rel="preload" href="assets/logo.webp" as="image">
-  <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="preload" href="assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles/fonts.css">
   <link rel="stylesheet" href="styles/critical.css">
 <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/mobile-navbar-fix.css?v=8">
@@ -65,7 +66,37 @@
       { "@type": "OpeningHoursSpecification", "name": "Ordinationszeiten", "dayOfWeek": "Thursday", "opens": "07:00", "closes": "12:00" }
     ],
     "priceRange": "€€",
-    "medicalSpecialty": ["PhysicalMedicine", "Rehabilitation"]
+    "medicalSpecialty": ["PhysicalMedicine", "Rehabilitation"],
+    "image": "https://www.drcenik.at/assets/logo.webp",
+    "sameAs": [
+      "https://www.google.com/maps/search/?api=1&query=Dr.+Fadime+Cenik+Kaiser-Ebersdorfer-Straße+328+Wien"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Dr. Fadime Cenik – Physikalische Medizin & Rehabilitation",
+    "url": "https://www.drcenik.at/",
+    "inLanguage": "de-AT",
+    "publisher": {
+      "@type": "Physician",
+      "name": "Dr. Fadime Cenik",
+      "url": "https://www.drcenik.at/"
+    },
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.drcenik.at/termin.html",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform"
+        ]
+      },
+      "name": "Termin anfragen"
+    }
   }
   </script>
 </head>
@@ -323,6 +354,7 @@
             <li><a href="faq.html">Häufige Fragen</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
+                      <li><a href="termin.html">Termin anfragen</a></li>
           </ul>
         </div>
         <div class="footer-col">
