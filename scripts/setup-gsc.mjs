@@ -45,20 +45,32 @@ Oder Token in config/gsc-verification.txt speichern (eine Zeile, ohne #).
 const meta = `  <meta name="google-site-verification" content="${token}">`;
 const metaRe = /<meta name="google-site-verification" content="[^"]*">\s*\n?/;
 
-let updated = 0;
-for (const file of fs.readdirSync(root).filter((f) => f.endsWith('.html'))) {
-  if (file === 'prototype-apple.html') continue;
-  const fp = path.join(root, file);
-  let html = fs.readFileSync(fp, 'utf8');
-  if (html.includes(`content="${token}"`)) continue;
+/** Mindestens Startseiten – reicht für URL-Präfix-Verifizierung */
+const PRIORITY = ['index.html', 'index-tr.html', 'index-en.html'];
+
+function patchHtml(html, file) {
+  if (html.includes(`content="${token}"`)) return null;
   if (metaRe.test(html)) {
-    html = html.replace(metaRe, meta + '\n');
-  } else if (html.includes('<meta charset="UTF-8">')) {
-    html = html.replace('<meta charset="UTF-8">', `<meta charset="UTF-8">\n${meta}`);
-  } else {
-    continue;
+    return html.replace(metaRe, meta + '\n');
   }
-  fs.writeFileSync(fp, html);
+  if (html.includes('<meta charset="UTF-8">')) {
+    return html.replace('<meta charset="UTF-8">', `<meta charset="UTF-8">\n${meta}`);
+  }
+  return null;
+}
+
+let updated = 0;
+const files = process.argv.includes('--all')
+  ? fs.readdirSync(root).filter((f) => f.endsWith('.html') && f !== 'prototype-apple.html')
+  : PRIORITY;
+
+for (const file of files) {
+  const fp = path.join(root, file);
+  if (!fs.existsSync(fp)) continue;
+  let html = fs.readFileSync(fp, 'utf8');
+  const next = patchHtml(html, file);
+  if (!next) continue;
+  fs.writeFileSync(fp, next);
   console.log('Meta-Tag gesetzt:', file);
   updated++;
 }
