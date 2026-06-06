@@ -460,6 +460,99 @@
     });
   }
 
+  function starsForRating(rating) {
+    var full = Math.round(Number(rating) || 0);
+    if (full < 0) full = 0;
+    if (full > 5) full = 5;
+    var out = '';
+    var i;
+    for (i = 0; i < full; i++) out += '★';
+    for (i = full; i < 5; i++) out += '☆';
+    return out;
+  }
+
+  function starsOutline(rating) {
+    return starsForRating(rating).split('').join(' ');
+  }
+
+  function formatRatingValue(rating) {
+    return (Math.round(Number(rating) * 10) / 10).toFixed(1);
+  }
+
+  function formatReviewMeta(reviewCount, syncedAt) {
+    var locale = lang();
+    var date = syncedAt ? new Date(syncedAt) : new Date();
+    var count = Math.max(0, Math.round(Number(reviewCount) || 0));
+    var monthYear;
+    var deMonths = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+    var trMonths = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+
+    if (locale === 'en') {
+      monthYear = new Intl.DateTimeFormat('en', { month: 'long', year: 'numeric' }).format(date);
+      return count + (count === 1 ? ' review · As of ' : ' reviews · As of ') + monthYear;
+    }
+    if (locale === 'tr') {
+      monthYear = trMonths[date.getMonth()] + ' ' + date.getFullYear();
+      return count + ' değerlendirme · Durum: ' + monthYear;
+    }
+    monthYear = deMonths[date.getMonth()] + ' ' + date.getFullYear();
+    return count + (count === 1 ? ' Bewertung · Stand: ' : ' Bewertungen · Stand: ') + monthYear;
+  }
+
+  function applyGoogleReviews(data) {
+    if (!data || !document.querySelector('.contact-google-reviews-block')) return;
+    var rating = formatRatingValue(data.rating);
+    var meta = formatReviewMeta(data.reviewCount, data.syncedAt);
+    var stars = starsForRating(data.rating);
+    var starsSpaced = starsOutline(data.rating);
+
+    document.querySelectorAll('.contact-google-stars').forEach(function (el) {
+      el.textContent = stars;
+    });
+    document.querySelectorAll('.contact-google-score').forEach(function (el) {
+      el.textContent = rating;
+    });
+    document.querySelectorAll('.contact-google-reviews').forEach(function (el) {
+      el.textContent = meta;
+    });
+    document.querySelectorAll('.contact-reviews-stars-outline').forEach(function (el) {
+      el.textContent = starsSpaced;
+    });
+    document.querySelectorAll('.contact-reviews-score').forEach(function (el) {
+      el.textContent = rating;
+    });
+    document.querySelectorAll('.contact-reviews-count').forEach(function (el) {
+      el.textContent = meta;
+    });
+
+    if (data.reviewUrl) {
+      document.querySelectorAll('.contact-google-reviews-block .btn-primary').forEach(function (el) {
+        el.setAttribute('href', data.reviewUrl);
+      });
+    }
+  }
+
+  function initGoogleReviews() {
+    if (!document.querySelector('.contact-google-reviews-block')) return;
+
+    var sources = ['/api/google-reviews', 'data/google-reviews.json'];
+
+    function tryFetch(index) {
+      if (index >= sources.length) return Promise.resolve();
+      return fetch(sources[index], { cache: 'no-store' })
+        .then(function (res) {
+          if (!res.ok) throw new Error('fetch failed');
+          return res.json();
+        })
+        .then(applyGoogleReviews)
+        .catch(function () {
+          return tryFetch(index + 1);
+        });
+    }
+
+    tryFetch(0);
+  }
+
   function init() {
     initSplash();
     initStickyCta();
@@ -472,6 +565,7 @@
     initCookieBanner();
     initMapsConsent();
     initForms();
+    initGoogleReviews();
   }
 
   if (document.readyState === 'loading') {

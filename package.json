@@ -25,7 +25,8 @@
     "enable-github-https": "node scripts/enable-github-pages-https.mjs",
     "audit-indexing": "node scripts/audit-indexing.mjs",
     "audit-images": "node scripts/audit-live-images.mjs",
-    "setup-gsc": "node scripts/setup-gsc.mjs"
+    "setup-gsc": "node scripts/setup-gsc.mjs",
+    "sync-google-reviews": "node scripts/sync-google-reviews.mjs"
   },
   "devDependencies": {
     "@fontsource/cormorant-garamond": "^5.2.5",
