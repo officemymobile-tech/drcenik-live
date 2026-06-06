@@ -7,7 +7,7 @@
 const CANONICAL = 'https://www.drcenik.at';
 const GITHUB_ORIGIN = 'https://officemymobile-tech.github.io';
 const PLACES_BASE = 'https://places.googleapis.com/v1';
-const PLACES_FIELD_MASK = 'id,rating,userRatingCount';
+const PLACES_FIELD_MASK = 'rating,userRatingCount';
 const REVIEWS_CACHE_TTL = 60 * 60 * 6;
 
 /** @param {URL} url */

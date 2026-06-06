@@ -11,7 +11,8 @@ const ROOT = path.resolve(__dirname, '../..');
 const GBP_PATH = path.join(ROOT, 'config/gbp.json');
 
 const PLACES_BASE = 'https://places.googleapis.com/v1';
-const FIELD_MASK = 'id,rating,userRatingCount';
+const FIELD_MASK = 'rating,userRatingCount';
+const SEARCH_FIELD_MASK = 'places.id,places.rating,places.userRatingCount';
 
 export function loadGbpConfig() {
   return JSON.parse(fs.readFileSync(GBP_PATH, 'utf8'));
@@ -26,13 +27,13 @@ function normalizePlaceId(id) {
   return id.startsWith('places/') ? id.slice('places/'.length) : id;
 }
 
-async function placesFetch(url, apiKey, init = {}) {
+async function placesFetch(url, apiKey, init = {}, fieldMask = FIELD_MASK) {
   const res = await fetch(url, {
     ...init,
     headers: {
       'Content-Type': 'application/json',
       'X-Goog-Api-Key': apiKey,
-      'X-Goog-FieldMask': FIELD_MASK,
+      'X-Goog-FieldMask': fieldMask,
       ...(init.headers || {}),
     },
   });
@@ -52,7 +53,7 @@ async function resolvePlaceId(gbp, apiKey) {
   const data = await placesFetch(`${PLACES_BASE}/places:searchText`, apiKey, {
     method: 'POST',
     body: JSON.stringify({ textQuery }),
-  });
+  }, SEARCH_FIELD_MASK);
 
   const place = data.places?.[0];
   if (!place?.id) {

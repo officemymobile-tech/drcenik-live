@@ -2,7 +2,7 @@
   "businessName": "Dr. Fadime Cenik",
   "accountId": "13753004035634104414",
   "locationFid": "16167401803672481750",
-  "placeId": "",
+  "placeId": "ChIJt14LF9yrbUcR1m_oKEgmXuA",
   "ludocid": "16167401803672481750",
   "mapsCidUrl": "https://www.google.com/maps?cid=16167401803672481750",
   "mapsPlaceUrl": "https://www.google.com/maps/place/Dr.Fadime+Cenik/@48.1588483,16.4717764,17z/data=!3m1!4b1!4m6!3m5!1s0x476dabdc170b5eb7:0xe05e264828e86fd6!8m2!3d48.1588483!4d16.4717764!16s%2Fg%2F11yx9rm5zy",
@@ -22,28 +22,88 @@
   ],
   "description": "Dr. med. univ. Fadime Cenik ist Fachärztin für Physikalische Medizin und allgemeine Rehabilitation in Wien 11 (1110 Simmering, Kaiser-Ebersdorfer-Straße 328). Seit 1990 am Standort: individuelle Therapien bei Beschwerden des Bewegungsapparats, Schmerzbehandlung und funktioneller Wiederherstellung nach Erkrankung, Unfall oder Operation.\n\nKassenleistungen der ÖGK, BVAEB und SVS (ärztlich verordnet) sowie Privatordination. Angebot: Heilmassage, Heilgymnastik, Physiotherapie, Manuelle Lymphdrainage, Elektrotherapie, Stoßwellentherapie, Indiba, Laser- und Magnetfeldtherapie, Medi-Taping und R-Force-Gehtraining mit Gewichtsentlastung.\n\nSchwerpunkt onkologische Rehabilitation · 37 wissenschaftliche Publikationen. Betreuung auf Deutsch, Türkisch und Englisch.\n\nTermin: 01 / 769 29 91 · www.drcenik.at/termin.html",
   "services": [
-    { "name": "Kassenleistung Physiotherapie", "desc": "ÖGK, BVAEB, SVS – bei ärztlicher Verordnung." },
-    { "name": "Heilmassage", "desc": "Heilmasseur mit Kassenvertrag, Wien 11." },
-    { "name": "Heilgymnastik", "desc": "Bewegungstherapie, Wirbelsäulengymnastik, Krafttraining." },
-    { "name": "Manuelle Lymphdrainage", "desc": "Entstauungstherapie nach Verordnung oder privat." },
-    { "name": "Stoßwellentherapie", "desc": "Schmerztherapie bei chronischen Beschwerden des Bewegungsapparats." },
-    { "name": "Indiba Radiofrequenztherapie", "desc": "Physikalische Therapie zur Schmerzlinderung und Regeneration." },
-    { "name": "Lasertherapie", "desc": "Physikalische Medizin in Wien 11." },
-    { "name": "Magnetfeldtherapie", "desc": "Unterstützende physikalische Behandlung." },
-    { "name": "Medi-Taping", "desc": "Tape-Anwendung zur Stabilisierung und Entlastung." },
-    { "name": "R-Force Gehtraining", "desc": "Antigravitations-Laufband mit Gewichtsentlastung – USP der Praxis." },
-    { "name": "Privatordination", "desc": "Ärztliche Befunderhebung und private Therapien ohne Kassenverordnung." },
-    { "name": "Medizinische Rehabilitation", "desc": "Wiederherstellung nach Erkrankung, OP oder Unfall." },
-    { "name": "Onkologische Rehabilitation", "desc": "Bewegungstherapie für Krebspatientinnen und -patienten." },
-    { "name": "Geschenkgutschein Therapie", "desc": "Gutschein für Massage und Therapien – www.drcenik.at/geschenkgutschein.html" }
+    {
+      "name": "Kassenleistung Physiotherapie",
+      "desc": "ÖGK, BVAEB, SVS – bei ärztlicher Verordnung."
+    },
+    {
+      "name": "Heilmassage",
+      "desc": "Heilmasseur mit Kassenvertrag, Wien 11."
+    },
+    {
+      "name": "Heilgymnastik",
+      "desc": "Bewegungstherapie, Wirbelsäulengymnastik, Krafttraining."
+    },
+    {
+      "name": "Manuelle Lymphdrainage",
+      "desc": "Entstauungstherapie nach Verordnung oder privat."
+    },
+    {
+      "name": "Stoßwellentherapie",
+      "desc": "Schmerztherapie bei chronischen Beschwerden des Bewegungsapparats."
+    },
+    {
+      "name": "Indiba Radiofrequenztherapie",
+      "desc": "Physikalische Therapie zur Schmerzlinderung und Regeneration."
+    },
+    {
+      "name": "Lasertherapie",
+      "desc": "Physikalische Medizin in Wien 11."
+    },
+    {
+      "name": "Magnetfeldtherapie",
+      "desc": "Unterstützende physikalische Behandlung."
+    },
+    {
+      "name": "Medi-Taping",
+      "desc": "Tape-Anwendung zur Stabilisierung und Entlastung."
+    },
+    {
+      "name": "R-Force Gehtraining",
+      "desc": "Antigravitations-Laufband mit Gewichtsentlastung – USP der Praxis."
+    },
+    {
+      "name": "Privatordination",
+      "desc": "Ärztliche Befunderhebung und private Therapien ohne Kassenverordnung."
+    },
+    {
+      "name": "Medizinische Rehabilitation",
+      "desc": "Wiederherstellung nach Erkrankung, OP oder Unfall."
+    },
+    {
+      "name": "Onkologische Rehabilitation",
+      "desc": "Bewegungstherapie für Krebspatientinnen und -patienten."
+    },
+    {
+      "name": "Geschenkgutschein Therapie",
+      "desc": "Gutschein für Massage und Therapien – www.drcenik.at/geschenkgutschein.html"
+    }
   ],
   "faqs": [
-    { "q": "Wie buche ich einen Termin?", "a": "Telefon 01 / 769 29 91, E-Mail office@drcenik.at oder www.drcenik.at/termin.html" },
-    { "q": "Werden Kosten von der ÖGK übernommen?", "a": "Ja, bei ärztlicher Verordnung und Kassenvertrag (ÖGK, BVAEB, SVS)." },
-    { "q": "Gibt es Privatordination?", "a": "Ja, unabhängig von Kassenverordnung." },
-    { "q": "Was ist R-Force?", "a": "Antigravitations-Laufband für Gehtraining mit Gewichtsentlastung." },
-    { "q": "Welche Sprachen?", "a": "Deutsch, Türkisch und Englisch." },
-    { "q": "Was bringe ich zum ersten Termin mit?", "a": "e-Card, Verordnung, Befunde, eigenes Leintuch." }
+    {
+      "q": "Wie buche ich einen Termin?",
+      "a": "Telefon 01 / 769 29 91, E-Mail office@drcenik.at oder www.drcenik.at/termin.html"
+    },
+    {
+      "q": "Werden Kosten von der ÖGK übernommen?",
+      "a": "Ja, bei ärztlicher Verordnung und Kassenvertrag (ÖGK, BVAEB, SVS)."
+    },
+    {
+      "q": "Gibt es Privatordination?",
+      "a": "Ja, unabhängig von Kassenverordnung."
+    },
+    {
+      "q": "Was ist R-Force?",
+      "a": "Antigravitations-Laufband für Gehtraining mit Gewichtsentlastung."
+    },
+    {
+      "q": "Welche Sprachen?",
+      "a": "Deutsch, Türkisch und Englisch."
+    },
+    {
+      "q": "Was bringe ich zum ersten Termin mit?",
+      "a": "e-Card, Verordnung, Befunde, eigenes Leintuch."
+    }
   ],
   "openingHoursTherapy": {
     "Mo": "07:00–19:00",
