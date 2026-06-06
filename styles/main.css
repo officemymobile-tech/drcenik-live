@@ -1746,6 +1746,47 @@ ul { list-style: none; margin: 0; padding: 0; }
 .mobile-cta-btn:focus-visible { outline-offset: 3px; }
 .mobile-cta.hidden { transform: translateY(100%); opacity: 0; pointer-events: none; }
 
+/* --- Mobile: schwebender Google-Maps-Pin --- */
+.mobile-maps-fab {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-maps-fab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    z-index: 999;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #ea4335;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(234, 67, 53, 0.45), 0 2px 6px rgba(35, 75, 94, 0.15);
+    text-decoration: none;
+    transition: transform 0.2s var(--ease-standard), box-shadow 0.2s var(--ease-standard);
+  }
+  body.has-mobile-cta .mobile-maps-fab {
+    bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+  .mobile-maps-fab:hover {
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(234, 67, 53, 0.5), 0 3px 8px rgba(35, 75, 94, 0.2);
+  }
+  .mobile-maps-fab:active { transform: scale(0.94); }
+  .mobile-maps-fab:focus-visible {
+    outline: 3px solid var(--navy-800);
+    outline-offset: 3px;
+  }
+  .mobile-maps-fab-icon {
+    width: 26px;
+    height: 26px;
+    display: block;
+  }
+}
+
 /* --- Cookie-Einwilligung („Alles akzeptieren“) --- */
 .cookie-consent {
   position: fixed;

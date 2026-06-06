@@ -48,6 +48,26 @@
     document.body.classList.add('has-mobile-cta');
   }
 
+  // --- Mobile: schwebender Google-Maps-Pin (Route zur Ordination) ---
+  (function () {
+    var MAPS_URL = 'https://www.google.com/maps/dir/?api=1&destination=Kaiser-Ebersdorfer-Stra%C3%9Fe+328,+1110+Wien,+%C3%96sterreich';
+    var lang = (document.documentElement.lang || 'de').slice(0, 2);
+    var labels = {
+      de: 'Route in Google Maps öffnen',
+      tr: 'Google Haritalar\'da yol tarifi aç',
+      en: 'Open directions in Google Maps'
+    };
+    var fab = document.createElement('a');
+    fab.href = MAPS_URL;
+    fab.className = 'mobile-maps-fab';
+    fab.setAttribute('target', '_blank');
+    fab.setAttribute('rel', 'noopener noreferrer');
+    fab.setAttribute('aria-label', labels[lang] || labels.de);
+    fab.innerHTML = '<svg class="mobile-maps-fab-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>';
+    document.body.appendChild(fab);
+    document.body.classList.add('has-mobile-maps-fab');
+  })();
+
   // --- Navbar scroll state ---
   const navbar = document.getElementById('navbar');
   if (navbar) {
