@@ -13,6 +13,8 @@
     "fix-p2-seo": "node scripts/fix-p2-p3-seo.mjs",
     "fix-critical-seo": "node scripts/fix-critical-seo.mjs",
     "fix-enterprise-seo": "node scripts/fix-enterprise-seo.mjs",
+    "fix-qa-seo": "node scripts/fix-qa-second-pass.mjs",
+    "audit-qa": "node scripts/audit-qa-second-pass.mjs",
     "fix-p2": "node scripts/fix-p2-audit.mjs",
     "optimize-webp": "node scripts/optimize-webp.mjs",
     "audit-seo": "node scripts/audit-seo-checklist.mjs",
