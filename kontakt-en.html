@@ -35,7 +35,7 @@
       <div class="navbar-actions">
         <a href="tel:+4317692991" class="navbar-phone">01 / 769 29 91</a>
         <div class="navbar-lang" aria-label="Language"><a href="kontakt.html" class="navbar-lang-link">DE</a><span class="navbar-lang-sep">|</span><a href="kontakt-tr.html" class="navbar-lang-link">TR</a><span class="navbar-lang-sep">|</span><a href="kontakt-en.html" class="navbar-lang-link is-active">EN</a></div>
-        <a href="kontakt-en.html" class="btn btn-primary">Book appointment</a>
+        <a href="termin-en.html" class="btn btn-primary">Book appointment</a>
       </div>
     </div>
   </nav>
@@ -246,27 +246,9 @@
 
   <aside class="mobile-cta" id="mobile-cta" aria-label="Quick actions">
     <a href="tel:+4317692991" class="mobile-cta-btn mobile-cta-phone">Call</a>
-    <a href="kontakt-en.html" class="mobile-cta-btn mobile-cta-book">Appointment</a>
+    <a href="termin-en.html" class="mobile-cta-btn mobile-cta-book">Appointment</a>
   </aside>
 
   <script src="scripts/main.js" defer></script>
-  <script>
-    (function() {
-      var form = document.getElementById('contact-form');
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          var consent = document.getElementById('contact-consent');
-          if (consent && !consent.checked) { consent.focus(); return; }
-          var name = (document.getElementById('contact-name') && document.getElementById('contact-name').value) || '';
-          var email = (document.getElementById('contact-email') && document.getElementById('contact-email').value) || '';
-          var phone = (document.getElementById('contact-phone') && document.getElementById('contact-phone').value) || '';
-          var msg = (document.getElementById('contact-message') && document.getElementById('contact-message').value) || '';
-          var body = 'Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\n\nMessage:\n' + msg;
-          window.location.href = 'mailto:office@drcenik.at?subject=Contact%20request%20drcenik.at&body=' + encodeURIComponent(body);
-        });
-      }
-    })();
-  </script>
 </body>
 </html>

@@ -35,7 +35,7 @@
       <div class="navbar-actions">
         <a href="tel:+4317692991" class="navbar-phone">01 / 769 29 91</a>
         <div class="navbar-lang" aria-label="Dil"><a href="kontakt.html" class="navbar-lang-link">DE</a><span class="navbar-lang-sep">|</span><a href="kontakt-tr.html" class="navbar-lang-link is-active">TR</a><span class="navbar-lang-sep">|</span><a href="kontakt-en.html" class="navbar-lang-link">EN</a></div>
-        <a href="kontakt-tr.html" class="btn btn-primary">Randevu al</a>
+        <a href="termin-tr.html" class="btn btn-primary">Randevu al</a>
       </div>
     </div>
   </nav>
@@ -246,27 +246,9 @@
 
   <aside class="mobile-cta" id="mobile-cta" aria-label="Hızlı işlemler">
     <a href="tel:+4317692991" class="mobile-cta-btn mobile-cta-phone">Ara</a>
-    <a href="kontakt-tr.html" class="mobile-cta-btn mobile-cta-book">Randevu</a>
+    <a href="termin-tr.html" class="mobile-cta-btn mobile-cta-book">Randevu</a>
   </aside>
 
   <script src="scripts/main.js" defer></script>
-  <script>
-    (function() {
-      var form = document.getElementById('contact-form');
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          var consent = document.getElementById('contact-consent');
-          if (consent && !consent.checked) { consent.focus(); return; }
-          var name = (document.getElementById('contact-name') && document.getElementById('contact-name').value) || '';
-          var email = (document.getElementById('contact-email') && document.getElementById('contact-email').value) || '';
-          var phone = (document.getElementById('contact-phone') && document.getElementById('contact-phone').value) || '';
-          var msg = (document.getElementById('contact-message') && document.getElementById('contact-message').value) || '';
-          var body = 'Ad: ' + name + '\nE-posta: ' + email + '\nTelefon: ' + phone + '\n\nMesaj:\n' + msg;
-          window.location.href = 'mailto:office@drcenik.at?subject=Iletisim%20talebi%20drcenik.at&body=' + encodeURIComponent(body);
-        });
-      }
-    })();
-  </script>
 </body>
 </html>

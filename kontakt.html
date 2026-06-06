@@ -91,7 +91,7 @@
           <span class="navbar-lang-sep">|</span>
           <a href="kontakt-en.html" class="navbar-lang-link" hreflang="en" lang="en">EN</a>
         </div>
-        <a href="kontakt.html" class="btn btn-primary">Termin buchen</a>
+        <a href="termin.html" class="btn btn-primary">Termin buchen</a>
       </div>
     </div>
   </nav>
@@ -307,30 +307,9 @@
 
   <aside class="mobile-cta" id="mobile-cta" aria-label="Schnellaktionen">
     <a href="tel:+4317692991" class="mobile-cta-btn mobile-cta-phone">Anrufen</a>
-    <a href="kontakt.html" class="mobile-cta-btn mobile-cta-book">Termin</a>
+    <a href="termin.html" class="mobile-cta-btn mobile-cta-book">Termin</a>
   </aside>
 
   <script src="scripts/main.js" defer></script>
-  <script>
-    (function() {
-      var form = document.getElementById('contact-form');
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          var consent = document.getElementById('contact-consent');
-          if (consent && !consent.checked) {
-            consent.focus();
-            return;
-          }
-          var name = (document.getElementById('contact-name') && document.getElementById('contact-name').value) || '';
-          var email = (document.getElementById('contact-email') && document.getElementById('contact-email').value) || '';
-          var phone = (document.getElementById('contact-phone') && document.getElementById('contact-phone').value) || '';
-          var msg = (document.getElementById('contact-message') && document.getElementById('contact-message').value) || '';
-          var body = 'Name: ' + name + '\nE-Mail: ' + email + '\nTelefon: ' + phone + '\n\nNachricht:\n' + msg;
-          window.location.href = 'mailto:office@drcenik.at?subject=Kontaktanfrage%20drcenik.at&body=' + encodeURIComponent(body);
-        });
-      }
-    })();
-  </script>
 </body>
 </html>

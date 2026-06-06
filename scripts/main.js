@@ -8,26 +8,38 @@
 
   function init() {
 
-  // --- Splash Screen: Intro-Logo 2 Sekunden (nur einmal pro Session) ---
+  // --- Splash Screen: kurz, überspringbar, blockiert keine Interaktion nach Dismiss ---
   (function () {
     var splash = document.getElementById('splash-screen');
     if (!splash) return;
     var HIDDEN = 'splash-screen--hidden';
     var STORAGE_KEY = 'drcenikSplashShown';
-    var DURATION_MS = 2000;
-    var FADE_MS = 500;
+    var SHOW_MS = 700;
+    var FADE_MS = 250;
+    var dismissed = false;
 
-    if (sessionStorage.getItem(STORAGE_KEY)) {
+    function dismissSplash() {
+      if (dismissed) return;
+      dismissed = true;
       splash.classList.add(HIDDEN);
+      splash.setAttribute('aria-hidden', 'true');
+      try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
       setTimeout(function () { splash.remove(); }, FADE_MS);
+    }
+
+    if (sessionStorage.getItem(STORAGE_KEY) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      splash.remove();
       return;
     }
 
-    setTimeout(function () {
-      splash.classList.add(HIDDEN);
-      sessionStorage.setItem(STORAGE_KEY, '1');
-      setTimeout(function () { splash.remove(); }, FADE_MS);
-    }, DURATION_MS);
+    splash.setAttribute('aria-hidden', 'false');
+    splash.setAttribute('title', 'Tippen zum Überspringen');
+    splash.addEventListener('click', dismissSplash);
+    splash.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') dismissSplash();
+    });
+    setTimeout(dismissSplash, SHOW_MS);
   })();
 
   // --- Sticky CTA-Bar: body class für Abstand (Desktop & Mobile) ---
@@ -305,6 +317,37 @@
     banner.querySelector('.cookie-consent-accept').addEventListener('click', function () { closeBanner('accepted'); });
     banner.querySelector('.cookie-consent-necessary').addEventListener('click', function () { closeBanner('necessary'); });
   }
+
+  // --- Kontakt- & Terminformulare (mailto) ---
+  (function () {
+    var forms = [
+      { id: 'contact-form', subject: 'Kontaktanfrage drcenik.at', consentId: 'contact-consent' },
+      { id: 'booking-form', subject: 'Terminanfrage drcenik.at', consentId: 'booking-consent' }
+    ];
+    forms.forEach(function (cfg) {
+      var form = document.getElementById(cfg.id);
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var consent = document.getElementById(cfg.consentId);
+        if (consent && !consent.checked) {
+          consent.focus();
+          return;
+        }
+        var name = (form.querySelector('[name="name"]') || {}).value || '';
+        var email = (form.querySelector('[name="email"]') || {}).value || '';
+        var phone = (form.querySelector('[name="phone"]') || {}).value || '';
+        var msg = (form.querySelector('[name="message"]') || {}).value || '';
+        var date = (form.querySelector('[name="preferred_date"]') || {}).value || '';
+        var time = (form.querySelector('[name="preferred_time"]') || {}).value || '';
+        var body = 'Name: ' + name + '\nE-Mail: ' + email + '\nTelefon: ' + phone;
+        if (date) body += '\nWunschtermin: ' + date;
+        if (time) body += '\nWunschzeit: ' + time;
+        body += '\n\nNachricht:\n' + msg;
+        window.location.href = 'mailto:office@drcenik.at?subject=' + encodeURIComponent(cfg.subject) + '&body=' + encodeURIComponent(body);
+      });
+    });
+  })();
 
   } // end init()
 

@@ -295,16 +295,17 @@ ul { list-style: none; margin: 0; padding: 0; }
   color: var(--bronze-700);
 }
 
-/* --- Splash Screen (Intro-Logo 2 Sekunden) --- */
+/* --- Splash Screen (kurz, überspringbar) --- */
 .splash-screen {
   position: fixed;
   inset: 0;
-  z-index: 10000;
+  z-index: 9000;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--cream-100);
-  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+  cursor: pointer;
+  transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
 }
 .splash-screen.splash-screen--hidden {
   opacity: 0;
@@ -321,10 +322,10 @@ ul { list-style: none; margin: 0; padding: 0; }
   to { opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .splash-screen,
-  .splash-screen.splash-screen--hidden { transition-duration: 0.2s; }
+  .splash-screen { display: none !important; }
   .splash-screen__logo { animation: none; opacity: 1; }
 }
+.booking-form-wrap { max-width: 640px; margin: 2rem auto 0; }
 
 /* --- 4. LAYOUT --- */
 .container {
@@ -1751,7 +1752,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 10001;
   padding: 16px 5%;
   padding-bottom: max(16px, env(safe-area-inset-bottom));
   background: var(--ref-bg-card);
