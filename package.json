@@ -10,7 +10,8 @@
     "sitemap": "node scripts/generate-sitemap.mjs",
     "fix-p1": "node scripts/fix-p1-audit.mjs",
     "fix-p2": "node scripts/fix-p2-audit.mjs",
-    "optimize-webp": "node scripts/optimize-webp.mjs"
+    "optimize-webp": "node scripts/optimize-webp.mjs",
+    "audit-images": "node scripts/audit-live-images.mjs"
   },
   "devDependencies": {
     "@fontsource/cormorant-garamond": "^5.2.5",
