@@ -22,12 +22,17 @@
   AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css application/javascript application/json
 </IfModule>
 
-# SEO: Canonical-URLs erzwingen
+# SEO: Canonical-URLs erzwingen (Rewrite + Redirect für World4You-Kompatibilität)
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /
   RewriteRule ^index\.html$ / [R=301,L]
   RewriteRule ^267059-geschenkgutschein-vorlage\.html$ /geschenkgutschein.html [R=301,L]
 </IfModule>
+
+# Fallback wenn mod_rewrite deaktiviert ist (mod_alias)
+Redirect 301 /index.html https://www.drcenik.at/
+Redirect 301 /267059-geschenkgutschein-vorlage.html https://www.drcenik.at/geschenkgutschein.html
 
 # Benutzerdefinierte 404-Seite
 ErrorDocument 404 /404.html
