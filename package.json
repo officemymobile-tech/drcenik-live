@@ -7,7 +7,8 @@
     "site-update": "node scripts/apply-site-updates.mjs",
     "favicons": "node scripts/generate-favicons.mjs",
     "fonts": "node scripts/download-fonts.mjs",
-    "sitemap": "node scripts/generate-sitemap.mjs"
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "fix-p1": "node scripts/fix-p1-audit.mjs"
   },
   "devDependencies": {
     "@fontsource/cormorant-garamond": "^5.2.5",

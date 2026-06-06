@@ -24,7 +24,7 @@ function deUrl(file) {
   return SITE + '/' + file.replace(/-tr\.html$/, '.html').replace(/-en\.html$/, '.html');
 }
 
-function ogBlock(title, desc, url) {
+function ogBlock(title, desc, url, locale = 'de_AT') {
   const t = title.replace(/"/g, '&quot;');
   const d = desc.replace(/"/g, '&quot;');
   return `  <meta property="og:title" content="${t}">
@@ -32,10 +32,16 @@ function ogBlock(title, desc, url) {
   <meta property="og:type" content="website">
   <meta property="og:url" content="${url}">
   <meta property="og:image" content="${SITE}/assets/logo.webp">
-  <meta property="og:locale" content="de_AT">
+  <meta property="og:locale" content="${locale}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="${t}">
   <meta name="twitter:description" content="${d}">`;
+}
+
+function localeForFile(file) {
+  if (file.endsWith('-tr.html')) return 'tr_TR';
+  if (file.endsWith('-en.html')) return 'en_AT';
+  return 'de_AT';
 }
 
 function patchFile(filePath) {
@@ -68,7 +74,7 @@ function patchFile(filePath) {
     const canonM = html.match(/<link rel="canonical" href="([^"]+)">/);
     if (titleM && descM) {
       const url = canonM ? canonM[1] : SITE + '/' + file;
-      const block = ogBlock(titleM[1], descM[1], url);
+      const block = ogBlock(titleM[1], descM[1], url, localeForFile(file));
       html = html.replace(/(<meta name="description" content="[^"]*">)/, '$1\n' + block);
       changed = true;
     }
@@ -97,7 +103,7 @@ function patchFile(filePath) {
                 <p class="body-text contact-map-consent-text">${blockedLabels[lang]}</p>
                 <button type="button" class="btn btn-primary" data-maps-load>${loadLabels[lang]}</button>
               </div>
-              <iframe class="contact-map-iframe" data-maps-iframe data-src="${src}"${rest.replace(/\s*loading="lazy"/, '')} hidden title="Google Maps"></iframe>
+              <iframe class="contact-map-iframe" data-maps-iframe data-src="${src}"${rest.replace(/\s*loading="lazy"/, '').replace(/\s*hidden title="Google Maps"/, '')} hidden></iframe>
             </div>`;
       }
     );

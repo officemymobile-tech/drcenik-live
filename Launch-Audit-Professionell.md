@@ -273,4 +273,17 @@ Die Website ist fachlich und rechtlich gut vorbereitet; die größte technische 
 | **Mittelfristig** | Launch-Docs aktualisieren | ✅ Dieser Abschnitt |
 | **Mittelfristig** | Logo.png.webp entfernen | ✅ Nicht mehr vorhanden; nur `logo.webp` |
 
-**Build-Skripte:** `npm run fonts`, `npm run favicons`, `npm run site-update`, `node scripts/generate-sitemap.mjs`
+**Build-Skripte:** `npm run fonts`, `npm run favicons`, `npm run site-update`, `npm run sitemap`, `npm run fix-p1`
+
+---
+
+## 10. P1-Nachbesserung (Juni 2026)
+
+| Maßnahme | Status |
+|----------|--------|
+| Schema Ordinationszeiten TR/EN | ✅ `index-tr.html`, `index-en.html` |
+| hreflang Startseite vereinheitlicht | ✅ DE + x-default → `/` |
+| og:locale pro Sprache | ✅ `de_AT` / `tr_TR` / `en_AT` auf allen Seiten |
+| Termin-Hinweis FormSubmit | ✅ DE/TR/EN |
+| 404-Routing | ✅ `ErrorDocument 404 /404.html` in `.htaccess` |
+| SEO-Checkliste aktualisiert | ✅ Gutschein in Sitemap |

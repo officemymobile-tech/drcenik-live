@@ -34,7 +34,7 @@ Detaillierte Prüfpunkte mit **Was**, **Warum**, **Wie testen** und **Idealer Zu
 
 ### Befund Ihre Website (Technisches SEO)
 - **robots.txt**: Vorhanden, `Allow: /`, Sitemap verlinkt, `Disallow: /prototype-apple.html` – gut.
-- **sitemap.xml**: Vollständig mit DE/EN/TR, hreflang in urlset, lastmod/priority gesetzt. **Hinweis:** `267059-geschenkgutschein-vorlage.html` fehlt in der Sitemap – bei gewünschter Indexierung aufnehmen.
+- **sitemap.xml**: Vollständig mit DE/EN/TR, hreflang in urlset inkl. `x-default`, lastmod/priority gesetzt. Gutschein-Vorlage (`267059-geschenkgutschein-vorlage.html`) enthalten.
 - **Canonical**: Auf allen geprüften Seiten gesetzt (index, ueber-uns, wissen-news, kontakt, etc.) mit `https://www.drcenik.at/...`.
 - **noindex**: Keine noindex auf wichtigen Seiten gefunden – gut.
 
@@ -159,7 +159,7 @@ Detaillierte Prüfpunkte mit **Was**, **Warum**, **Wie testen** und **Idealer Zu
 - **Navigation**: Einheitliche Nav mit Startseite, Therapieangebot, R-Force, Wissen & News, FAQ, Über uns, Kontakt – gut.
 - **Footer**: Gleiche Struktur + Impressum, Datenschutz, AGB – gut.
 - **Interne Verweise**: Wissen & News verlinkt auf Kontakt/Telefon; Startseite Erkenntnisse → wissen-news.html; Gutschein-Vorlage von Startseite verlinkt – sinnvoll.
-- **Gutschein-Vorlage**: Nur in Nav nicht verlinkt (bewusst als Zusatzseite) – ok; bei Sichtbarkeit in Sitemap aufnehmen.
+- **Gutschein-Vorlage**: In Sitemap enthalten; nur in Nav nicht verlinkt (bewusst als Zusatzseite) – ok.
 
 ---
 
@@ -267,7 +267,7 @@ Detaillierte Prüfpunkte mit **Was**, **Warum**, **Wie testen** und **Idealer Zu
 - **Canonicals**: Auf https://www.drcenik.at/... gesetzt – gut.
 - **Hreflang**: Im Sitemap und in den HTML-Head-Bereichen (link rel="alternate" hreflang) für DE/EN/TR verwendet – gut. Vor Live prüfen: Jede Sprachversion verweist auf alle drei (de, en, tr) inkl. sich selbst.
 - **Prototyp**: `prototype-apple.html` in robots.txt disallow – sinnvoll, nicht in Sitemap – gut.
-- **Gutschein-Vorlage**: In Sitemap fehlend – je nach Ziel: aufnehmen oder bewusst nicht indexieren (dann ggf. noindex oder in robots disallow).
+- **Gutschein-Vorlage**: In Sitemap enthalten (`267059-geschenkgutschein-vorlage.html`); bei Bedarf noindex setzen, falls nicht indexiert werden soll.
 
 ---
 
@@ -275,7 +275,7 @@ Detaillierte Prüfpunkte mit **Was**, **Warum**, **Wie testen** und **Idealer Zu
 
 | Bereich | Prüfung | Status (Beispiel) |
 |--------|---------|-------------------|
-| Technisch | robots.txt, Sitemap, Canonical, noindex | ✅ weitgehend ok; Sitemap: Gutschein-Vorlage optional |
+| Technisch | robots.txt, Sitemap, Canonical, noindex | ✅ inkl. Gutschein-Vorlage in Sitemap |
 | Onpage | Title, Meta, H1 pro Seite | ✅ ok; Gutschein-Seite: H1 statt H2 |
 | Content | Keywords, keine Thin Content | ✅ ok |
 | Bilder | Alt-Texte, Dateinamen, Größen | ⚠ Alt bei Artikelbildern ausbaufähig |
