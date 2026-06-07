@@ -4221,3 +4221,90 @@ body.page-home.theme-ref {
     max-width: 90px !important;
   }
 }
+
+/* =========================
+   LOCAL SEO LANDING PAGES
+========================= */
+.local-seo-hero {
+  padding-bottom: var(--space-8);
+}
+.local-seo-hero .section-header {
+  margin-bottom: var(--space-6);
+}
+.local-trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  justify-content: center;
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-6);
+  background: var(--cream-100);
+  border: 1px solid var(--cream-200);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy-700);
+}
+.local-trust-bar span:not(:last-child)::after {
+  content: "·";
+  margin-left: var(--space-4);
+  font-weight: 400;
+  color: var(--gray-400);
+}
+.local-seo-hero-cta {
+  margin-top: var(--space-6);
+}
+.local-seo-hero-cta .cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+.local-seo-mid-cta,
+.local-seo-end-cta {
+  margin: var(--space-10) 0;
+}
+.local-seo-content .heading-3 {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+.related-treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-6) 0 var(--space-8);
+}
+.related-treatment-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.related-treatment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.related-treatment-card .card-link {
+  margin-top: auto;
+  padding-top: var(--space-3);
+  font-weight: 600;
+  color: var(--gold-600);
+}
+.local-seo-home-grid {
+  margin-top: var(--space-4);
+}
+@media (max-width: 768px) {
+  .local-trust-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .local-trust-bar span:not(:last-child)::after {
+    content: none;
+  }
+  .related-treatments-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -339,4 +339,60 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.drcenik.at/r-force-therapie-wien/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.drcenik.at/r-force-therapie-wien/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drcenik.at/r-force-therapie-wien/"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://www.drcenik.at/stosswellentherapie-wien/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.drcenik.at/stosswellentherapie-wien/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drcenik.at/stosswellentherapie-wien/"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://www.drcenik.at/nackenschmerzen-ursachen/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.drcenik.at/nackenschmerzen-ursachen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drcenik.at/nackenschmerzen-ursachen/"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://www.drcenik.at/rueckenschmerzen-wien/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.drcenik.at/rueckenschmerzen-wien/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drcenik.at/rueckenschmerzen-wien/"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://www.drcenik.at/knieschmerzen-behandlung/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.drcenik.at/knieschmerzen-behandlung/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drcenik.at/knieschmerzen-behandlung/"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://www.drcenik.at/schulter-schmerzen/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.drcenik.at/schulter-schmerzen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drcenik.at/schulter-schmerzen/"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://www.drcenik.at/faszienschmerzen/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.drcenik.at/faszienschmerzen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.drcenik.at/faszienschmerzen/"/>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
 </urlset>

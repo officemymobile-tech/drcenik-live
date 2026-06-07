@@ -1,0 +1,128 @@
+{
+  "description": "Google Business Profile posts for Local SEO landing pages – one post per page with suggested schedule",
+  "timezone": "Europe/Vienna",
+  "ctaDefault": {
+    "type": "BOOK",
+    "url": "https://www.drcenik.at/termin.html"
+  },
+  "schedule": {
+    "startDate": "2026-06-09",
+    "intervalDays": 7,
+    "preferredPostDay": "Tuesday",
+    "preferredPostTime": "09:00"
+  },
+  "posts": [
+    {
+      "id": "post-r-force-therapie-wien",
+      "pageSlug": "r-force-therapie-wien",
+      "scheduledDate": "2026-06-09",
+      "scheduledTime": "09:00",
+      "topicType": "STANDARD",
+      "language": "de",
+      "title": "R-Force Gehtraining in Wien 11",
+      "summary": "Antigravitations-Laufband mit bis zu 100 % Gewichtsentlastung – ideal nach Knie-OP, Kreuzband-Reha oder bei neurologischen Erkrankungen. Fachärztin Dr. Cenik, Simmering seit 1990.",
+      "callToAction": {
+        "type": "BOOK",
+        "url": "https://www.drcenik.at/termin.html"
+      },
+      "link": "https://www.drcenik.at/r-force-therapie-wien/",
+      "hashtags": ["Wien11", "Simmering", "RForce", "Rehabilitation"]
+    },
+    {
+      "id": "post-stosswellentherapie-wien",
+      "pageSlug": "stosswellentherapie-wien",
+      "scheduledDate": "2026-06-16",
+      "scheduledTime": "09:00",
+      "topicType": "STANDARD",
+      "language": "de",
+      "title": "Stoßwellentherapie (ESWT) Wien 11",
+      "summary": "Chronische Sehnen- und Ansatzschmerzen? Stoßwellentherapie in unserer Ordination Kaiser-Ebersdorfer-Straße 328 – kombiniert mit Heilmassage und Heilgymnastik. ÖGK, BVAEB, SVS mit Verordnung.",
+      "callToAction": {
+        "type": "CALL",
+        "url": "tel:+4317692991"
+      },
+      "link": "https://www.drcenik.at/stosswellentherapie-wien/",
+      "hashtags": ["Stosswelle", "ESWT", "Wien11", "Schmerztherapie"]
+    },
+    {
+      "id": "post-nackenschmerzen-ursachen",
+      "pageSlug": "nackenschmerzen-ursachen",
+      "scheduledDate": "2026-06-23",
+      "scheduledTime": "09:00",
+      "topicType": "STANDARD",
+      "language": "de",
+      "title": "Nackenschmerzen – Ursachen verstehen",
+      "summary": "Verspannter Nacken nach Bildschirmarbeit? Wir erklären häufige Ursachen, Warnsignale und wann eine fachärztliche Abklärung in Simmering sinnvoll ist.",
+      "callToAction": {
+        "type": "BOOK",
+        "url": "https://www.drcenik.at/termin.html"
+      },
+      "link": "https://www.drcenik.at/nackenschmerzen-ursachen/",
+      "hashtags": ["Nackenschmerzen", "HWS", "Wien11", "PhysikalischeMedizin"]
+    },
+    {
+      "id": "post-rueckenschmerzen-wien",
+      "pageSlug": "rueckenschmerzen-wien",
+      "scheduledDate": "2026-06-30",
+      "scheduledTime": "09:00",
+      "topicType": "STANDARD",
+      "language": "de",
+      "title": "Rückenschmerzen behandeln – Wien 11",
+      "summary": "Hexenschuss oder chronischer Kreuzschmerz? Heilgymnastik, Massage und physikalische Therapie bei Dr. Fadime Cenik in Simmering. Termin: 01 / 769 29 91.",
+      "callToAction": {
+        "type": "BOOK",
+        "url": "https://www.drcenik.at/termin.html"
+      },
+      "link": "https://www.drcenik.at/rueckenschmerzen-wien/",
+      "hashtags": ["Rueckenschmerzen", "Wien11", "Heilgymnastik", "Simmering"]
+    },
+    {
+      "id": "post-knieschmerzen-behandlung",
+      "pageSlug": "knieschmerzen-behandlung",
+      "scheduledDate": "2026-07-07",
+      "scheduledTime": "09:00",
+      "topicType": "STANDARD",
+      "language": "de",
+      "title": "Knieschmerzen – konservative Behandlung",
+      "summary": "Arthrose, Meniskus oder Patellaprobleme? Strukturierte Knietherapie in Wien 11 – inkl. R-Force Gehtraining und Stoßwelle bei Indikation.",
+      "callToAction": {
+        "type": "CALL",
+        "url": "tel:+4317692991"
+      },
+      "link": "https://www.drcenik.at/knieschmerzen-behandlung/",
+      "hashtags": ["Knieschmerzen", "Wien11", "Rehabilitation", "RForce"]
+    },
+    {
+      "id": "post-schulter-schmerzen",
+      "pageSlug": "schulter-schmerzen",
+      "scheduledDate": "2026-07-14",
+      "scheduledTime": "09:00",
+      "topicType": "STANDARD",
+      "language": "de",
+      "title": "Schulterschmerzen – Therapie Wien 11",
+      "summary": "Impingement, Frozen Shoulder oder Rotatorenmanschettenreizung? Konservative Schultertherapie in Simmering – Fachärztin für Physikalische Medizin.",
+      "callToAction": {
+        "type": "BOOK",
+        "url": "https://www.drcenik.at/termin.html"
+      },
+      "link": "https://www.drcenik.at/schulter-schmerzen/",
+      "hashtags": ["Schulterschmerzen", "Wien11", "Impingement", "Simmering"]
+    },
+    {
+      "id": "post-faszienschmerzen",
+      "pageSlug": "faszienschmerzen",
+      "scheduledDate": "2026-07-21",
+      "scheduledTime": "09:00",
+      "topicType": "STANDARD",
+      "language": "de",
+      "title": "Faszienschmerzen & Triggerpunkte",
+      "summary": "Myofasziale Beschwerden und verklebtes Gewebe? Heilmassage und manuelle Therapie bei Dr. Cenik, Wien 11 – seit 1990 am Standort.",
+      "callToAction": {
+        "type": "BOOK",
+        "url": "https://www.drcenik.at/termin.html"
+      },
+      "link": "https://www.drcenik.at/faszienschmerzen/",
+      "hashtags": ["Faszienschmerzen", "Triggerpunkte", "Wien11", "Heilmassage"]
+    }
+  ]
+}

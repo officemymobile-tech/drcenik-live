@@ -27,6 +27,16 @@ const singles = [
   ['geschenkgutschein.html', 'monthly', '0.6'],
 ];
 
+const localSeoSingles = [
+  ['r-force-therapie-wien/', 'monthly', '0.88'],
+  ['stosswellentherapie-wien/', 'monthly', '0.88'],
+  ['nackenschmerzen-ursachen/', 'monthly', '0.88'],
+  ['rueckenschmerzen-wien/', 'monthly', '0.88'],
+  ['knieschmerzen-behandlung/', 'monthly', '0.88'],
+  ['schulter-schmerzen/', 'monthly', '0.88'],
+  ['faszienschmerzen/', 'monthly', '0.88'],
+];
+
 function loc(file) {
   return file === '' ? SITE + '/' : SITE + '/' + file;
 }
@@ -49,6 +59,10 @@ for (const [de, tr, en] of clusters) {
 }
 
 for (const [file, freq, pri] of singles) {
+  xml += `  <url>\n    <loc>${loc(file)}</loc>\n    <xhtml:link rel="alternate" hreflang="de" href="${loc(file)}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${loc(file)}"/>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>${freq}</changefreq>\n    <priority>${pri}</priority>\n  </url>\n`;
+}
+
+for (const [file, freq, pri] of localSeoSingles) {
   xml += `  <url>\n    <loc>${loc(file)}</loc>\n    <xhtml:link rel="alternate" hreflang="de" href="${loc(file)}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${loc(file)}"/>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>${freq}</changefreq>\n    <priority>${pri}</priority>\n  </url>\n`;
 }
 
