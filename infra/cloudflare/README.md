@@ -77,6 +77,8 @@ wrangler deploy
 
 Worker-Route muss `*drcenik.at/*` abdecken (siehe `wrangler.toml`).
 
+Der Worker setzt zusätzlich **Security Headers** (HSTS, CSP, X-Frame-Options, Referrer-Policy, Permissions-Policy, X-Content-Type-Options) auf alle Antworten. Details und Prüfbefehle: `AKTIVIERUNG.md` → Schritt 6.
+
 ## Schritt 4 — GitHub Pages
 
 Repository → **Settings → Pages → Enforce HTTPS** aktivieren.

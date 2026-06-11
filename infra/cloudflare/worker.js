@@ -1,6 +1,6 @@
 /**
- * Edge-301 für drcenik.at vor GitHub Pages.
- * Deploy: npx wrangler deploy (siehe README.md)
+ * Edge-301 + Security-Headers für drcenik.at vor GitHub Pages.
+ * Deploy: npx wrangler deploy (siehe README.md, AKTIVIERUNG.md)
  *
  * Optional: GET /api/google-reviews – cached Places API proxy (Secret GOOGLE_PLACES_API_KEY).
  */
@@ -9,10 +9,59 @@ const PLACES_BASE = 'https://places.googleapis.com/v1';
 const PLACES_FIELD_MASK = 'rating,userRatingCount';
 const REVIEWS_CACHE_TTL = 60 * 60 * 6;
 
+/**
+ * CSP abgestimmt auf statische Site: self-hosted Assets, GA4/Maps nach Consent,
+ * FormSubmit, img onerror-Fallbacks (script-src-attr), wenige inline styles (404).
+ */
+const CONTENT_SECURITY_POLICY = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com",
+  "script-src-attr 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data:",
+  "font-src 'self'",
+  "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://formsubmit.co",
+  "frame-src https://www.google.com",
+  "frame-ancestors 'self'",
+  "form-action 'self'",
+  "upgrade-insecure-requests",
+].join('; ');
+
+/** @type {Record<string, string>} */
+const SECURITY_HEADERS = {
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'SAMEORIGIN',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy':
+    'accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()',
+  'Content-Security-Policy': CONTENT_SECURITY_POLICY,
+};
+
+/** @param {Headers} headers */
+function applySecurityHeaders(headers) {
+  for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
+    headers.set(key, value);
+  }
+}
+
+/** @param {Response} response */
+function withSecurityHeaders(response) {
+  const headers = new Headers(response.headers);
+  applySecurityHeaders(headers);
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 /** @param {URL} url */
 function redirect301(url, targetPath, search = '') {
   const dest = `${CANONICAL}${targetPath}${search}`;
-  return Response.redirect(dest, 301);
+  return withSecurityHeaders(Response.redirect(dest, 301));
 }
 
 /** @param {Request} request */
@@ -82,15 +131,14 @@ function normalizeRequest(request) {
 }
 
 function jsonResponse(data, status = 200, extraHeaders = {}) {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: {
-      'Content-Type': 'application/json; charset=utf-8',
-      'Access-Control-Allow-Origin': CANONICAL,
-      'Cache-Control': `public, max-age=${REVIEWS_CACHE_TTL}`,
-      ...extraHeaders,
-    },
+  const headers = new Headers({
+    'Content-Type': 'application/json; charset=utf-8',
+    'Access-Control-Allow-Origin': CANONICAL,
+    'Cache-Control': `public, max-age=${REVIEWS_CACHE_TTL}`,
+    ...extraHeaders,
   });
+  applySecurityHeaders(headers);
+  return new Response(JSON.stringify(data), { status, headers });
 }
 
 /** @param {string} apiKey @param {string} placeId */
@@ -128,13 +176,13 @@ async function fetchPlaceReviews(apiKey, placeId) {
 /** @param {Request} request @param {Record<string, string>} env */
 async function handleGoogleReviews(request, env) {
   if (request.method === 'OPTIONS') {
-    return new Response(null, {
-      headers: {
-        'Access-Control-Allow-Origin': CANONICAL,
-        'Access-Control-Allow-Methods': 'GET, OPTIONS',
-        'Access-Control-Max-Age': '86400',
-      },
+    const headers = new Headers({
+      'Access-Control-Allow-Origin': CANONICAL,
+      'Access-Control-Allow-Methods': 'GET, OPTIONS',
+      'Access-Control-Max-Age': '86400',
     });
+    applySecurityHeaders(headers);
+    return new Response(null, { headers });
   }
 
   const apiKey = env.GOOGLE_PLACES_API_KEY;
@@ -183,10 +231,6 @@ export default {
       redirect: 'manual',
     });
 
-    return new Response(originResponse.body, {
-      status: originResponse.status,
-      statusText: originResponse.statusText,
-      headers: originResponse.headers,
-    });
+    return withSecurityHeaders(originResponse);
   },
 };
