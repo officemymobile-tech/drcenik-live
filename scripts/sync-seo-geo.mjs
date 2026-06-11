@@ -87,23 +87,23 @@ index = index.replace(
 );
 write('index.html', index);
 
-// --- index-en.html ---
+// --- en/index.html ---
 const en = cfg.copy.en;
-let indexEn = read('index-en.html');
+let indexEn = read('en/index.html');
 indexEn = setMetaContent(indexEn, 'name="description"', en.metaHome);
 indexEn = setMetaContent(indexEn, 'property="og:description"', en.metaHomeOg);
 indexEn = setMetaContent(indexEn, 'name="twitter:description"', en.metaHomeTwitter);
 indexEn = patchPhysicianSchema(indexEn);
-write('index-en.html', indexEn);
+write('en/index.html', indexEn);
 
-// --- index-tr.html ---
+// --- tr/index.html ---
 const tr = cfg.copy.tr;
-let indexTr = read('index-tr.html');
+let indexTr = read('tr/index.html');
 indexTr = setMetaContent(indexTr, 'name="description"', tr.metaHome);
 indexTr = setMetaContent(indexTr, 'property="og:description"', tr.metaHomeOg);
 indexTr = setMetaContent(indexTr, 'name="twitter:description"', tr.metaHomeTwitter);
 indexTr = patchPhysicianSchema(indexTr);
-write('index-tr.html', indexTr);
+write('tr/index.html', indexTr);
 
 // --- kontakt.html ---
 let kontakt = read('kontakt.html');

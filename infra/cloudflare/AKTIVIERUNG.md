@@ -44,7 +44,40 @@ Sobald Cloudflare-NS aktiv sind:
 
 ---
 
-## Schritt 3 — DNS in Cloudflare (nach NS-Umstellung)
+## Schritt 3 — DNS in Cloudflare (P0: www proxied)
+
+**Ohne diesen Schritt bleiben Live-301-Redirects bei 3/7** (`index.html`, Gutschein, Trailing-Slash).
+
+### Option A — API (empfohlen)
+
+1. Cloudflare Dashboard → **My Profile** → **API Tokens** → **Create Token**
+2. Vorlage **Edit zone DNS** oder Custom:
+   - Zone → DNS → Edit
+   - Zone → Zone → Read
+   - Zone → Zone Settings → Edit (für Always Use HTTPS)
+3. Zone: `drcenik.at`
+
+```powershell
+cd C:\Users\Kassa\drcenik-live
+$env:CLOUDFLARE_API_TOKEN = "DEIN_TOKEN"
+npm run provision-cloudflare-dns
+npm run audit-redirects
+```
+
+Setzt automatisch:
+
+| Typ | Name | Ziel | Proxy |
+|-----|------|------|-------|
+| CNAME | www | officemymobile-tech.github.io | ✅ orange |
+| A | @ | 185.199.108–111.153 (GitHub Pages) | ✅ |
+
+### Option B — Dashboard (ohne Token)
+
+Cloudflare → `drcenik.at` → **DNS** → `www` CNAME → **Proxied** (orange Wolke, nicht grau)
+
+---
+
+## Schritt 3b — DNS-Details (Referenz)
 
 ### Option A — API (empfohlen)
 

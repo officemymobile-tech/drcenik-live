@@ -7,20 +7,20 @@ import { fileURLToPath } from 'url';
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://www.drcenik.at';
-const TODAY = '2026-06-06';
+const TODAY = new Date().toISOString().slice(0, 10);
 
 const clusters = [
-  ['', 'index-tr.html', 'index-en.html'],
-  ['ueber-uns.html', 'ueber-uns-tr.html', 'ueber-uns-en.html'],
-  ['therapieangebot.html', 'therapieangebot-tr.html', 'therapieangebot-en.html'],
-  ['r-force.html', 'r-force-tr.html', 'r-force-en.html'],
-  ['wissen-news.html', 'wissen-news-tr.html', 'wissen-news-en.html'],
-  ['faq.html', 'faq-tr.html', 'faq-en.html'],
-  ['kontakt.html', 'kontakt-tr.html', 'kontakt-en.html'],
-  ['impressum.html', 'impressum-tr.html', 'impressum-en.html'],
-  ['datenschutz.html', 'datenschutz-tr.html', 'datenschutz-en.html'],
-  ['agb.html', 'agb-tr.html', 'agb-en.html'],
-  ['termin.html', 'termin-tr.html', 'termin-en.html'],
+  ['', 'tr/', 'en/'],
+  ['ueber-uns.html', 'tr/ueber-uns.html', 'en/ueber-uns.html'],
+  ['therapieangebot.html', 'tr/therapieangebot.html', 'en/therapieangebot.html'],
+  ['r-force.html', 'tr/r-force.html', 'en/r-force.html'],
+  ['wissen-news.html', 'tr/wissen-news.html', 'en/wissen-news.html'],
+  ['faq.html', 'tr/faq.html', 'en/faq.html'],
+  ['kontakt.html', 'tr/kontakt.html', 'en/kontakt.html'],
+  ['impressum.html', 'tr/impressum.html', 'en/impressum.html'],
+  ['datenschutz.html', 'tr/datenschutz.html', 'en/datenschutz.html'],
+  ['agb.html', 'tr/agb.html', 'en/agb.html'],
+  ['termin.html', 'tr/termin.html', 'en/termin.html'],
 ];
 
 const singles = [

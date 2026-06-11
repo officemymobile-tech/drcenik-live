@@ -38,6 +38,8 @@ const TARGETS = [
   { rel: 'assets/images/wissen-news/artikel-4-klinik.webp', maxWidth: 800, quality: 80 },
   { rel: 'assets/images/wissen-news/artikel-5-reha.webp', maxWidth: 800, quality: 80 },
   { rel: 'assets/images/wissen-news/artikel-6-therapie.webp', maxWidth: 800, quality: 80 },
+  { rel: 'assets/gbp/gbp-praxis-empfang.webp', maxWidth: 1200, quality: 76 },
+  { rel: 'assets/gbp/gbp-schulterschmerzen.webp', maxWidth: 1000, quality: 76 },
 ];
 
 function download(url) {

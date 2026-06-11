@@ -24,6 +24,14 @@
   # Legacy Gutschein
   RewriteRule ^267059-geschenkgutschein-vorlage\.html$ /geschenkgutschein.html [R=301,L,NC]
 
+  # i18n clean URLs (legacy *-tr.html / *-en.html)
+  RewriteRule ^index-tr\.html$ /tr/ [R=301,L,NC]
+  RewriteRule ^index-en\.html$ /en/ [R=301,L,NC]
+  RewriteRule ^([a-z0-9-]+)-tr\.html$ /tr/$1.html [R=301,L,NC]
+  RewriteRule ^([a-z0-9-]+)-en\.html$ /en/$1.html [R=301,L,NC]
+  RewriteRule ^tr/index\.html$ /tr/ [R=301,L,NC]
+  RewriteRule ^en/index\.html$ /en/ [R=301,L,NC]
+
   # Trailing Slash auf *.html
   RewriteRule ^(.+\.html)/+$ /$1 [R=301,L,NC]
 </IfModule>

@@ -54,7 +54,7 @@ const localNotInSitemap = [...localPaths].filter((u) => u !== `${SITE}/404.html`
 if (localNotInSitemap.length) console.log('  Nicht in Sitemap:', localNotInSitemap.join(', '));
 
 // sample live pages
-const samples = ['', 'kontakt.html', 'therapieangebot.html', 'wissen-news.html', 'index-tr.html', '404.html'];
+const samples = ['', 'kontakt.html', 'therapieangebot.html', 'wissen-news.html', 'tr/', 'en/', 'faszienschmerzen/', '404.html'];
 console.log('\nLIVE-STICHPROBE:');
 console.log('PAGE'.padEnd(26), 'HTTP', 'ROBOTS', 'CANONICAL');
 for (const p of samples) {
