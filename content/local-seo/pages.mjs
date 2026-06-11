@@ -1,5 +1,6 @@
 import { EXTENDED_SECTIONS } from './extended-sections.mjs';
 import { SUPPLEMENT_SECTIONS } from './supplement-sections.mjs';
+import { GEO } from './geo.mjs';
 
 /** @typedef {{ q: string, a: string }} Faq */
 /** @typedef {{ h3: string, paragraphs: string[] }} Subsection */
@@ -8,9 +9,10 @@ import { SUPPLEMENT_SECTIONS } from './supplement-sections.mjs';
 /** @typedef {{ slug: string, title: string, metaDescription: string, h1: string, heroIntro: string, breadcrumbName: string, schemaName: string, schemaType?: string, conditionName?: string, sections: Section[], faqs: Faq[], related: RelatedLink[] }} LocalSeoPage */
 
 const LOCAL = {
-  addr: 'Kaiser-Ebersdorfer-Straße 328, 1110 Wien (Simmering)',
-  district: 'Wien 11 (Simmering)',
-  phone: '01 / 769 29 91',
+  addr: GEO.addr,
+  district: GEO.district,
+  region: GEO.region,
+  phone: GEO.phone,
 };
 
 /** @type {RelatedLink[]} */

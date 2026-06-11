@@ -9,6 +9,7 @@
     "fonts": "node scripts/download-fonts.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "build-local-seo": "node scripts/build-local-seo-pages.mjs",
+    "sync-seo-geo": "node scripts/sync-seo-geo.mjs",
     "fix-p1": "node scripts/fix-p1-audit.mjs",
     "fix-p1-seo": "node scripts/fix-p1-seo.mjs",
     "fix-p2-seo": "node scripts/fix-p2-p3-seo.mjs",
@@ -30,6 +31,7 @@
     "audit-indexing": "node scripts/audit-indexing.mjs",
     "audit-images": "node scripts/audit-live-images.mjs",
     "setup-gsc": "node scripts/setup-gsc.mjs",
+    "gbp-export": "node scripts/gbp-export.mjs",
     "sync-google-reviews": "node scripts/sync-google-reviews.mjs",
     "apply-google-reviews-cache": "node scripts/apply-google-reviews-cache.mjs"
   },

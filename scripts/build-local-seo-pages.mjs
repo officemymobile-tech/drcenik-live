@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { PAGES, ALL_SLUGS } from '../content/local-seo/pages.mjs';
+import { GEO, AREA_SERVED_SCHEMA, SERVICE_AREA_SCHEMA } from '../content/local-seo/geo.mjs';
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://www.drcenik.at';
@@ -102,11 +103,8 @@ function buildSchemas(page, url) {
     description: page.metaDescription,
     url,
     provider: { '@id': PHYSICIAN_ID },
-    areaServed: {
-      '@type': 'City',
-      name: 'Wien',
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Simmering', containedInPlace: { '@type': 'City', name: 'Wien' } },
-    },
+    areaServed: AREA_SERVED_SCHEMA,
+    serviceArea: SERVICE_AREA_SCHEMA,
     availableChannel: {
       '@type': 'ServiceChannel',
       serviceUrl: url,
@@ -224,12 +222,12 @@ ${buildSchemas(page, url)}
     <section class="local-seo-hero section-standard" aria-labelledby="page-heading">
       <div class="container">
         <div class="local-trust-bar" role="note" aria-label="Vertrauensmerkmale">
-          <span>Seit 1990 in Wien 11</span>
+          <span>Seit 1990 in 1110 Wien</span>
           <span>Fachärztin für Physikalische Medizin</span>
           <span>Kassen: ÖGK · BVAEB · SVS</span>
         </div>
         <div class="section-header">
-          <span class="overline">Wien 11 · Simmering</span>
+          <span class="overline">${GEO.overline}</span>
           <h1 class="heading-1" id="page-heading">${page.h1}</h1>
           <p class="body-text-lg">${page.heroIntro}</p>
         </div>
@@ -268,8 +266,8 @@ ${renderFaqs(page.faqs)}
         </div>
 
         <div class="cta-block cta-block-large local-seo-end-cta">
-          <h2 class="heading-2">Termin in Wien 11 vereinbaren</h2>
-          <p class="body-text">Ob akute Beschwerden oder chronische Schmerzen: In unserer Ordination in Simmering finden wir gemeinsam den passenden Behandlungsweg. Rufen Sie an oder nutzen Sie unser Online-Formular.</p>
+          <h2 class="heading-2">${GEO.terminCta || 'Termin in 1110 Wien vereinbaren'}</h2>
+          <p class="body-text">Ob akute Beschwerden oder chronische Schmerzen: In unserer Ordination in Simmering finden wir gemeinsam den passenden Behandlungsweg – ${GEO.terminText || 'gut erreichbar aus 1100 Wien, Schwechat und dem 15-km-Umkreis.'} Rufen Sie an oder nutzen Sie unser Online-Formular.</p>
           <div class="cta-actions">
             <a href="tel:+4317692991" class="btn btn-primary">Jetzt anrufen</a>
             <a href="../termin.html" class="btn btn-secondary">Termin buchen</a>

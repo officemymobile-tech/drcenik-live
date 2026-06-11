@@ -1,0 +1,75 @@
+{
+  "dsgvo": {
+    "aiGenerated": true,
+    "noPersonalData": true,
+    "noIdentifiableFaces": true,
+    "purpose": "Google Business Profile Illustrationen",
+    "notice": "KI-generierte Symbolfotos ohne erkennbare Personen. Keine echten Patient:innen oder Praxisräume."
+  },
+  "images": [
+    {
+      "file": "gbp-faszienschmerzen.webp",
+      "source": "gbp-faszienschmerzen.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 83202,
+      "service": "faszienschmerzen"
+    },
+    {
+      "file": "gbp-nackenschmerzen.webp",
+      "source": "gbp-nackenschmerzen.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 68350,
+      "service": "nackenschmerzen"
+    },
+    {
+      "file": "gbp-knieschmerzen.webp",
+      "source": "gbp-knieschmerzen.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 84306,
+      "service": "knieschmerzen"
+    },
+    {
+      "file": "gbp-praxis-empfang.webp",
+      "source": "gbp-praxis-empfang.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 163690,
+      "service": "praxis-empfang"
+    },
+    {
+      "file": "gbp-rueckenschmerzen.webp",
+      "source": "gbp-rueckenschmerzen.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 76992,
+      "service": "rueckenschmerzen"
+    },
+    {
+      "file": "gbp-r-force-gehtraining.webp",
+      "source": "gbp-r-force-gehtraining.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 87652,
+      "service": "r-force-gehtraining"
+    },
+    {
+      "file": "gbp-stosswellentherapie.webp",
+      "source": "gbp-stosswellentherapie.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 47600,
+      "service": "stosswellentherapie"
+    },
+    {
+      "file": "gbp-schulterschmerzen.webp",
+      "source": "gbp-schulterschmerzen.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 120200,
+      "service": "schulterschmerzen"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 node_modules/
 package-lock.json
+logs/
 config/gsc-verification.txt
 config/google-places.env
 .env

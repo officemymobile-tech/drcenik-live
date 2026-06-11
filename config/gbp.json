@@ -20,7 +20,18 @@
     "Massage-Therapeut",
     "Medizinisches Zentrum"
   ],
-  "description": "Dr. med. univ. Fadime Cenik ist Fachärztin für Physikalische Medizin und allgemeine Rehabilitation in Wien 11 (1110 Simmering, Kaiser-Ebersdorfer-Straße 328). Seit 1990 am Standort: individuelle Therapien bei Beschwerden des Bewegungsapparats, Schmerzbehandlung und funktioneller Wiederherstellung nach Erkrankung, Unfall oder Operation.\n\nKassenleistungen der ÖGK, BVAEB und SVS (ärztlich verordnet) sowie Privatordination. Angebot: Heilmassage, Heilgymnastik, Physiotherapie, Manuelle Lymphdrainage, Elektrotherapie, Stoßwellentherapie, Indiba, Laser- und Magnetfeldtherapie, Medi-Taping und R-Force-Gehtraining mit Gewichtsentlastung.\n\nSchwerpunkt onkologische Rehabilitation · 37 wissenschaftliche Publikationen. Betreuung auf Deutsch, Türkisch und Englisch.\n\nTermin: 01 / 769 29 91 · www.drcenik.at/termin.html",
+  "description": "Dr. med. univ. Fadime Cenik ist Fachärztin für Physikalische Medizin und Rehabilitation in 1110 Wien (Simmering), Kaiser-Ebersdorfer-Straße 328. Seit 1990 am Standort.\n\nEinzugsgebiet: 1100 Wien, 1110 Wien, Schwechat, Mannswörth, Fischamend, Himberg, Leopoldsdorf, Maria Lanzendorf, Enzersdorf an der Fischa (ca. 15 km).\n\nSchwerpunkte: R-Force Gehtraining · Stoßwellentherapie · Nacken & HWS · Rücken · Knie · Schulter · Faszienschmerzen. Dazu Heilmassage, Heilgymnastik, Lymphdrainage, Indiba, Laser, Medi-Taping.\n\nÖGK, BVAEB, SVS mit Verordnung · Privatordination. Onkologische Rehabilitation. Deutsch, Türkisch, Englisch.\n\nTermin: 01 / 769 29 91",
+  "descriptionNote": "GBP: keine URLs. Einzugsgebiet aus config/seo-geo.json",
+  "descriptionCharCount": 647,
+  "localSeoServicesInDescription": [
+    "R-Force Gehtraining (Antigravitations-Laufband)",
+    "Stoßwellentherapie (ESWT)",
+    "Nackenschmerzen – Diagnostik & Therapie",
+    "Rückenschmerzen – konservative Therapie",
+    "Knieschmerzen – Rehabilitation & Therapie",
+    "Schulterschmerzen – konservative Therapie",
+    "Faszienschmerzen & Triggerpunkt-Therapie"
+  ],
   "services": [
     {
       "name": "Kassenleistung Physiotherapie",
@@ -126,5 +137,21 @@
     "body": "Dr. med. univ. Fadime Cenik – Kassenleistungen (ÖGK, BVAEB, SVS) und Privatordination. Heilmassage, Heilgymnastik, Stoßwelle, Indiba, R-Force. Praxis seit 1990 in Simmering.\n\nTermin: 01 / 769 29 91 · www.drcenik.at/termin.html",
     "cta": "Termin buchen",
     "ctaUrl": "https://www.drcenik.at/termin.html"
-  }
+  },
+  "localSeoConfig": "config/gbp-local-seo.json",
+  "localSeoPosts": "config/gbp-local-posts.json",
+  "localSeoExport": "npm run gbp-export",
+  "seoGeoConfig": "config/seo-geo.json",
+  "serviceAreaKm": 15,
+  "serviceAreaLabels": [
+    "1110 Wien",
+    "1100 Wien",
+    "Schwechat",
+    "Mannswörth",
+    "Fischamend",
+    "Himberg",
+    "Leopoldsdorf",
+    "Maria Lanzendorf",
+    "Enzersdorf an der Fischa"
+  ]
 }

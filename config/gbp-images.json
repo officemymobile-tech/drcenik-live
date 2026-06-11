@@ -1,0 +1,72 @@
+{
+  "dsgvo": {
+    "aiGenerated": true,
+    "noPersonalData": true,
+    "noIdentifiableFaces": true,
+    "license": "Interne Praxis-Illustrationen, KI-generiert",
+    "noticeDe": "Symbolfotos ohne erkennbare Personen. Keine Abbildung echter Patient:innen, Räume oder Mitarbeiter.",
+    "noticeTr": "Tanınabilir kişi yok. Gerçek hasta, oda veya personel tasviri değildir."
+  },
+  "directory": "assets/gbp",
+  "gbpUploadFormat": "png",
+  "gbpUploadNote": "Google Business Profile akzeptiert kein WebP – immer *.png (oder JPEG) hochladen.",
+  "gbpUploadStatus": "2026-06-07: 8 PNGs hochgeladen, Google-Prüfung ausstehend",
+  "images": [
+    {
+      "id": "r-force",
+      "serviceId": "r-force-therapie-wien",
+      "fileWebp": "gbp-r-force-gehtraining.webp",
+      "fileGbp": "gbp-r-force-gehtraining.png",
+      "gbpCaptionDe": "R-Force Gehtraining – Antigravitations-Laufband (Symbolfoto)"
+    },
+    {
+      "id": "stosswelle",
+      "serviceId": "stosswellentherapie-wien",
+      "fileWebp": "gbp-stosswellentherapie.webp",
+      "fileGbp": "gbp-stosswellentherapie.png",
+      "gbpCaptionDe": "Stoßwellentherapie ESWT in der Physiotherapie (Symbolfoto)"
+    },
+    {
+      "id": "nacken",
+      "serviceId": "nackenschmerzen-ursachen",
+      "fileWebp": "gbp-nackenschmerzen.webp",
+      "fileGbp": "gbp-nackenschmerzen.png",
+      "gbpCaptionDe": "Nacken- und HWS-Therapie (Symbolfoto)"
+    },
+    {
+      "id": "ruecken",
+      "serviceId": "rueckenschmerzen-wien",
+      "fileWebp": "gbp-rueckenschmerzen.webp",
+      "fileGbp": "gbp-rueckenschmerzen.png",
+      "gbpCaptionDe": "Rückenschmerzen – Heilgymnastik und Bewegungstherapie (Symbolfoto)"
+    },
+    {
+      "id": "knie",
+      "serviceId": "knieschmerzen-behandlung",
+      "fileWebp": "gbp-knieschmerzen.webp",
+      "fileGbp": "gbp-knieschmerzen.png",
+      "gbpCaptionDe": "Knieschmerzen – Rehabilitation und Knietraining (Symbolfoto)"
+    },
+    {
+      "id": "schulter",
+      "serviceId": "schulter-schmerzen",
+      "fileWebp": "gbp-schulterschmerzen.webp",
+      "fileGbp": "gbp-schulterschmerzen.png",
+      "gbpCaptionDe": "Schulterschmerzen – Physiotherapie und Mobilisation (Symbolfoto)"
+    },
+    {
+      "id": "faszien",
+      "serviceId": "faszienschmerzen",
+      "fileWebp": "gbp-faszienschmerzen.webp",
+      "fileGbp": "gbp-faszienschmerzen.png",
+      "gbpCaptionDe": "Faszienschmerzen und Triggerpunkt-Therapie (Symbolfoto)"
+    },
+    {
+      "id": "empfang",
+      "serviceId": null,
+      "fileWebp": "gbp-praxis-empfang.webp",
+      "fileGbp": "gbp-praxis-empfang.png",
+      "gbpCaptionDe": "Physiotherapie- und Rehabilitationsordination – Empfangsbereich (Symbolfoto)"
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "practice": {
+    "name": "Dr. Fadime Cenik",
+    "street": "Kaiser-Ebersdorfer-Straße 328",
+    "postalCode": "1110",
+    "city": "Wien",
+    "district": "Simmering",
+    "districtLabel": "Wien 11",
+    "country": "AT",
+    "coordinates": {
+      "latitude": 48.1588483,
+      "longitude": 16.4717764
+    }
+  },
+  "serviceRadiusKm": 15,
+  "primaryTargets": [
+    {
+      "id": "1110",
+      "postalCode": "1110",
+      "label": "1110 Wien",
+      "place": "Simmering",
+      "district": "Wien 11",
+      "priority": "primary"
+    },
+    {
+      "id": "1100",
+      "postalCode": "1100",
+      "label": "1100 Wien",
+      "place": "Favoriten",
+      "district": "Wien 10",
+      "priority": "secondary"
+    },
+    {
+      "id": "schwechat",
+      "postalCode": "2320",
+      "label": "Schwechat",
+      "place": "Schwechat",
+      "adminArea": "Niederösterreich",
+      "priority": "secondary"
+    },
+    {
+      "id": "mannswoerth",
+      "postalCode": "2320",
+      "label": "Mannswörth",
+      "place": "Mannswörth",
+      "adminArea": "Niederösterreich",
+      "priority": "suburb"
+    },
+    {
+      "id": "fischamend",
+      "postalCode": "2401",
+      "label": "Fischamend",
+      "place": "Fischamend",
+      "adminArea": "Niederösterreich",
+      "priority": "suburb"
+    },
+    {
+      "id": "himberg",
+      "postalCode": "2325",
+      "label": "Himberg",
+      "place": "Himberg bei Wien",
+      "adminArea": "Niederösterreich",
+      "priority": "suburb"
+    },
+    {
+      "id": "leopoldsdorf",
+      "postalCode": "2333",
+      "label": "Leopoldsdorf",
+      "place": "Leopoldsdorf bei Wien",
+      "adminArea": "Niederösterreich",
+      "priority": "suburb"
+    },
+    {
+      "id": "maria-lanzendorf",
+      "postalCode": "2332",
+      "label": "Maria Lanzendorf",
+      "place": "Maria Lanzendorf",
+      "adminArea": "Niederösterreich",
+      "priority": "suburb"
+    },
+    {
+      "id": "enzersdorf-fischa",
+      "postalCode": "2431",
+      "label": "Enzersdorf an der Fischa",
+      "place": "Enzersdorf an der Fischa",
+      "adminArea": "Niederösterreich",
+      "priority": "suburb"
+    }
+  ],
+  "schema": {
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.1588483,
+        "longitude": 16.4717764
+      },
+      "geoRadius": "15000"
+    },
+    "areaServed": [
+      { "@type": "PostalCode", "postalCode": "1110", "addressCountry": "AT" },
+      { "@type": "PostalCode", "postalCode": "1100", "addressCountry": "AT" },
+      {
+        "@type": "Place",
+        "name": "Simmering",
+        "containedInPlace": { "@type": "City", "name": "Wien" }
+      },
+      {
+        "@type": "Place",
+        "name": "Favoriten",
+        "containedInPlace": { "@type": "City", "name": "Wien" }
+      },
+      {
+        "@type": "Place",
+        "name": "Schwechat",
+        "containedInPlace": { "@type": "AdministrativeArea", "name": "Niederösterreich" }
+      },
+      {
+        "@type": "Place",
+        "name": "Mannswörth",
+        "containedInPlace": { "@type": "AdministrativeArea", "name": "Niederösterreich" }
+      },
+      {
+        "@type": "Place",
+        "name": "Fischamend",
+        "containedInPlace": { "@type": "AdministrativeArea", "name": "Niederösterreich" }
+      },
+      {
+        "@type": "Place",
+        "name": "Himberg bei Wien",
+        "containedInPlace": { "@type": "AdministrativeArea", "name": "Niederösterreich" }
+      },
+      {
+        "@type": "Place",
+        "name": "Leopoldsdorf bei Wien",
+        "containedInPlace": { "@type": "AdministrativeArea", "name": "Niederösterreich" }
+      },
+      {
+        "@type": "Place",
+        "name": "Maria Lanzendorf",
+        "containedInPlace": { "@type": "AdministrativeArea", "name": "Niederösterreich" }
+      },
+      {
+        "@type": "Place",
+        "name": "Enzersdorf an der Fischa",
+        "containedInPlace": { "@type": "AdministrativeArea", "name": "Niederösterreich" }
+      }
+    ]
+  },
+  "gbpKeywords": [
+    "1110 wien",
+    "1100 wien",
+    "schwechat",
+    "mannswörth",
+    "fischamend",
+    "himberg",
+    "leopoldsdorf",
+    "maria lanzendorf",
+    "enzersdorf an der fischa",
+    "physiotherapie simmering",
+    "physiotherapie favoriten",
+    "physiotherapie schwechat",
+    "rehabilitation wien 11",
+    "rehabilitation schwechat",
+    "physikalische medizin 1110",
+    "heilgymnastik simmering"
+  ],
+  "copy": {
+    "de": {
+      "metaHome": "Dr. Fadime Cenik – Physikalische Medizin & Rehabilitation in 1110 Wien (Simmering). Einzugsgebiet: 1100 Wien, Schwechat, Mannswörth, Fischamend, Himberg und Umgebung (15 km).",
+      "metaHomeOg": "Physikalische Medizin in 1110 Wien – erreichbar aus 1100 Wien, Schwechat, Mannswörth, Fischamend und Umgebung (15 km).",
+      "metaHomeTwitter": "Physikalische Medizin 1110 Wien · 1100 Wien · Schwechat · Mannswörth · Fischamend (15 km).",
+      "metaKontakt": "Kontakt – Ordination Dr. Cenik, 1110 Wien (Simmering). Einzugsgebiet 1100 Wien, Schwechat, Mannswörth, Fischamend, Himberg, 15 km Umkreis. Adresse, Anfahrt, Öffnungszeiten.",
+      "metaKontaktOg": "Ordination 1110 Wien – Anfahrt aus 1100 Wien, Schwechat, Mannswörth, Fischamend und Umgebung (15 km).",
+      "heroBadge": "1110 Wien · 1100 Wien · Schwechat · Mannswörth · Fischamend",
+      "cardLocation": "1110 Wien (Simmering) · Einzugsgebiet 15 km",
+      "localSectionTitle": "Schwerpunkte – 1110 Wien, 1100 Wien & Umgebung",
+      "localSectionSubtitle": "Physikalische Medizin in Simmering – für Patientinnen und Patienten aus Wien 10/11, Schwechat, Mannswörth, Fischamend, Himberg und Umgebung (ca. 15 km)",
+      "reachLine": "Einzugsgebiet: 1110 Wien, 1100 Wien, Schwechat, Mannswörth, Fischamend, Himberg und Umgebung (ca. 15 km)",
+      "overline": "1110 Wien · 1100 Wien · Schwechat · Mannswörth · Fischamend · 15 km",
+      "district": "1110 Wien (Simmering)",
+      "region": "Wien 10/11, Schwechat, Mannswörth, Fischamend, Himberg und 15-km-Umkreis",
+      "terminCta": "Termin in 1110 Wien vereinbaren",
+      "terminText": "Gut erreichbar aus 1100 Wien (Favoriten), Schwechat, Mannswörth, Fischamend und dem 15-km-Umkreis.",
+      "kontaktIntro": "Ordination in 1110 Wien (Simmering) – Einzugsgebiet 1100 Wien, Schwechat, Mannswörth, Fischamend, Himberg und Umgebung (ca. 15 km).",
+      "kontaktFaqAnfahrt": "Kaiser-Ebersdorfer-Straße 328, 1110 Wien (Simmering). Gut erreichbar aus 1100 Wien (Favoriten), Schwechat, Mannswörth, Fischamend und Wien 11. Bus (71B, 73A, 76B, 79A, 79B) und Tram (11, 71) bis Kaiserebersdorf, Zinnergasse.",
+      "gbpDescription": "Dr. med. univ. Fadime Cenik ist Fachärztin für Physikalische Medizin und Rehabilitation in 1110 Wien (Simmering), Kaiser-Ebersdorfer-Straße 328. Seit 1990 am Standort.\n\nEinzugsgebiet: 1100 Wien, 1110 Wien, Schwechat, Mannswörth, Fischamend, Himberg, Leopoldsdorf, Maria Lanzendorf, Enzersdorf an der Fischa (ca. 15 km).\n\nSchwerpunkte: R-Force Gehtraining · Stoßwellentherapie · Nacken & HWS · Rücken · Knie · Schulter · Faszienschmerzen. Dazu Heilmassage, Heilgymnastik, Lymphdrainage, Indiba, Laser, Medi-Taping.\n\nÖGK, BVAEB, SVS mit Verordnung · Privatordination. Onkologische Rehabilitation. Deutsch, Türkisch, Englisch.\n\nTermin: 01 / 769 29 91"
+    },
+    "en": {
+      "metaHome": "Dr. Fadime Cenik – Physical Medicine in 1110 Vienna (Simmering). Service area: 1100 Vienna, Schwechat and surroundings (15 km).",
+      "metaHomeOg": "Physical Medicine in 1110 Vienna – reachable from 1100 Vienna, Schwechat and within 15 km.",
+      "metaHomeTwitter": "Physical Medicine 1110 Vienna · 1100 Vienna · Schwechat (15 km radius).",
+      "heroBadge": "1110 Vienna · 1100 Vienna · Schwechat",
+      "cardLocation": "1110 Vienna (Simmering) · 15 km service area",
+      "localSectionTitle": "Treatments – 1110 Vienna, 1100 Vienna & Schwechat",
+      "localSectionSubtitle": "Physical Medicine in Simmering – for patients from Vienna 10/11, Schwechat and within ~15 km"
+    },
+    "tr": {
+      "metaHome": "Dr. Fadime Cenik – Fiziksel Tıp, 1110 Viyana (Simmering). Hizmet alanı: 1100 Viyana, Schwechat ve çevresi (15 km).",
+      "metaHomeOg": "1110 Viyana'da Fiziksel Tıp – 1100 Viyana, Schwechat ve 15 km çevreden ulaşılabilir.",
+      "metaHomeTwitter": "Fiziksel Tıp 1110 Viyana · 1100 Viyana · Schwechat (15 km).",
+      "heroBadge": "1110 Viyana · 1100 Viyana · Schwechat",
+      "cardLocation": "1110 Viyana (Simmering) · 15 km hizmet alanı",
+      "localSectionTitle": "Tedaviler – 1110 Viyana, 1100 Viyana ve Schwechat",
+      "localSectionSubtitle": "Simmering'de Fiziksel Tıp – Viyana 10/11, Schwechat ve 15 km çevre için"
+    }
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "profile": {
+    "businessName": "Dr. Fadime Cenik",
+    "address": "Kaiser-Ebersdorfer-Straße 328, 1110 Wien, Österreich",
+    "phone": "01 / 769 29 91",
+    "phoneTel": "+4317692991",
+    "bookingUrl": "https://www.drcenik.at/termin.html",
+    "reviewUrl": "https://www.google.com/maps/place/Dr.Fadime+Cenik/@48.1588483,16.4717764,17z/data=!4m6!3m5!1s0x476dabdc170b5eb7:0xe05e264828e86fd6!8m2!3d48.1588483!4d16.4717764!16s%2Fg%2F11yx9rm5zy!9m1!1b1",
+    "editUrl": "https://business.google.com/n/13753004035634104414/profile?fid=16167401803672481750",
+    "primaryCategory": "Arzt für physikalische Medizin und allgemeine Rehabilitation",
+    "secondaryCategories": [
+      "Rehabilitationszentrum",
+      "Physiotherapie-Praxis",
+      "Schmerztherapeut",
+      "Massage-Therapeut",
+      "Medizinisches Zentrum"
+    ]
+  },
+  "postingStrategy": {
+    "frequency": "1x pro Woche, Dienstag 09:00",
+    "timezone": "Europe/Vienna",
+    "rotationWeeks": 8,
+    "notes": "Jede Woche anderer Service-Fokus. Woche 8: allgemeiner Praxis-Post (postTemplate in gbp.json)."
+  },
+  "reviewTemplates": {
+    "requestSms": "Vielen Dank für Ihren Besuch bei Dr. Fadime Cenik in Wien 11. Wenn Sie zufrieden waren, freuen wir uns über eine Google-Bewertung – das hilft anderen Patienten, uns zu finden: {reviewUrl} · Dauer ca. 1 Minute. Herzlichen Dank!",
+    "replyPositive": "Vielen Dank für Ihre freundliche Bewertung und Ihr Vertrauen! Wir freuen uns, Sie in unserer Ordination in Simmering begleiten zu dürfen. Ihr Team Dr. Fadime Cenik",
+    "replyCritical": "Vielen Dank für Ihr Feedback. Wir nehmen Ihre Anmerkung ernst und würden das gerne persönlich klären. Bitte melden Sie sich unter 01 / 769 29 91. Mit freundlichen Grüßen, Dr. Fadime Cenik"
+  },
+  "localRankingChecklist": [
+    "Alle 7 Local-SEO-Services im GBP-Dashboard anlegen",
+    "Wöchentliche Beiträge mit unterschiedlichem Thema (kein Duplikat)",
+    "Mindestens 3 Fotos pro Therapie-Thema + Außenansicht + Team",
+    "Q&A: Termin, Kassen (ÖGK/BVAEB/SVS), R-Force, Sprachen beantworten",
+    "Review-Ziel: 50+ Bewertungen in 6 Monaten",
+    "NAP überall identisch: Dr. Fadime Cenik, Kaiser-Ebersdorfer-Straße 328, 1110 Wien"
+  ],
+  "services": [
+    {
+      "id": "r-force-therapie-wien",
+      "name": "R-Force Gehtraining (Antigravitations-Laufband)",
+      "shortDescription": "Gehtraining mit Gewichtsentlastung in Wien 11. Ideal nach OP, bei Knie-/Hüftbeschwerden und neurologischer Reha. Fachärztin Dr. Cenik, Simmering.",
+      "gbpDescription": "Antigravitations-Laufband R-Force: Gehtraining mit bis zu 100 % Gewichtsentlastung. Ideal nach Knie-/Hüft-OP, Kreuzband-Reha, neurologischen Erkrankungen und Gangunsicherheit. Fachärztlich betreut in Simmering.",
+      "gbpCategoryHint": "Rehabilitationszentrum",
+      "keywords": [
+        "r-force wien",
+        "gehtraining wien 11",
+        "antigravitation therapie",
+        "knie rehabilitation simmering",
+        "1110 wien",
+        "physiotherapie schwechat",
+        "rehabilitation schwechat",
+        "1100 wien",
+        "schwechat",
+        "physiotherapie simmering",
+        "physiotherapie favoriten",
+        "rehabilitation wien 11",
+        "physikalische medizin 1110",
+        "heilgymnastik simmering",
+        "mannswörth",
+        "fischamend",
+        "himberg",
+        "leopoldsdorf",
+        "maria lanzendorf",
+        "enzersdorf an der fischa"
+      ],
+      "landingPage": "https://www.drcenik.at/r-force-therapie-wien/",
+      "imageIdeas": [
+        "Patient am R-Force-Laufband (Gesicht unkenntlich)",
+        "Gerät im Therapieraum",
+        "Gehübung mit Unterstützung"
+      ]
+    },
+    {
+      "id": "stosswellentherapie-wien",
+      "name": "Stoßwellentherapie (ESWT)",
+      "shortDescription": "Stoßwellentherapie bei chronischen Sehnen- und Ansatzschmerzen in Wien 11. Schmerztherapie in Simmering – Kassenleistung mit Verordnung.",
+      "gbpDescription": "Fokussierte Stoßwellentherapie (ESWT) bei Achillessehnenreizung, Tennis-/Golferellenbogen, Fersensporn und Schulteransatzschmerzen. Kombiniert mit Heilmassage und Heilgymnastik. ÖGK, BVAEB, SVS mit Verordnung.",
+      "gbpCategoryHint": "Schmerztherapeut",
+      "keywords": [
+        "stoßwelle wien",
+        "eswt wien 11",
+        "sehnenschmerz behandlung",
+        "schmerztherapie simmering",
+        "1110 wien",
+        "physiotherapie schwechat",
+        "rehabilitation schwechat",
+        "1100 wien",
+        "schwechat",
+        "physiotherapie simmering",
+        "physiotherapie favoriten",
+        "rehabilitation wien 11",
+        "physikalische medizin 1110",
+        "heilgymnastik simmering",
+        "mannswörth",
+        "fischamend",
+        "himberg",
+        "leopoldsdorf",
+        "maria lanzendorf",
+        "enzersdorf an der fischa"
+      ],
+      "landingPage": "https://www.drcenik.at/stosswellentherapie-wien/",
+      "imageIdeas": [
+        "Stoßwellengerät in Anwendung",
+        "Therapeut bei Behandlung",
+        "Praxisraum hell und professionell"
+      ]
+    },
+    {
+      "id": "nackenschmerzen-ursachen",
+      "name": "Nackenschmerzen – Diagnostik & Therapie",
+      "shortDescription": "Fachärztliche Betreuung bei Nacken- und HWS-Beschwerden in Wien 11. Ursachenklärung, Heilmassage und Bewegungstherapie in Simmering.",
+      "gbpDescription": "Abklärung von Nacken- und HWS-Beschwerden: Verspannungen, Fehlhaltung, Blockaden. Heilmassage, Mobilisation und Bewegungstherapie. Fachärztliche Betreuung bei Warnsignalen wie Taubheit oder Schwindel.",
+      "gbpCategoryHint": "Arzt für physikalische Medizin und allgemeine Rehabilitation",
+      "keywords": [
+        "nackenschmerzen wien 11",
+        "hws therapie wien",
+        "nackenverspannung behandlung",
+        "physikalische medizin nacken",
+        "1110 wien",
+        "physiotherapie schwechat",
+        "rehabilitation schwechat",
+        "1100 wien",
+        "schwechat",
+        "physiotherapie simmering",
+        "physiotherapie favoriten",
+        "rehabilitation wien 11",
+        "physikalische medizin 1110",
+        "heilgymnastik simmering",
+        "mannswörth",
+        "fischamend",
+        "himberg",
+        "leopoldsdorf",
+        "maria lanzendorf",
+        "enzersdorf an der fischa"
+      ],
+      "landingPage": "https://www.drcenik.at/nackenschmerzen-ursachen/",
+      "imageIdeas": [
+        "HWS-Mobilisation / Massage",
+        "Ergonomie-Hinweis Bildschirmarbeit",
+        "Entspannte Nackenhaltung (Stockfoto)"
+      ]
+    },
+    {
+      "id": "rueckenschmerzen-wien",
+      "name": "Rückenschmerzen – konservative Therapie",
+      "shortDescription": "Behandlung von akuten und chronischen Rückenschmerzen in Wien 11. Heilgymnastik, Massage und physikalische Therapie – Dr. Cenik, Simmering.",
+      "gbpDescription": "Konservative Therapie bei Hexenschuss und chronischen Rückenschmerzen: Heilgymnastik, manuelle Techniken, physikalische Medizin und Stoßwelle bei Sehnenreizungen. Strukturierte Behandlung in Wien 11.",
+      "gbpCategoryHint": "Arzt für physikalische Medizin und allgemeine Rehabilitation",
+      "keywords": [
+        "rückenschmerzen wien 11",
+        "kreuzschmerz behandlung wien",
+        "rückentherapie simmering",
+        "heilgymnastik wien",
+        "1110 wien",
+        "physiotherapie schwechat",
+        "rehabilitation schwechat",
+        "1100 wien",
+        "schwechat",
+        "physiotherapie simmering",
+        "physiotherapie favoriten",
+        "rehabilitation wien 11",
+        "physikalische medizin 1110",
+        "heilgymnastik simmering",
+        "mannswörth",
+        "fischamend",
+        "himberg",
+        "leopoldsdorf",
+        "maria lanzendorf",
+        "enzersdorf an der fischa"
+      ],
+      "landingPage": "https://www.drcenik.at/rueckenschmerzen-wien/",
+      "imageIdeas": [
+        "Heilgymnastik Rückenübung",
+        "Manuelle Therapie",
+        "Patientin bei Wirbelsäulenübung"
+      ]
+    },
+    {
+      "id": "knieschmerzen-behandlung",
+      "name": "Knieschmerzen – Rehabilitation & Therapie",
+      "shortDescription": "Konservative Kniebehandlung in Wien 11: Heilgymnastik, R-Force Gehtraining, Stoßwelle. Nach OP und bei Arthrose – Simmering.",
+      "gbpDescription": "Kniebehandlung bei Arthrose, Meniskus, Kreuzband und Patella: fachärztliche Abklärung, Knietraining, R-Force Gehtraining und Stoßwelle. Ideal nach Knie-OP und bei chronischen Beschwerden.",
+      "gbpCategoryHint": "Rehabilitationszentrum",
+      "keywords": [
+        "knieschmerzen wien 11",
+        "knie arthrose therapie wien",
+        "knie op reha simmering",
+        "r-force knie",
+        "1110 wien",
+        "physiotherapie schwechat",
+        "rehabilitation schwechat",
+        "1100 wien",
+        "schwechat",
+        "physiotherapie simmering",
+        "physiotherapie favoriten",
+        "rehabilitation wien 11",
+        "physikalische medizin 1110",
+        "heilgymnastik simmering",
+        "mannswörth",
+        "fischamend",
+        "himberg",
+        "leopoldsdorf",
+        "maria lanzendorf",
+        "enzersdorf an der fischa"
+      ],
+      "landingPage": "https://www.drcenik.at/knieschmerzen-behandlung/",
+      "imageIdeas": [
+        "Knie-Mobilisation",
+        "R-Force Gehtraining Knie",
+        "Beinübung am Therapieband"
+      ]
+    },
+    {
+      "id": "schulter-schmerzen",
+      "name": "Schulterschmerzen – konservative Therapie",
+      "shortDescription": "Behandlung von Schulter- und Rotatorenmanschettenbeschwerden in Wien 11. Heilgymnastik und physikalische Medizin in Simmering.",
+      "gbpDescription": "Schultertherapie bei Impingement, Frozen Shoulder und Rotatorenmanschettenreizung: Heilgymnastik, Mobilisation und Heilmassage. Konservative Behandlung ohne Operation, wo möglich.",
+      "gbpCategoryHint": "Arzt für physikalische Medizin und allgemeine Rehabilitation",
+      "keywords": [
+        "schulterschmerzen wien 11",
+        "impingement behandlung wien",
+        "schultertherapie simmering",
+        "frozen shoulder wien",
+        "1110 wien",
+        "physiotherapie schwechat",
+        "rehabilitation schwechat",
+        "1100 wien",
+        "schwechat",
+        "physiotherapie simmering",
+        "physiotherapie favoriten",
+        "rehabilitation wien 11",
+        "physikalische medizin 1110",
+        "heilgymnastik simmering",
+        "mannswörth",
+        "fischamend",
+        "himberg",
+        "leopoldsdorf",
+        "maria lanzendorf",
+        "enzersdorf an der fischa"
+      ],
+      "landingPage": "https://www.drcenik.at/schulter-schmerzen/",
+      "imageIdeas": [
+        "Schulter-Pendelübung",
+        "Mobilisation durch Therapeut",
+        "Heilgymnastik Schulter"
+      ]
+    },
+    {
+      "id": "faszienschmerzen",
+      "name": "Faszienschmerzen & Triggerpunkt-Therapie",
+      "shortDescription": "Myofasziale Schmerztherapie in Wien 11: Heilmassage und manuelle Behandlung bei Dr. Cenik, Simmering.",
+      "gbpDescription": "Myofasziale Schmerztherapie bei Faszienschmerzen und Triggerpunkten: Heilmassage, manuelle Triggerpunkt-Behandlung, Dehnung und Bewegungstherapie. Ganzheitliche Schmerzbehandlung in Simmering.",
+      "gbpCategoryHint": "Massage-Therapeut",
+      "keywords": [
+        "faszienschmerzen wien",
+        "triggerpunkte wien 11",
+        "myofaszialer schmerz",
+        "heilmassage simmering",
+        "1110 wien",
+        "physiotherapie schwechat",
+        "rehabilitation schwechat",
+        "1100 wien",
+        "schwechat",
+        "physiotherapie simmering",
+        "physiotherapie favoriten",
+        "rehabilitation wien 11",
+        "physikalische medizin 1110",
+        "heilgymnastik simmering",
+        "mannswörth",
+        "fischamend",
+        "himberg",
+        "leopoldsdorf",
+        "maria lanzendorf",
+        "enzersdorf an der fischa"
+      ],
+      "landingPage": "https://www.drcenik.at/faszienschmerzen/",
+      "imageIdeas": [
+        "Heilmassage Rücken",
+        "Manuelle Triggerpunkt-Behandlung",
+        "Entspannte Therapieszene"
+      ]
+    }
+  ],
+  "serviceArea": {
+    "radiusKm": 15,
+    "targets": [
+      {
+        "id": "1110",
+        "postalCode": "1110",
+        "label": "1110 Wien",
+        "place": "Simmering",
+        "district": "Wien 11",
+        "priority": "primary"
+      },
+      {
+        "id": "1100",
+        "postalCode": "1100",
+        "label": "1100 Wien",
+        "place": "Favoriten",
+        "district": "Wien 10",
+        "priority": "secondary"
+      },
+      {
+        "id": "schwechat",
+        "postalCode": "2320",
+        "label": "Schwechat",
+        "place": "Schwechat",
+        "adminArea": "Niederösterreich",
+        "priority": "secondary"
+      },
+      {
+        "id": "mannswoerth",
+        "postalCode": "2320",
+        "label": "Mannswörth",
+        "place": "Mannswörth",
+        "adminArea": "Niederösterreich",
+        "priority": "suburb"
+      },
+      {
+        "id": "fischamend",
+        "postalCode": "2401",
+        "label": "Fischamend",
+        "place": "Fischamend",
+        "adminArea": "Niederösterreich",
+        "priority": "suburb"
+      },
+      {
+        "id": "himberg",
+        "postalCode": "2325",
+        "label": "Himberg",
+        "place": "Himberg bei Wien",
+        "adminArea": "Niederösterreich",
+        "priority": "suburb"
+      },
+      {
+        "id": "leopoldsdorf",
+        "postalCode": "2333",
+        "label": "Leopoldsdorf",
+        "place": "Leopoldsdorf bei Wien",
+        "adminArea": "Niederösterreich",
+        "priority": "suburb"
+      },
+      {
+        "id": "maria-lanzendorf",
+        "postalCode": "2332",
+        "label": "Maria Lanzendorf",
+        "place": "Maria Lanzendorf",
+        "adminArea": "Niederösterreich",
+        "priority": "suburb"
+      },
+      {
+        "id": "enzersdorf-fischa",
+        "postalCode": "2431",
+        "label": "Enzersdorf an der Fischa",
+        "place": "Enzersdorf an der Fischa",
+        "adminArea": "Niederösterreich",
+        "priority": "suburb"
+      }
+    ],
+    "keywords": [
+      "1110 wien",
+      "1100 wien",
+      "schwechat",
+      "mannswörth",
+      "fischamend",
+      "himberg",
+      "leopoldsdorf",
+      "maria lanzendorf",
+      "enzersdorf an der fischa",
+      "physiotherapie simmering",
+      "physiotherapie favoriten",
+      "physiotherapie schwechat",
+      "rehabilitation wien 11",
+      "rehabilitation schwechat",
+      "physikalische medizin 1110",
+      "heilgymnastik simmering"
+    ]
+  }
+}

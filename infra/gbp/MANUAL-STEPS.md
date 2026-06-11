@@ -77,9 +77,25 @@ Logo allein reicht nicht — Maps zeigt derzeit wenig „Vom Inhaber“-Fotos.
 
 ---
 
-## Schritt 8 — Neuer Beitrag
+## Schritt 8 — Local-SEO-Beiträge (7 Wochen Plan)
 
-**Beitrag hinzufügen** — Vorlage aus `config/gbp.json` → `postTemplate`
+**Beitrag hinzufügen** — Copy-Paste aus dem Export:
+
+```bash
+npm run gbp-export
+```
+
+Quellen:
+- `config/gbp-local-posts.json` — 7 Beiträge mit Datum (ab 09.06.2026, dienstags 09:00)
+- `config/gbp-local-seo.json` — Dienstleistungen, Review-Vorlagen, Checkliste
+
+Nur einen Post exportieren: `npm run gbp-export -- --post 0` (Index 0–6)
+
+---
+
+## Schritt 8b — Local-SEO-Dienstleistungen
+
+**Dienstleistungen bearbeiten** → Zusätzlich zu den bestehenden Einträgen in `gbp.json` die 7 Services aus `config/gbp-local-seo.json` → `services` anlegen (Name + Kurzbeschreibung + je 1 Foto).
 
 ---
 
