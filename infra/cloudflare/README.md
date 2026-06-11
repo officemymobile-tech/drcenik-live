@@ -2,6 +2,26 @@
 
 GitHub Pages kann keine Pfad-Redirects. Cloudflare sitzt vor GitHub und liefert echte **301**.
 
+**Aktueller Stand (7. Juni 2026):** Zone `drcenik.at` angelegt (Free), Worker `drcenik-redirects` deployed.  
+**Nameserver (bei World4You eintragen):**
+
+- `aarav.ns.cloudflare.com`
+- `nancy.ns.cloudflare.com`
+
+Zone-ID (API): `b7ff8c0a0014cf9b634b109db088c392` — Status: **pending** bis NS-Umstellung.
+
+**Nach NS-Propagation:** `npm run audit-redirects` → Ziel 7/7.
+
+## Schnell-Deploy (Checkliste)
+
+1. [cloudflare.com](https://dash.cloudflare.com) → **Add site** → `drcenik.at` (Free Plan)
+2. World4You → Nameserver auf die zwei Cloudflare-NS umstellen (Propagation 1–24 h)
+3. Cloudflare DNS wie unten (World4You-Apex-Weiterleitung **deaktivieren**)
+4. **Option A:** `bulk-redirects.csv` importieren **oder** **Option B:** `npm run setup-cloudflare` mit API-Token **oder** **Option C:** `cd infra/cloudflare && npx wrangler deploy`
+5. SSL: Full (strict), Always Use HTTPS: ON
+6. GitHub Pages: Enforce HTTPS bleibt AN
+7. Prüfen: `npm run audit-redirects` → 7/7
+
 ## Voraussetzungen
 
 - Cloudflare-Konto (Free reicht)

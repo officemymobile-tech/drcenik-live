@@ -30,7 +30,10 @@ function escAttr(s) {
 function patchPhysicianSchema(html) {
   let out = html;
   if (out.includes('"serviceArea"')) {
-    out = out.replace(/"serviceArea":\s*\{[\s\S]*?\},?\s*\n/, `${serviceAreaBlock}\n`);
+    out = out.replace(
+      /"serviceArea":\s*\{[\s\S]*?\n\s*\},?\s*\n(?=\s*"areaServed")/,
+      `${serviceAreaBlock}\n`,
+    );
   } else {
     out = out.replace(
       /("medicalSpecialty":\s*\[[^\]]+\],)\s*\n(\s*"areaServed":)/,

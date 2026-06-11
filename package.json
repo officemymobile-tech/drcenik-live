@@ -25,6 +25,7 @@
     "setup-cloudflare": "node scripts/setup-cloudflare-redirects.mjs",
     "provision-cloudflare-dns": "node scripts/provision-cloudflare-dns.mjs",
     "monitor-cf": "node scripts/monitor-cloudflare-propagation.mjs",
+    "cloudflare-status": "node scripts/cloudflare-status.mjs",
     "fix-gbp-website": "node scripts/fix-gbp-website.mjs",
     "fix-audit-critical": "node scripts/fix-audit-critical.mjs",
     "enable-github-https": "node scripts/enable-github-pages-https.mjs",

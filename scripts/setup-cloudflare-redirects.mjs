@@ -57,6 +57,19 @@ const rules = [
       },
     },
   },
+  {
+    description: 'trailing slash after .html',
+    expression: '(http.request.uri.path matches "^/.+\\\\.html/$")',
+    action_parameters: {
+      from_value: {
+        status_code: 301,
+        target_url: {
+          expression: 'concat("https://www.drcenik.at", regex_replace(http.request.uri.path, "/$", ""))',
+        },
+        preserve_query_string: true,
+      },
+    },
+  },
 ];
 
 const res = await fetch(

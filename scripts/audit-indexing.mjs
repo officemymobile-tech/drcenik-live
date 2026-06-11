@@ -76,4 +76,11 @@ for (const f of localHtmlFiles()) {
 
 const gscConfigured = localHtmlFiles().some((f) => fs.readFileSync(path.join(root, f), 'utf8').includes('google-site-verification'));
 console.log('\nGoogle-Verifizierung im Code:', gscConfigured ? 'JA' : 'NEIN (Search Console noch nicht verifiziert)');
-console.log('\nHinweis: site:drcenik.at in Google prüfen – ohne GSC/Sitemap dauert Indexierung oft Tage bis Wochen.');
+
+console.log('\n--- Google Search Console (manuell) ---');
+console.log('1. https://search.google.com/search-console → Property: https://www.drcenik.at/');
+console.log('2. Verifizierung: HTML-Tag (bereits auf allen Seiten live)');
+console.log('3. Sitemaps → URL einreichen: https://www.drcenik.at/sitemap.xml');
+console.log('4. URL-Prüfung → Startseite + kontakt.html → „Indexierung beantragen“');
+console.log('5. Nach 3–14 Tagen: site:www.drcenik.at in Google prüfen');
+console.log('\nHinweis: site:drcenik.at liefert oft noch 0 Treffer bis GSC-Sitemap eingereicht ist.');

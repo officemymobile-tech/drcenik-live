@@ -44,7 +44,7 @@ const FAQ_META = {
   'faq-en.html': { url: `${SITE}/faq-en.html`, name: 'FAQ – Dr. Fadime Cenik' },
 };
 
-const CORMORANT_PRELOAD = `  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>`;
+const CORMORANT_PRELOAD = `  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>`;
 
 function langOf(file) {
   if (file.includes('-tr.')) return 'tr';
@@ -86,7 +86,7 @@ function setMetaDesc(html, content) {
 }
 
 function addCormorantPreload(html) {
-  if (html.includes('cormorant-garamond-latin-600-normal.woff2')) return html;
+  if (html.includes('cormorant-garamond-latin-400-normal.woff2')) return html;
   return html.replace(
     /(<link rel="preload" href="assets\/fonts\/source-sans-3[^>]+>\n)/,
     `$1${CORMORANT_PRELOAD}\n`

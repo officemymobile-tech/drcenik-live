@@ -1,9 +1,12 @@
 # World4You — Apex & DNS für drcenik.at
 
-## Aktuelles Setup
+## Aktuelles Setup (Stand Juni 2026)
 
-- `www` → CNAME → `officemymobile-tech.github.io` (GitHub Pages)
-- Apex-HTTP leitet derzeit auf `http://www.drcenik.at/` (ohne HTTPS) — **fixen**
+- `www` → CNAME → `officemymobile-tech.github.io` (GitHub Pages, Enforce HTTPS aktiv)
+- Apex `drcenik.at` → A → `81.19.159.92` (World4You) + **301-Weiterleitung** → `https://www.drcenik.at/`
+- `https://drcenik.at/kontakt.html` → 301 → www ✅
+- `http://drcenik.at/` → 301 → `http://www` → HTTPS (2 Sprünge, World4You-Limit) ⚠️
+- Pfad-Redirects (`/index.html`, Gutschein, Trailing Slash) → nur mit Cloudflare (siehe `../cloudflare/README.md`)
 
 ## Option A — Mit Cloudflare (empfohlen)
 
