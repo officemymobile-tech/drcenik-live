@@ -41,7 +41,7 @@ function patchFile(filePath) {
   if (file === '267059-geschenkgutschein-vorlage.html' && !html.includes('twitter:card')) {
     html = html.replace(
       /(<meta property="og:locale" content="de_AT">)/,
-      `$1\n  <meta name="twitter:card" content="summary">\n  <meta name="twitter:title" content="Geschenkgutschein-Vorlage | Dr. Fadime Cenik">\n  <meta name="twitter:description" content="Druckbare Geschenkkarte für Physikalische Medizin und Rehabilitation. Wien 11.">`
+      `$1\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="Geschenkgutschein-Vorlage | Dr. Fadime Cenik">\n  <meta name="twitter:description" content="Druckbare Geschenkkarte für Physikalische Medizin und Rehabilitation. Wien 11.">`
     );
     changed = true;
   }

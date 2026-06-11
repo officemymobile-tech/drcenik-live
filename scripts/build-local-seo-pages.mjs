@@ -175,7 +175,7 @@ function buildPage(page) {
   <meta property="og:image" content="${SITE}/assets/logo.webp">
   <meta name="twitter:image" content="${SITE}/assets/logo.webp">
   <meta property="og:locale" content="de_AT">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(page.title)}">
   <meta name="twitter:description" content="${esc(page.metaDescription)}">
   <link rel="canonical" href="${url}">
