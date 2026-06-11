@@ -1,4 +1,5 @@
 node_modules/
+*.tmp.webp
 package-lock.json
 logs/
 config/gsc-verification.txt

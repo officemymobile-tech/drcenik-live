@@ -31,6 +31,8 @@
     "enable-github-https": "node scripts/enable-github-pages-https.mjs",
     "audit-indexing": "node scripts/audit-indexing.mjs",
     "audit-images": "node scripts/audit-live-images.mjs",
+    "audit-performance": "node scripts/audit-performance.mjs",
+    "apply-performance": "node scripts/apply-performance.mjs",
     "setup-gsc": "node scripts/setup-gsc.mjs",
     "gbp-export": "node scripts/gbp-export.mjs",
     "sync-google-reviews": "node scripts/sync-google-reviews.mjs",
@@ -44,6 +46,7 @@
   "devDependencies": {
     "@fontsource/cormorant-garamond": "^5.2.5",
     "@fontsource/source-sans-3": "^5.2.5",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "web-vitals": "^4.2.4"
   }
 }

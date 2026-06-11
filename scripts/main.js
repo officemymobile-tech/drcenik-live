@@ -78,7 +78,7 @@
     if (!splash) return;
     var HIDDEN = 'splash-screen--hidden';
     var STORAGE_KEY = 'drcenikSplashShown';
-    var SHOW_MS = 700;
+    var SHOW_MS = 400;
     var FADE_MS = 250;
     var dismissed = false;
     var t = L();
@@ -92,8 +92,10 @@
       setTimeout(function () { splash.remove(); }, FADE_MS);
     }
 
+    var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
     if (sessionStorage.getItem(STORAGE_KEY) ||
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+        (conn && (conn.saveData || conn.effectiveType === 'slow-2g' || conn.effectiveType === '2g'))) {
       splash.remove();
       return;
     }
