@@ -27,10 +27,6 @@ function normalizeRequest(request) {
     return redirect301(url, path === '' ? '/' : path, search);
   }
 
-  if (url.protocol === 'http:') {
-    return redirect301(url, path || '/', search);
-  }
-
   if (path === '/index.html' || path === '/Index.html') {
     return redirect301(url, '/', search);
   }
@@ -46,6 +42,10 @@ function normalizeRequest(request) {
 
   if (/^\/[^/]+\.html\/+\/?$/i.test(path)) {
     return redirect301(url, path.replace(/\/+$/, ''), search);
+  }
+
+  if (url.protocol === 'http:') {
+    return redirect301(url, path || '/', search);
   }
 
   return null;

@@ -9,11 +9,6 @@
   var search = location.search;
   var hash = location.hash;
 
-  if (proto === 'http:') {
-    location.replace('https://' + location.host + path + search + hash);
-    return;
-  }
-
   if (host === 'drcenik.at') {
     location.replace('https://www.drcenik.at' + path + search + hash);
     return;
@@ -31,5 +26,10 @@
 
   if (/^\/[^/]+\.html\/+\/?$/i.test(path)) {
     location.replace('https://www.drcenik.at' + path.replace(/\/+$/, '') + search + hash);
+    return;
+  }
+
+  if (proto === 'http:') {
+    location.replace('https://' + location.host + path + search + hash);
   }
 })();
