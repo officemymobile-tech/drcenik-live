@@ -2,6 +2,9 @@ node_modules/
 package-lock.json
 logs/
 config/gsc-verification.txt
+config/gsc-oauth-client.json
+config/gsc-oauth-token.json
+config/gsc-service-account.json
 config/google-places.env
 .env
 .env.*
