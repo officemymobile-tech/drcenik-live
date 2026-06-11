@@ -3,7 +3,7 @@ window.DRCENIK_I18N = {
   de: {
     splashSkip: 'Tippen zum Überspringen',
     cookieLabel: 'Cookie-Hinweis',
-    cookieText: 'Wir verwenden technisch notwendige Speicher (localStorage) und laden Google Maps nur nach Ihrer Einwilligung. ',
+    cookieText: 'Wir verwenden technisch notwendige Speicher (localStorage). Google Maps und Google Analytics laden wir nur nach Ihrer Einwilligung („Alles akzeptieren“). ',
     cookiePrivacy: 'Datenschutzerklärung',
     cookieNecessary: 'Nur notwendige',
     cookieAccept: 'Alles akzeptieren',
@@ -25,7 +25,7 @@ window.DRCENIK_I18N = {
   tr: {
     splashSkip: 'Atlamak için dokunun',
     cookieLabel: 'Çerez bildirimi',
-    cookieText: 'Teknik olarak gerekli depolama (localStorage) kullanıyoruz; Google Haritalar yalnızca onayınızdan sonra yüklenir. ',
+    cookieText: 'Teknik olarak gerekli depolama (localStorage) kullanıyoruz. Google Haritalar ve Google Analytics yalnızca onayınızdan („Tümünü kabul et“) sonra yüklenir. ',
     cookiePrivacy: 'Gizlilik Politikası',
     cookieNecessary: 'Yalnızca gerekli',
     cookieAccept: 'Tümünü kabul et',
@@ -47,7 +47,7 @@ window.DRCENIK_I18N = {
   en: {
     splashSkip: 'Tap to skip',
     cookieLabel: 'Cookie notice',
-    cookieText: 'We use technically necessary storage (localStorage) and load Google Maps only after your consent. ',
+    cookieText: 'We use technically necessary storage (localStorage). Google Maps and Google Analytics load only after your consent (“Accept all”). ',
     cookiePrivacy: 'Privacy policy',
     cookieNecessary: 'Necessary only',
     cookieAccept: 'Accept all',

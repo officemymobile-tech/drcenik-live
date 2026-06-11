@@ -38,7 +38,8 @@
     "migrate-i18n": "node scripts/migrate-i18n-paths.mjs",
     "apply-seo-p2": "node scripts/apply-seo-phase-p2.mjs",
     "gsc-checklist": "node scripts/gsc-post-deploy.mjs",
-    "submit-gsc": "node scripts/submit-gsc-auto.mjs"
+    "submit-gsc": "node scripts/submit-gsc-auto.mjs",
+    "apply-analytics": "node scripts/apply-analytics.mjs"
   },
   "devDependencies": {
     "@fontsource/cormorant-garamond": "^5.2.5",

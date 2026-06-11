@@ -77,7 +77,9 @@ checks.push(['P2', 'prototype noindex', read('prototype-apple.html').includes('n
 checks.push(['P3', 'Article ItemList wissen-news DE', read('wissen-news.html').includes('"@type": "ItemList"')]);
 checks.push(['P3', 'og:locale:alternate index', read('index.html').includes('og:locale:alternate')]);
 checks.push(['P3', '404 mehrsprachig TR/EN', read('404.html').includes('lang="tr"') && read('404.html').includes('lang="en"')]);
-checks.push(['P3', 'Consent-Analytics (bewusst aus)', read('datenschutz.html').includes('keine Analyse-') || read('en/datenschutz.html').includes('do not use any analytics')]);
+checks.push(['P3', 'GA4 Datenschutz DE', read('datenschutz.html').includes('Google Analytics 4')]);
+checks.push(['P3', 'GA4 Datenschutz EN', read('en/datenschutz.html').includes('Google Analytics 4')]);
+checks.push(['P3', 'analytics.js vorhanden', fs.existsSync(path.join(root, 'scripts/analytics.js'))]);
 
 // P4 Enterprise
 checks.push(['P4', 'AboutPage ueber-uns-tr', read('tr/ueber-uns.html').includes('"@type": "AboutPage"')]);
