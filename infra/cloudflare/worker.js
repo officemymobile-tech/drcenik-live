@@ -5,7 +5,6 @@
  * Optional: GET /api/google-reviews – cached Places API proxy (Secret GOOGLE_PLACES_API_KEY).
  */
 const CANONICAL = 'https://www.drcenik.at';
-const GITHUB_ORIGIN = 'https://officemymobile-tech.github.io';
 const PLACES_BASE = 'https://places.googleapis.com/v1';
 const PLACES_FIELD_MASK = 'rating,userRatingCount';
 const REVIEWS_CACHE_TTL = 60 * 60 * 6;
@@ -145,14 +144,11 @@ export default {
     const blocked = normalizeRequest(request);
     if (blocked) return blocked;
 
-    const originUrl = `${GITHUB_ORIGIN}${url.pathname}${url.search}`;
-
-    const headers = new Headers(request.headers);
-    headers.set('Host', 'www.drcenik.at');
-
-    const originResponse = await fetch(originUrl, {
-      method: request.method,
-      headers,
+    // GitHub Pages antwortet nur mit Host www.drcenik.at (nicht *.github.io).
+    // resolveOverride leitet DNS auf GitHub, URL/Host bleiben die Custom Domain.
+    const originRequest = new Request(request.url, request);
+    const originResponse = await fetch(originRequest, {
+      cf: { resolveOverride: 'officemymobile-tech.github.io' },
       redirect: 'manual',
     });
 

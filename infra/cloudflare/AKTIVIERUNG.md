@@ -3,7 +3,7 @@
 **Stand:** 11. Juni 2026  
 **Worker:** `drcenik-redirects` deployed (Routes `drcenik.at/*`, `www.drcenik.at/*`)  
 **Zone-ID:** `b7ff8c0a0014cf9b634b109db088c392`  
-**Status Zone:** `pending` — Traffic läuft noch über World4You-NS
+**Status Zone:** `active` (Cloudflare-Mail bestätigt) — **offen:** `www` muss **Proxied** (orange Wolke) sein
 
 ## Was der Worker nach Aktivierung liefert (echte HTTP-301)
 
