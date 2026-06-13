@@ -41,8 +41,8 @@ window.DRCENIK_I18N = {
     ctaCall: 'Ara',
     ctaBook: 'Şimdi randevu al',
     ctaBookShort: 'Randevu',
-    privacyPath: 'datenschutz-tr.html',
-    terminPath: 'termin-tr.html'
+    privacyPath: '/tr/datenschutz.html',
+    terminPath: '/tr/termin.html'
   },
   en: {
     splashSkip: 'Tap to skip',
@@ -63,7 +63,7 @@ window.DRCENIK_I18N = {
     ctaCall: 'Call',
     ctaBook: 'Book appointment now',
     ctaBookShort: 'Appointment',
-    privacyPath: 'datenschutz-en.html',
-    terminPath: 'termin-en.html'
+    privacyPath: '/en/datenschutz.html',
+    terminPath: '/en/termin.html'
   }
 };

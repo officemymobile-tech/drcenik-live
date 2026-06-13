@@ -274,23 +274,60 @@
     });
   }
 
+  function langPublicUrl(lang, slug) {
+    if (lang === 'de') return slug === 'index' ? '/' : '/' + slug + '.html';
+    return slug === 'index' ? '/' + lang + '/' : '/' + lang + '/' + slug + '.html';
+  }
+
   function initLangSwitch() {
-    var path = window.location.pathname || '';
-    var file = path.split('/').pop() || 'index.html';
-    if (!file) file = 'index.html';
-    var base = file.replace(/\.html$/i, '').replace(/-tr$|-en$/, '');
-    if (!base) base = 'index';
-    var isTR = /-tr\.html$/i.test(file);
-    var isEN = /-en\.html$/i.test(file);
-    var hrefDE = base === 'index' ? '/' : base + '.html';
-    var hrefTR = base + '-tr.html';
-    var hrefEN = base + '-en.html';
+    var path = window.location.pathname || '/';
+    var parts = path.split('/').filter(Boolean);
+    var currentLang = 'de';
+    var slug = 'index';
+
+    if (parts[0] === 'en' || parts[0] === 'tr') {
+      currentLang = parts[0];
+      slug = parts[1] ? parts[1].replace(/\.html$/i, '') : 'index';
+    } else {
+      var file = parts[parts.length - 1] || 'index.html';
+      if (file.indexOf('.') === -1) file = file ? file + '.html' : 'index.html';
+      slug = file.replace(/\.html$/i, '');
+      if (/-tr$/i.test(slug)) {
+        currentLang = 'tr';
+        slug = slug.replace(/-tr$/i, '') || 'index';
+      } else if (/-en$/i.test(slug)) {
+        currentLang = 'en';
+        slug = slug.replace(/-en$/i, '') || 'index';
+      }
+    }
+
+    if (!slug) slug = 'index';
+
+    var hrefDE = langPublicUrl('de', slug);
+    var hrefTR = langPublicUrl('tr', slug);
+    var hrefEN = langPublicUrl('en', slug);
+
     document.querySelectorAll('.navbar-lang').forEach(function (wrap) {
       var links = wrap.querySelectorAll('.navbar-lang-link');
       links.forEach(function (a) { a.classList.remove('is-active'); });
-      if (links[0]) { links[0].href = hrefDE; links[0].setAttribute('hreflang', 'de'); links[0].setAttribute('lang', 'de'); if (!isTR && !isEN) links[0].classList.add('is-active'); }
-      if (links[1]) { links[1].href = hrefTR; links[1].setAttribute('hreflang', 'tr'); links[1].setAttribute('lang', 'tr'); if (isTR) links[1].classList.add('is-active'); }
-      if (links[2]) { links[2].href = hrefEN; links[2].setAttribute('hreflang', 'en'); links[2].setAttribute('lang', 'en'); if (isEN) links[2].classList.add('is-active'); }
+      if (links[0]) {
+        links[0].href = hrefDE;
+        links[0].setAttribute('hreflang', 'de');
+        links[0].setAttribute('lang', 'de');
+        if (currentLang === 'de') links[0].classList.add('is-active');
+      }
+      if (links[1]) {
+        links[1].href = hrefTR;
+        links[1].setAttribute('hreflang', 'tr');
+        links[1].setAttribute('lang', 'tr');
+        if (currentLang === 'tr') links[1].classList.add('is-active');
+      }
+      if (links[2]) {
+        links[2].href = hrefEN;
+        links[2].setAttribute('hreflang', 'en');
+        links[2].setAttribute('lang', 'en');
+        if (currentLang === 'en') links[2].classList.add('is-active');
+      }
     });
   }
 
