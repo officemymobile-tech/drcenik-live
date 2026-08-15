@@ -33,7 +33,7 @@
       <link rel="preload" href="../assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../styles/fonts.css">
   <link rel="stylesheet" href="../styles/critical.css">
-  <link rel="stylesheet" href="../styles/main.css?v=14">
+  <link rel="stylesheet" href="../styles/main.css?v=15">
   <link rel="stylesheet" href="../styles/mobile-navbar-fix.css?v=8">
 
   <script type="application/ld+json">
@@ -117,7 +117,7 @@
           <p class="body-text-lg contact-page-intro">Adres, ulaşım ve çalışma saatleri – Dr. Fadime Cenik muayenehanesi, Viyana 11. Randevu ve sorular için lütfen <a href="tel:+4317692991">01 / 769 29 91</a> numaralı telefondan arayın.</p>
         </header>
 
-        <div class="contact-cards-row">
+        <div class="contact-cards-row contact-cards-row--3">
           <div class="contact-card">
             <span class="contact-card-icon" aria-hidden="true">📞</span>
             <span class="contact-card-label">Telefon</span>
@@ -133,111 +133,80 @@
             <span class="contact-card-label">Adres</span>
             <span class="contact-card-value">Kaiser-Ebersdorfer-Straße 328, 1110 Wien, Avusturya</span>
           </div>
-          <div class="contact-card">
-            <span class="contact-card-icon" aria-hidden="true">🕐</span>
-            <span class="contact-card-label">Terapi saatleri</span>
-            <span class="contact-card-value">Pzt 7–19 · Sal–Per 6:30–19 · Cum 6:30–17 · Cmt/Paz kapalı. Muayenehane: Pzt/Çar 13–18, Sal 8–13, Per 7–12.</span>
-          </div>
         </div>
-
-        <div class="contact-zeiten-row">
-          <div class="contact-zeiten-block">
-            <h2 class="contact-zeiten-title">Terapi saatleri</h2>
-            <p>Pazartesi: 07:00 – 19:00</p>
-            <p>Salı – Perşembe: 06:30 – 19:00</p>
-            <p>Cuma: 06:30 – 17:00</p>
-            <p>Cumartesi ve Pazar: Kapalı</p>
-          </div>
-          <div class="contact-zeiten-block">
-            <h2 class="contact-zeiten-title">Muayenehane saatleri</h2>
-            <p>Pazartesi &amp; Çarşamba: 13:00 – 18:00</p>
-            <p>Salı: 08:00 – 13:00</p>
-            <p>Perşembe: 07:00 – 12:00</p>
-          </div>
-        </div>
-        <p class="zeiten-note body-text">İlk muayene randevuları telefonla alınır.</p>
 
         <div class="contact-visit-block">
           <div class="contact-form-map-grid contact-visit-grid">
             <div class="contact-form-column contact-call-column">
+              <p class="zeiten-note body-text contact-call-note">İlk muayene randevuları telefonla alınır.</p>
               <h2 class="heading-2 contact-section-title">Randevu alın</h2>
               <p class="body-text contact-call-text">Randevu ve sorular için lütfen <a href="tel:+4317692991">01 / 769 29 91</a> numaralı telefondan arayın.</p>
               <a href="tel:+4317692991" class="btn btn-primary contact-call-btn">Şimdi ara · 01 / 769 29 91</a>
-              <p class="contact-call-email">Veya e-posta: <a href="mailto:office@drcenik.at">office@drcenik.at</a></p>
-            </div>
-            <div class="contact-map-column">
-              <div class="contact-map-wrap" data-maps-consent>
-                <div class="contact-map-overlay"><span class="contact-map-address">Kaiser-Ebersdorfer-Straße 328, 1110 Wien</span>
-                  <a href="https://www.google.com/maps/search/?api=1&query=Kaiser-Ebersdorfer-Straße+328,+1110+Wien,+Österreich" target="_blank" rel="noopener noreferrer" class="contact-map-link">Google Haritalar'da aç</a>
-                  <a href="https://www.google.com/maps/dir/?api=1&destination=Kaiser-Ebersdorfer-Straße+328,+1110+Wien,+Österreich" target="_blank" rel="noopener noreferrer" class="contact-map-link">Rota planla</a></div>
-                <div class="contact-map-placeholder" data-maps-placeholder>
-                  <p class="body-text contact-map-consent-text">Google Haritalar yalnızca onayınızdan sonra yüklenir.</p>
-                  <button type="button" class="btn btn-primary" data-maps-load>Haritayı yükle</button>
-                </div>
-                <iframe class="contact-map-iframe" data-maps-iframe data-src="https://www.google.com/maps?q=Kaiser-Ebersdorfer-Stra%C3%9Fe+328,+1110+Wien,+%C3%96sterreich&amp;z=16&amp;output=embed" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" title="Harita: Dr. Fadime Cenik muayenehanesi" hidden></iframe>
-              </div>
-              <a href="https://www.google.com/maps/dir/?api=1&destination=Kaiser-Ebersdorfer-Straße+328,+1110+Wien,+Österreich" target="_blank" rel="noopener noreferrer" class="btn btn-secondary contact-route-btn">Rota planla</a>
-              <div class="anfahrt-block anfahrt-compact">
-                <h3 class="anfahrt-title">Ulaşım</h3>
-                <div class="anfahrt-grid">
-                  <div class="anfahrt-col">
-                    <h4 class="anfahrt-label">Toplu taşıma</h4>
-                    <ul class="anfahrt-list">
-                      <li><span class="anfahrt-emoji" aria-hidden="true">🚇</span> Metro: Kaiserebersdorf, Zinnergasse</li>
-                      <li><span class="anfahrt-emoji" aria-hidden="true">🚌</span> Otobüs: 71B / 73A / 76B / 79A / 79B</li>
-                      <li><span class="anfahrt-emoji" aria-hidden="true">🚋</span> Tramvay: 11 / 71</li>
-                    </ul>
-                  </div>
-                  <div class="anfahrt-col">
-                    <h4 class="anfahrt-label">Otopark</h4>
-                    <p class="anfahrt-parking">Yakın çevrede park yeri bulunmaktadır.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+              <p class="contact-call-email">Veya e-posta: <a href="mailto:office@drcenik.at">office@drcenik.at</a>.</p>
 
-        <div class="contact-profile-card">
-          <h2 class="heading-2 contact-section-title contact-profile-heading">Muayenehane &amp; İletişim</h2>
-          <div class="contact-profile-status contact-profile-status-dual">
-            <div class="contact-profile-status-row">
-              <span class="contact-profile-status-label">Terapi saatleri</span>
-              <span class="open-closed-badge open-closed-badge-card" data-open-closed aria-live="polite"></span>
+              <div class="contact-call-status" aria-label="Açılış durumu">
+                <div class="contact-profile-status-row">
+                  <span class="contact-profile-status-label">Terapi</span>
+                  <span class="open-closed-badge open-closed-badge-card" data-open-closed aria-live="polite"></span>
+                </div>
+                <div class="contact-profile-status-row">
+                  <span class="contact-profile-status-label">Muayenehane</span>
+                  <span class="open-closed-badge open-closed-badge-card" data-open-closed="ordination" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="contact-call-hours">
+                <div class="contact-call-hours-col">
+                  <h3 class="contact-call-hours-title">Terapi saatleri</h3>
+                  <p>Pzt 07:00–19:00</p>
+                  <p>Sal–Per 06:30–19:00</p>
+                  <p>Cum 06:30–17:00</p>
+                  <p>Cmt/Paz kapalı</p>
+                </div>
+                <div class="contact-call-hours-col">
+                  <h3 class="contact-call-hours-title">Muayenehane saatleri</h3>
+                  <p>Pzt &amp; Çar 13:00–18:00</p>
+                  <p>Sal 08:00–13:00</p>
+                  <p>Per 07:00–12:00</p>
+                </div>
+              </div>
             </div>
-            <div class="contact-profile-status-row">
-              <span class="contact-profile-status-label">Muayenehane / Muayene saatleri</span>
-              <span class="open-closed-badge open-closed-badge-card" data-open-closed="ordination" aria-live="polite"></span>
+
+            <div class="contact-map-column">
+              <div class="contact-map-panel">
+                <div class="contact-map-wrap" data-maps-consent>
+                  <div class="contact-map-overlay"><span class="contact-map-address">Kaiser-Ebersdorfer-Straße 328, 1110 Wien</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Kaiser-Ebersdorfer-Straße+328,+1110+Wien,+Österreich" target="_blank" rel="noopener noreferrer" class="contact-map-link">Google Haritalar'da aç</a>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Kaiser-Ebersdorfer-Straße+328,+1110+Wien,+Österreich" target="_blank" rel="noopener noreferrer" class="contact-map-link">Rota planla</a></div>
+                  <div class="contact-map-placeholder" data-maps-placeholder>
+                    <p class="body-text contact-map-consent-text">Google Haritalar yalnızca onayınızdan sonra yüklenir.</p>
+                    <button type="button" class="btn btn-primary" data-maps-load>Haritayı yükle</button>
+                  </div>
+                  <iframe class="contact-map-iframe" data-maps-iframe data-src="https://www.google.com/maps?q=Kaiser-Ebersdorfer-Stra%C3%9Fe+328,+1110+Wien,+%C3%96sterreich&amp;z=16&amp;output=embed" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" title="Harita: Dr. Fadime Cenik muayenehanesi" hidden></iframe>
+                </div>
+                <div class="contact-map-panel-body">
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=Kaiser-Ebersdorfer-Straße+328,+1110+Wien,+Österreich" target="_blank" rel="noopener noreferrer" class="btn btn-secondary contact-route-btn">Rota planla</a>
+                  <div class="anfahrt-block anfahrt-compact">
+                    <h3 class="anfahrt-title">Ulaşım</h3>
+                    <div class="anfahrt-grid">
+                      <div class="anfahrt-col">
+                        <h4 class="anfahrt-label">Toplu taşıma</h4>
+                        <ul class="anfahrt-list">
+                          <li><span class="anfahrt-emoji" aria-hidden="true">🚇</span> Metro: Kaiserebersdorf, Zinnergasse</li>
+                          <li><span class="anfahrt-emoji" aria-hidden="true">🚌</span> Otobüs: 71B / 73A / 76B / 79A / 79B</li>
+                          <li><span class="anfahrt-emoji" aria-hidden="true">🚋</span> Tramvay: 11 / 71</li>
+                        </ul>
+                      </div>
+                      <div class="anfahrt-col">
+                        <h4 class="anfahrt-label">Otopark</h4>
+                        <p class="anfahrt-parking">Yakın çevrede park yeri bulunmaktadır.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="contact-profile-grid contact-profile-grid--praxis">
-            <div class="contact-profile-item">
-              <span class="contact-google-label">Adres</span>
-              <p class="contact-profile-value">Kaiser-Ebersdorfer-Straße 328<br>1110 Wien</p>
-            </div>
-            <div class="contact-profile-item">
-              <span class="contact-google-label">Telefon</span>
-              <p class="contact-profile-value contact-profile-phone"><a href="tel:+4317692991">01 / 769 29 91</a></p>
-            </div>
-            <div class="contact-profile-item">
-              <span class="contact-google-label">E-posta</span>
-              <p class="contact-profile-value"><a href="mailto:office@drcenik.at">office@drcenik.at</a></p>
-            </div>
-            <div class="contact-profile-item">
-              <span class="contact-google-label">Muayenehane saatleri</span>
-              <p class="contact-profile-value">Pzt &amp; Çar 13–18, Sal 8–13, Per 7–12. İlk muayene randevu ile.</p>
-            </div>
-            <div class="contact-profile-item contact-profile-item--full">
-              <span class="contact-google-label">Terapi saatleri</span>
-              <p class="contact-profile-value">Pzt 7–19, Sal–Per 6:30–19, Cum 6:30–17. Cmt &amp; Paz: Kapalı.</p>
-            </div>
-            <div class="contact-profile-item contact-profile-item--full contact-profile-rating">
-              <span class="contact-google-label">Google değerlendirme</span>
-              <p class="contact-google-rating"><span class="contact-google-stars" aria-hidden="true">★★★★☆</span> <strong class="contact-google-score">4.1</strong></p>
-              <p class="contact-google-reviews">38 değerlendirme · Durum: Haziran 2026</p>
-            </div>
-          </div>
-          <a href="https://www.google.com/maps?cid=16167401803672481750" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-google-profile">Google profilini ziyaret et</a>
         </div>
 
         <div class="contact-google-reviews-block contact-reviews-compact" data-google-reviews>
@@ -246,10 +215,12 @@
             <span class="contact-reviews-stars-outline" aria-hidden="true">★★★★☆</span>
             <strong class="contact-reviews-score">4.1</strong><span class="contact-reviews-score-suffix"> / 5</span>
             <span class="contact-reviews-sep" aria-hidden="true">·</span>
-            <span class="contact-reviews-count">38 değerlendirme</span>
+            <span class="contact-reviews-count">38 değerlendirme · Durum: Haziran 2026</span>
           </p>
-          <p class="contact-reviews-stand">Durum: Haziran 2026</p>
-          <a href="https://www.google.com/maps/place/Dr.Fadime+Cenik/@48.1588483,16.4717764,17z/data=!4m6!3m5!1s0x476dabdc170b5eb7:0xe05e264828e86fd6!8m2!3d48.1588483!4d16.4717764!16s%2Fg%2F11yx9rm5zy!9m1!1b1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary contact-reviews-btn">Tüm değerlendirmeler</a>
+          <div class="contact-reviews-actions">
+            <a href="https://www.google.com/maps/place/Dr.Fadime+Cenik/@48.1588483,16.4717764,17z/data=!4m6!3m5!1s0x476dabdc170b5eb7:0xe05e264828e86fd6!8m2!3d48.1588483!4d16.4717764!16s%2Fg%2F11yx9rm5zy!9m1!1b1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary contact-reviews-btn">Tüm değerlendirmeler</a>
+            <a href="https://www.google.com/maps?cid=16167401803672481750" target="_blank" rel="noopener noreferrer" class="contact-reviews-profile-link">Google profilini ziyaret et</a>
+          </div>
         </div>
 
         <div class="contact-faq-block">
@@ -321,6 +292,6 @@
   <script src="../scripts/analytics.js" defer></script>
 
   <script src="../scripts/site-i18n.js" defer></script>
-  <script src="../scripts/main.js?v=14" defer></script>
+  <script src="../scripts/main.js?v=15" defer></script>
 </body>
 </html>

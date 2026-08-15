@@ -2913,7 +2913,13 @@ body.theme-ref {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-3);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
+}
+.contact-cards-row--3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .contact-card {
   padding: var(--space-4);
@@ -2999,13 +3005,13 @@ body.theme-ref {
   align-items: start;
 }
 .contact-visit-block {
-  margin: 0 0 var(--space-7);
+  margin: 0 0 var(--space-5);
 }
 .contact-visit-grid {
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: var(--space-6);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: var(--space-5);
   margin-bottom: 0;
-  align-items: start;
+  align-items: stretch;
 }
 .contact-section-title {
   margin: 0 0 var(--space-3);
@@ -3018,7 +3024,21 @@ body.theme-ref {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  padding: var(--space-1) 0;
+  padding: var(--space-4);
+  background: var(--white);
+  border: 1px solid var(--cream-200);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(26, 48, 64, 0.04);
+}
+.contact-call-note {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: left;
+  font-size: 13px;
+  color: var(--gray-700);
+  max-width: none;
+  width: auto;
 }
 .contact-call-text {
   margin: 0;
@@ -3039,13 +3059,47 @@ body.theme-ref {
   padding: 12px 26px;
 }
 .contact-call-email {
-  margin: var(--space-1) 0 0;
+  margin: 0;
   font-size: 14px;
   color: var(--gray-700);
 }
 .contact-call-email a {
   color: var(--bronze-700);
   text-decoration: underline;
+}
+.contact-call-status {
+  margin-top: auto;
+  padding: var(--space-2) var(--space-3);
+  background: var(--cream-50);
+  border: 1px solid var(--cream-200);
+  border-radius: 12px;
+}
+.contact-call-status .contact-profile-status-row {
+  padding: 6px 0;
+}
+.contact-call-status .contact-profile-status-row:not(:last-child) {
+  border-bottom: 1px solid var(--cream-200);
+}
+.contact-call-hours {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--cream-200);
+}
+.contact-call-hours-title {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--navy-800);
+}
+.contact-call-hours-col p {
+  margin: 0 0 4px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--gray-700);
 }
 .theme-ref .contact-call-text a,
 .theme-ref .contact-call-email a { color: var(--bronze-700); }
@@ -3108,11 +3162,38 @@ body.theme-ref {
 /* Kontakt: Map, Anfahrt, Praxis-Karte, Reviews, FAQ */
 .contact-map-wrap {
   position: relative;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  border: none;
+  margin-bottom: 0;
+  box-shadow: none;
+}
+.contact-map-panel {
+  background: var(--white);
+  border: 1px solid var(--cream-200);
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid var(--cream-200);
-  margin-bottom: var(--space-3);
-  box-shadow: 0 2px 10px rgba(26, 48, 64, 0.06);
+  box-shadow: 0 2px 10px rgba(26, 48, 64, 0.04);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-map-panel-body {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.contact-map-panel .contact-route-btn {
+  margin: 0;
+  align-self: flex-start;
+}
+.contact-map-panel .anfahrt-compact {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 .contact-map-placeholder {
   display: flex;
@@ -3129,7 +3210,7 @@ body.theme-ref {
 .contact-map-consent-text { max-width: 36ch; margin: 0; color: var(--gray-700); }
 .contact-map-iframe[hidden] { display: none; }
 .form-status { margin-top: var(--space-3); min-height: 1.5em; color: var(--bronze-700); font-weight: 600; }
-.contact-map-iframe { width: 100%; height: 320px; min-height: 320px; display: block; border: none; }
+.contact-map-iframe { width: 100%; height: 280px; min-height: 280px; display: block; border: none; }
 .contact-route-btn {
   display: inline-flex;
   align-items: center;
@@ -3269,7 +3350,8 @@ body.theme-ref {
   background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%231A3040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Ccircle cx="12" cy="12" r="10"/%3E%3Cpath d="M12 6v6l4 2"/%3E%3C/svg%3E') center/contain no-repeat;
   flex-shrink: 0;
 }
-.contact-profile-card .open-closed-badge-card {
+.contact-profile-card .open-closed-badge-card,
+.contact-call-status .open-closed-badge-card {
   padding: 3px 10px;
   font-size: 11px;
   font-weight: 500;
@@ -3278,29 +3360,35 @@ body.theme-ref {
   box-shadow: none;
   gap: 6px;
 }
-.contact-profile-card .open-closed-badge-card .open-closed-icon {
+.contact-profile-card .open-closed-badge-card .open-closed-icon,
+.contact-call-status .open-closed-badge-card .open-closed-icon {
   width: 16px;
   height: 16px;
 }
-.contact-profile-card .open-closed-badge-card .open-closed-icon svg {
+.contact-profile-card .open-closed-badge-card .open-closed-icon svg,
+.contact-call-status .open-closed-badge-card .open-closed-icon svg {
   width: 11px;
   height: 11px;
 }
-.contact-profile-card .open-closed-badge-card.is-closed {
+.contact-profile-card .open-closed-badge-card.is-closed,
+.contact-call-status .open-closed-badge-card.is-closed {
   background: rgba(217, 48, 37, 0.06);
   color: #b3261e;
   border-color: rgba(217, 48, 37, 0.22);
 }
-.contact-profile-card .open-closed-badge-card.is-open {
+.contact-profile-card .open-closed-badge-card.is-open,
+.contact-call-status .open-closed-badge-card.is-open {
   background: rgba(45, 138, 71, 0.08);
   color: #1f6b38;
   border-color: rgba(45, 138, 71, 0.25);
 }
-.contact-profile-card .open-closed-badge-card.is-closed .open-closed-icon-closed {
+.contact-profile-card .open-closed-badge-card.is-closed .open-closed-icon-closed,
+.contact-call-status .open-closed-badge-card.is-closed .open-closed-icon-closed {
   color: #b3261e;
   background: rgba(217, 48, 37, 0.1);
 }
-.contact-profile-card .open-closed-badge-card.is-open .open-closed-icon-open {
+.contact-profile-card .open-closed-badge-card.is-open .open-closed-icon-open,
+.contact-call-status .open-closed-badge-card.is-open .open-closed-icon-open {
   color: #1f6b38;
   background: rgba(45, 138, 71, 0.12);
 }
@@ -3385,7 +3473,22 @@ body.theme-ref {
   gap: 8px;
   min-height: 0;
   padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-5);
 }
+.contact-reviews-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 18px;
+  margin-top: 4px;
+}
+.contact-reviews-profile-link {
+  font-size: 14px;
+  color: var(--bronze-700);
+  text-decoration: underline;
+}
+.contact-reviews-profile-link:hover { color: var(--navy-800); }
 .contact-reviews-heading {
   margin: 0;
   font-size: 1.15rem;
@@ -3493,10 +3596,12 @@ body.theme-ref {
 
 @media (max-width: 900px) {
   .contact-cards-row { grid-template-columns: 1fr 1fr; }
+  .contact-cards-row--3 { grid-template-columns: 1fr; max-width: none; }
   .contact-form-map-grid,
   .contact-visit-grid { grid-template-columns: 1fr; }
   .contact-profile-grid { grid-template-columns: 1fr; }
   .anfahrt-grid { grid-template-columns: 1fr; gap: var(--space-3); }
+  .contact-call-hours { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
   .contact-cards-row { grid-template-columns: 1fr; }
