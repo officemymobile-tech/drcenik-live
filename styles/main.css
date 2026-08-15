@@ -2998,10 +2998,28 @@ body.theme-ref {
   margin-bottom: var(--space-8);
   align-items: start;
 }
-.contact-form-map-grid--map-only {
-  grid-template-columns: 1fr;
-  max-width: 720px;
+.contact-call-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: 2px;
 }
+.contact-call-text {
+  margin: 0 0 var(--space-2);
+  color: var(--gray-700);
+  line-height: 1.55;
+  max-width: 36ch;
+}
+.contact-call-text a {
+  color: var(--ref-gold);
+  text-decoration: underline;
+}
+.contact-call-btn {
+  align-self: flex-start;
+  margin-top: var(--space-1);
+}
+.theme-ref .contact-call-text a { color: var(--bronze-700); }
+.theme-ref .contact-call-text a:hover { color: var(--navy-800); }
 .contact-form-title { margin-bottom: var(--space-4); color: var(--ref-text); }
 .contact-form-styled .form-label-with-icon { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
 .contact-form-styled .form-icon { font-size: 16px; opacity: 0.9; }
