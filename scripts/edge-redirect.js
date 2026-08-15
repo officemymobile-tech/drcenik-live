@@ -45,8 +45,11 @@
     '/datenschutz-en.html': '/en/datenschutz.html',
     '/agb-tr.html': '/tr/agb.html',
     '/agb-en.html': '/en/agb.html',
-    '/termin-tr.html': '/tr/termin.html',
-    '/termin-en.html': '/en/termin.html',
+    '/termin-tr.html': '/tr/',
+    '/termin-en.html': '/en/',
+    '/termin.html': '/',
+    '/tr/termin.html': '/tr/',
+    '/en/termin.html': '/en/',
     '/tr/index.html': '/tr/',
     '/en/index.html': '/en/'
   };

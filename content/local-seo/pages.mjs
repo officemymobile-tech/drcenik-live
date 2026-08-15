@@ -103,7 +103,7 @@ export const PAGES = [
         h2: 'Kombination mit weiteren Therapien',
         paragraphs: [
           `R-Force wirkt am besten im Verbund: Heilgymnastik stärkt Muskulatur und Beweglichkeit, Manuelle Lymphdrainage unterstützt bei Schwellungen nach OP, Stoßwellentherapie kann bei chronischen Sehnenansatzbeschwerden sinnvoll sein. Für Rücken- oder Nackenprobleme, die den Gang beeinflussen, verweisen wir auf unsere thematischen Informationsseiten – die Behandlung bleibt jedoch stets individuell.`,
-          `Ausführliche technische Informationen zum Gerät finden Sie auf unserer <a href="../r-force.html">R-Force Produktseite</a>. Für einen Termin in Wien 11 nutzen Sie <a href="../termin.html">unser Online-Formular</a> oder rufen Sie uns direkt an.`,
+          `Ausführliche technische Informationen zum Gerät finden Sie auf unserer <a href="../r-force.html">R-Force Produktseite</a>. Für einen Termin in Wien 11 nutzen Sie <a href="tel:+4317692991">unser Telefon</a> oder rufen Sie uns direkt an.`,
         ],
       },
     ],
@@ -162,7 +162,7 @@ export const PAGES = [
           {
             h3: 'Kosten und Kassen',
             paragraphs: [
-              `Je nach Indikation und Verordnung können Leistungen über ÖGK, BVAEB oder SVS abgerechnet werden; andernfalls bieten wir ESWT als Privatleistung an. Wir informieren Sie vor Beginn transparent – telefonisch unter ${LOCAL.phone} oder bei der Terminvereinbarung über <a href="../termin.html">termin.html</a>.`,
+              `Je nach Indikation und Verordnung können Leistungen über ÖGK, BVAEB oder SVS abgerechnet werden; andernfalls bieten wir ESWT als Privatleistung an. Wir informieren Sie vor Beginn transparent – telefonisch unter ${LOCAL.phone} oder bei der Terminvereinbarung über <a href="tel:+4317692991">termin.html</a>.`,
             ],
           },
         ],
@@ -237,7 +237,7 @@ export const PAGES = [
         h2: 'Selbsthilfe und Prävention',
         paragraphs: [
           `Kurze Pausen, Blickführung auf Augenhöhe, ergonomischer Stuhl und regelmäßige Nacken- und Schulterdehnung können Verspannungen vorbeugen. Wärme oder sanfte Mobilisation lindern akute Episoden – jedoch nicht bei akuter Entzündung oder nach frischem Trauma ohne Abklärung.`,
-          `Wenn Selbsthilfe nicht ausreicht, vereinbaren Sie einen Termin – telefonisch ${LOCAL.phone} oder über <a href="../termin.html">termin.html</a>. Kassenleistungen (ÖGK, BVAEB, SVS) sind bei Verordnung möglich.`,
+          `Wenn Selbsthilfe nicht ausreicht, vereinbaren Sie einen Termin – telefonisch ${LOCAL.phone} oder über <a href="tel:+4317692991">termin.html</a>. Kassenleistungen (ÖGK, BVAEB, SVS) sind bei Verordnung möglich.`,
         ],
       },
     ],
@@ -289,7 +289,7 @@ export const PAGES = [
           {
             h3: 'Kassen und Terminvereinbarung',
             paragraphs: [
-              `Mit Verordnung sind viele Leistungen über ÖGK, BVAEB und SVS möglich. Privatordination bieten wir parallel an. Termin: ${LOCAL.phone} oder <a href="../termin.html">Online-Anfrage</a>. Adresse: ${LOCAL.addr}.`,
+              `Mit Verordnung sind viele Leistungen über ÖGK, BVAEB und SVS möglich. Privatordination bieten wir parallel an. Termin: ${LOCAL.phone} oder <a href="tel:+4317692991">Telefon</a>. Adresse: ${LOCAL.addr}.`,
             ],
           },
         ],
@@ -496,7 +496,7 @@ export const PAGES = [
       { q: 'Sind Faszienschmerzen ernst?', a: 'Meist funktionell behandelbar – aber Warnsignale müssen ausgeschlossen werden.' },
       { q: 'Zusammenhang mit Stress?', a: 'Stress erhöht Muskeltonus und verstärkt Triggerpunkte – ein häufiger Mitfaktor.' },
       { q: 'Kann Stoßwelle helfen?', a: 'Bei chronischen Ansatzstellen ja; bei rein myofaszialen Triggerpunkten steht Manuelle Therapie im Vordergrund.' },
-      { q: 'Termin in Simmering?', a: `${LOCAL.phone} oder online über termin.html.` },
+      { q: 'Termin in Simmering?', a: `${LOCAL.phone}.` },
     ],
     related: relatedFor('faszienschmerzen'),
   },

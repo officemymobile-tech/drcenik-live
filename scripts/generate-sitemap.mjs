@@ -20,7 +20,6 @@ const clusters = [
   ['impressum.html', 'tr/impressum.html', 'en/impressum.html'],
   ['datenschutz.html', 'tr/datenschutz.html', 'en/datenschutz.html'],
   ['agb.html', 'tr/agb.html', 'en/agb.html'],
-  ['termin.html', 'tr/termin.html', 'en/termin.html'],
 ];
 
 const singles = [

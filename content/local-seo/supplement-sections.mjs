@@ -13,7 +13,7 @@ function closingBlock(topic) {
       `Dr. Fadime Cenik ist Fachärztin für Physikalische Medizin und allgemeine Rehabilitation. Seit 1990 am Standort ${L.addr} in ${L.district} begleiten wir Patientinnen und Patienten mit evidenzorientierter, persönlicher Therapie – nicht mit anonymen Massenabfertigungen.`,
       `Kassenleistungen der ÖGK, BVAEB und SVS sind bei ärztlicher Verordnung und bestehendem Kassenvertrag möglich. Privatordination bieten wir für flexible Termine und Wahlleistungen. Kosten und Ablauf besprechen wir vor Beginn transparent.`,
       `Die Anbindung an öffentliche Verkehrsmittel (Bus 71B, 73A, 76B, Tram 11/71, Station Kaiserebersdorf) erleichtert regelmäßige Termine – ein entscheidender Faktor für Therapieerfolg bei Beschwerden des Bewegungsapparats.`,
-      `Vereinbaren Sie einen Termin telefonisch unter ${L.phone} oder über <a href="../termin.html">termin.html</a>. Übersicht aller Leistungen: <a href="../therapieangebot.html">Therapieangebot</a>.`,
+      `Vereinbaren Sie einen Termin telefonisch unter ${L.phone} oder über <a href="tel:+4317692991">termin.html</a>. Übersicht aller Leistungen: <a href="../therapieangebot.html">Therapieangebot</a>.`,
     ],
   };
 }
@@ -36,7 +36,7 @@ export const SUPPLEMENT_SECTIONS = {
         `Nach der Sitzung: kein intensives Training am selben Tag; leichte Bewegung ist meist in Ordnung. Hautreaktionen sind häufig harmlos und temporär.`,
         `Wir besprechen realistische Erfolgsaussichten: ESWT wirkt bei vielen chronischen Sehnenproblemen, aber nicht bei jedem Befund. Bei fehlendem Ansprechen überdenken wir Diagnose oder empfehlen weiterführende Schritte.`,
         `Die Ordination in ${L.district} ist seit 1990 etabliert – Sie sprechen mit der Fachärztin und einem eingespielten Team, nicht mit wechselnden anonymen Behandlerinnen.`,
-        `Terminvereinbarung: ${L.phone}, ${L.addr}, oder <a href="../termin.html">Online</a>.`,
+        `Terminvereinbarung: ${L.phone}, ${L.addr}, oder <a href="tel:+4317692991">Online</a>.`,
       ],
     },
     closingBlock('Stoßwellentherapie'),
@@ -104,7 +104,7 @@ export const SUPPLEMENT_SECTIONS = {
         `Nach Besserung: Erhaltungsprogramm mit 2–3 Übungseinheiten pro Woche – Rücken „vergisst“ Training schnell.`,
         `Arbeitgebergespräch bei schwerer körperlicher Tätigkeit kann sinnvoll sein – wir dokumentieren auf Wunsch Empfehlungen.`,
         `Bei erneutem Schub: früh wieder aktiv werden, nicht wochenlang schonen – mit fachlicher Begleitung.`,
-        `Termin: ${L.phone} oder <a href="../termin.html">termin.html</a> – Ordination Dr. Cenik, ${L.addr}.`,
+        `Termin: ${L.phone} oder <a href="tel:+4317692991">termin.html</a> – Ordination Dr. Cenik, ${L.addr}.`,
         `Rückenschmerzen sind kein Schicksal – mit strukturierter Therapie in Wien 11 viele Patientinnen und Patienten wieder alltagsfähig.`,
       ],
     },
@@ -135,7 +135,7 @@ export const SUPPLEMENT_SECTIONS = {
         `Jüngere Sportlerinnen: Return-to-Play. Ältere Patientinnen: Treppen ohne Geländer, Einkauf in Simmering, Spaziergang mit Enkelkindern.`,
         `Nach Knie-TEP: Gangschulung, Kraft, Propriozeption – R-Force kann frühe Mobilisation unterstützen.`,
         `Bei Patellaproblemen: Quadrizeps-Aufbau und Hüftstabilität – oft wichtiger als isolierte Kniebehandlung.`,
-        `Termin und Adresse: ${L.phone}, ${L.addr}. Online: <a href="../termin.html">termin.html</a>.`,
+        `Termin und Adresse: ${L.phone}, ${L.addr}. Online: <a href="tel:+4317692991">termin.html</a>.`,
       ],
     },
     {
@@ -153,7 +153,7 @@ export const SUPPLEMENT_SECTIONS = {
       paragraphs: [
         `Viele Patientinnen und Patienten warten zu lange – frühe Physiotherapie und ärztliche Koordination verbessern die Chance auf konservativen Erfolg.`,
         `Wir besprechen Sport, Beruf und Alltag in Wien ehrlich – Therapie muss in Ihr Leben passen, nicht umgekehrt.`,
-        `Kontakt: ${L.phone}. Online: <a href="../termin.html">termin.html</a>. <a href="../therapieangebot.html">Therapieangebot</a> im Überblick.`,
+        `Kontakt: ${L.phone}. Online: <a href="tel:+4317692991">termin.html</a>. <a href="../therapieangebot.html">Therapieangebot</a> im Überblick.`,
       ],
     },
     {
@@ -208,7 +208,7 @@ export const SUPPLEMENT_SECTIONS = {
         `Arbeitsplatzanpassung (höhenverstellbarer Schreibtisch, Tool-Balance) verhindert Rezidive bei Impingement.`,
         `Bei Frozen Shoulder: realistische Zeitachse besprechen – Frustration ist normal, Struktur hilft.`,
         `Wir messen Fortschritt an Alltagsaufgaben: Anziehen, Regal, Schlaf – nicht nur Gradzahlen.`,
-        `Ordination ${L.addr} – Termin ${L.phone} oder <a href="../termin.html">Online</a>. Kassen ÖGK, BVAEB, SVS.`,
+        `Ordination ${L.addr} – Termin ${L.phone} oder <a href="tel:+4317692991">Online</a>. Kassen ÖGK, BVAEB, SVS.`,
       ],
     },
     {
@@ -283,7 +283,7 @@ export const SUPPLEMENT_SECTIONS = {
         `Wer monatelang nur Schmerzmittel nimmt, verpasst oft die beste Phase für manuelle Therapie und Bewegung.`,
         `Wir planen realistische Serien – mit Evaluation alle paar Wochen und Anpassung der Technik.`,
         `Kassenpatientinnen mit Verordnung willkommen; Privatordination für flexible Termine.`,
-        `Kontakt ${L.phone}, ${L.addr} – <a href="../termin.html">Termin online</a>.`,
+        `Kontakt ${L.phone}, ${L.addr} – <a href="tel:+4317692991">Termin online</a>.`,
       ],
     },
     closingBlock('Faszienschmerzen'),
@@ -292,7 +292,7 @@ export const SUPPLEMENT_SECTIONS = {
       paragraphs: [
         `Kurze Spaziergänge, Dehnpausen am Arbeitsplatz und ausreichend Flüssigkeit unterstützen die manuelle Therapie zwischen Terminen.`,
         `Wir zeigen sichere Eigenübungen – ohne Überlastung am ersten Tag nach der Behandlung.`,
-        `Faszientherapie bei Dr. Cenik in Simmering – Termin ${L.phone} oder <a href="../termin.html">Online</a>.`,
+        `Faszientherapie bei Dr. Cenik in Simmering – Termin ${L.phone} oder <a href="tel:+4317692991">Online</a>.`,
         `Kassen ÖGK, BVAEB und SVS mit Verordnung – Privatordination für flexible Wahltermine ohne lange Wartezeit.`,
         `Adresse: ${L.addr} in ${L.district}, gut erreichbar mit Bus und Straßenbahn.`,
       ],

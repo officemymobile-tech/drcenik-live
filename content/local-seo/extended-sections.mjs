@@ -48,7 +48,7 @@ export const EXTENDED_SECTIONS = {
       paragraphs: [
         `R-Force beschleunigt nicht jede Genesung, aber es ermöglicht früheres, sichereres Training in Phasen, in denen volle Belastung noch nicht möglich ist. Fortschritte sind individuell – abhängig von Alter, Ausgangsdiagnose, Compliance und Begleittherapien.`,
         `Wir messen Erfolg an funktionellen Zielen: weniger Schmerz beim Gehen, längere Gehstrecken, stabilere Treppe, Rückkehr zum Sport oder zur Arbeit. Digitale Trainingsdaten helfen, diese Ziele objektiv zu verfolgen.`,
-        `Technische Details zum Gerät, Biofeedback und Anwendungsbeispiele finden Sie auf der <a href="../r-force.html">R-Force Produktseite</a>. Für eine persönliche Indikationsstellung vereinbaren Sie einen Termin über <a href="../termin.html">termin.html</a> oder telefonisch.`,
+        `Technische Details zum Gerät, Biofeedback und Anwendungsbeispiele finden Sie auf der <a href="../r-force.html">R-Force Produktseite</a>. Für eine persönliche Indikationsstellung vereinbaren Sie einen Termin über <a href="tel:+4317692991">termin.html</a> oder telefonisch.`,
       ],
     },
     {
@@ -58,7 +58,7 @@ export const EXTENDED_SECTIONS = {
         `Viele Patientinnen und Patienten aus Simmering, dem 10. und 23. Bezirk schätzen, dass sie nicht quer durch Wien fahren müssen, um modernes Gehtraining zu erhalten. Das reduziert Ausfallzeiten im Beruf und erleichtert die Einhaltung von zwei bis drei Terminen pro Woche in der Aufbauphase.`,
         `Bringen Sie zur Erstanamnese Verordnungen, Operationsberichte und vorhandene Bildgebung mit. Je klarer die Ausgangslage, desto zielgerichteter können wir Belastungsstufen und Trainingsziele definieren – von erstem schmerzarmen Gehen bis zur Rückkehr in Sport und Beruf.`,
         `Unsere Ordination verbindet seit 1990 persönliche Betreuung mit moderner Technik. Dr. Fadime Cenik ist Fachärztin für Physikalische Medizin – Sie sind in ärztlicher Verantwortung, nicht in einem anonymen Fitnessstudio mit Laufband.`,
-        `Kontakt: ${L.phone}, ${L.addr}. Online-Terminanfrage über <a href="../termin.html">termin.html</a>. Kassen ÖGK, BVAEB, SVS mit Verordnung; Privatordination auf Anfrage.`,
+        `Kontakt: ${L.phone}, ${L.addr}. Online-Terminanfrage über <a href="tel:+4317692991">termin.html</a>. Kassen ÖGK, BVAEB, SVS mit Verordnung; Privatordination auf Anfrage.`,
       ],
     },
   ],
@@ -108,7 +108,7 @@ export const EXTENDED_SECTIONS = {
     {
       h2: 'Stoßwelle in Wien 11 buchen – Ablauf kurz',
       paragraphs: [
-        `Telefonisch unter ${L.phone} oder online über <a href="../termin.html">termin.html</a> vereinbaren Sie einen Ersttermin. Wir klären Indikation, bisherige Therapien und Kassenstatus (ÖGK, BVAEB, SVS).`,
+        `Telefonisch unter ${L.phone} oder online über <a href="tel:+4317692991">termin.html</a> vereinbaren Sie einen Ersttermin. Wir klären Indikation, bisherige Therapien und Kassenstatus (ÖGK, BVAEB, SVS).`,
         `Die Behandlung selbst ist kurz; der größte Effekt entsteht durch die Serie über Wochen plus Eigenübungen. Planen Sie realistisch drei bis fünf Termine – nicht eine einzelne „Wunder-Sitzung“.`,
         `Bei Schulter- oder Kniesehnenproblemen verlinken unsere Seiten <a href="schulter-schmerzen/">Schulterschmerzen</a> und <a href="knieschmerzen-behandlung/">Knieschmerzen</a> – ESWT ist dort als Option eingebettet, diese Seite bleibt das ESWT-Schwerpunktthema.`,
         `Standort: ${L.addr}, ${L.district}. Seit 1990 etabliert – Vertrauen, Kontinuität, ärztliche Verantwortung durch Dr. Fadime Cenik, Fachärztin für Physikalische Medizin und allgemeine Rehabilitation.`,
@@ -155,7 +155,7 @@ export const EXTENDED_SECTIONS = {
       paragraphs: [
         `Diese Seite klärt Ursachen und Warnsignale des Nackens – die Behandlung lumbaler Rückenschmerzen beschreiben wir separat unter <a href="rueckenschmerzen-wien/">Rückenschmerzen Wien</a>, um Inhalte nicht zu vermischen.`,
         `Bei muskulär-faszialer Beteiligung können Heilmassage, myofasziale Techniken und Heilgymnastik helfen – siehe auch <a href="faszienschmerzen/">Faszienschmerzen</a>. Elektrotherapie, Wärme und Taping sind weitere Bausteine.`,
-        `Dr. Cenik ist Fachärztin in ${L.district}, ${L.addr}. Kassen ÖGK, BVAEB, SVS mit Verordnung. Termin: ${L.phone} oder <a href="../termin.html">Online</a>.`,
+        `Dr. Cenik ist Fachärztin in ${L.district}, ${L.addr}. Kassen ÖGK, BVAEB, SVS mit Verordnung. Termin: ${L.phone} oder <a href="tel:+4317692991">Online</a>.`,
       ],
     },
     {
@@ -214,7 +214,7 @@ export const EXTENDED_SECTIONS = {
     {
       h2: 'Rückenschmerzen in Wien 11 – Termin und Erwartungen',
       paragraphs: [
-        `Vereinbaren Sie unter ${L.phone} oder <a href="../termin.html">termin.html</a> einen Ersttermin. Wir erheben Befund, besprechen Ziele und planen Heilgymnastik, Massage und physikalische Verfahren – ohne Versprechen von „Wunderheilung“.`,
+        `Vereinbaren Sie unter ${L.phone} oder <a href="tel:+4317692991">termin.html</a> einen Ersttermin. Wir erheben Befund, besprechen Ziele und planen Heilgymnastik, Massage und physikalische Verfahren – ohne Versprechen von „Wunderheilung“.`,
         `Realistische Ziele: weniger Schmerz im Alltag, bessere Beweglichkeit, Rückkehr zur Arbeit oder zu Hobbyaktivitäten in Wien. Messen wir Fortschritt, passen wir Therapie an – nicht starr nach Schema F.`,
         `Bei Gangstörung nach OP kann <a href="r-force-therapie-wien/">R-Force</a> ergänzen. Bei Sehnenansatzproblemen <a href="stosswellentherapie-wien/">Stoßwelle</a>. Bei Triggerpunkten <a href="faszienschmerzen/">Faszienschmerzen</a>.`,
         `Adresse: ${L.addr}. Kassen ÖGK, BVAEB, SVS. Privatordination möglich. Seit 1990 am Standort – Dr. Fadime Cenik, Fachärztin für Physikalische Medizin.`,
@@ -270,7 +270,7 @@ export const EXTENDED_SECTIONS = {
         `Bei anhaltenden Beschwerden über zwei bis drei Wochen, Schwellung, Instabilität oder nächtlichem Schmerz ist Abklärung sinnvoll – nicht „abwarten bis es von selbst geht“.`,
         `Nach Operation oder Verletzung: strukturierte Reha verhindert chronische Belastungsunterschiede und erleichtert Rückkehr zum Sport. R-Force kann hier ein entscheidender Baustein sein.`,
         `Wir koordinieren konservative Therapie und empfehlen Orthopädie, wenn Bildgebung oder OP-Optionen nötig werden – transparent und ohne Verzögerung bei Red Flags.`,
-        `Termin: ${L.phone}, ${L.addr}. Online: <a href="../termin.html">termin.html</a>. Übersicht: <a href="../therapieangebot.html">Therapieangebot</a>.`,
+        `Termin: ${L.phone}, ${L.addr}. Online: <a href="tel:+4317692991">termin.html</a>. Übersicht: <a href="../therapieangebot.html">Therapieangebot</a>.`,
       ],
     },
   ],
@@ -314,13 +314,13 @@ export const EXTENDED_SECTIONS = {
       paragraphs: [
         `Heilgymnastik mit Fokus Scapula, Rotatorenmanschette und Thoraxmobilität; Heilmassage; Elektrotherapie; Wärme; Taping; bei Indikation <a href="stosswellentherapie-wien/">Stoßwellentherapie</a>.`,
         `Seit 1990 am Standort – Vertrauen und Kontinuität. Kassen und Privatordination. ${L.addr}, ${L.district}.`,
-        `Terminvereinbarung: ${L.phone} oder <a href="../termin.html">termin.html</a>. Gesamtangebot: <a href="../therapieangebot.html">Therapieangebot</a>.`,
+        `Terminvereinbarung: ${L.phone} oder <a href="tel:+4317692991">termin.html</a>. Gesamtangebot: <a href="../therapieangebot.html">Therapieangebot</a>.`,
       ],
     },
     {
       h2: 'Schulterschmerzen in Wien 11 – Termin vereinbaren',
       paragraphs: [
-        `Rufen Sie ${L.phone} an oder nutzen Sie <a href="../termin.html">termin.html</a>. Ersttermin: Anamnese, Schulter- und Nackenuntersuchung, Besprechung von Bildgebung und Therapieplan.`,
+        `Rufen Sie ${L.phone} an oder nutzen Sie <a href="tel:+4317692991">termin.html</a>. Ersttermin: Anamnese, Schulter- und Nackenuntersuchung, Besprechung von Bildgebung und Therapieplan.`,
         `Bringen Sie Verordnungen und Arbeitsplatz-Infos mit (überkopfarbeit ja/nein) – relevant für Impingement und Rotatorenmanschette.`,
         `Konservative Therapie braucht Geduld – besonders bei Frozen Shoulder. Wir begleiten Sie über Monate mit planbaren Terminen in Simmering.`,
         `Verwandte Themen: <a href="nackenschmerzen-ursachen/">Nacken</a>, <a href="stosswellentherapie-wien/">Stoßwelle</a>, <a href="faszienschmerzen/">Faszien</a>. ${L.addr}.`,
@@ -367,7 +367,7 @@ export const EXTENDED_SECTIONS = {
       paragraphs: [
         `Myofasziale Beschwerden lösen sich selten nach einer Sitzung – realistisch sind mehrere Wochen strukturierte Therapie plus Verhaltensanpassung (Ergonomie, Stress, Schlaf).`,
         `Dr. Cenik überwacht ärztlich den Verlauf und passt Therapie an. Ordination seit 1990 in ${L.district}, ${L.addr}. ÖGK, BVAEB, SVS mit Verordnung.`,
-        `Vereinbaren Sie einen Termin: ${L.phone} oder <a href="../termin.html">Online</a>. Übersicht aller Leistungen: <a href="../therapieangebot.html">Therapieangebot</a>.`,
+        `Vereinbaren Sie einen Termin: ${L.phone} oder <a href="tel:+4317692991">Online</a>. Übersicht aller Leistungen: <a href="../therapieangebot.html">Therapieangebot</a>.`,
       ],
     },
     {

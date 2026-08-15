@@ -212,7 +212,7 @@ ${buildSchemas(page, url)}
       </ul>
       <div class="navbar-actions">
         <a href="tel:+4317692991" class="navbar-phone">01 / 769 29 91</a>
-        <a href="../termin.html" class="btn btn-primary">Termin buchen</a>
+        <a href="tel:+4317692991" class="btn btn-primary">Termin buchen</a>
       </div>
     </div>
   </nav>
@@ -234,7 +234,7 @@ ${buildSchemas(page, url)}
         <div class="cta-block local-seo-hero-cta">
           <div class="cta-actions">
             <a href="tel:+4317692991" class="btn btn-primary">Jetzt anrufen: 01 / 769 29 91</a>
-            <a href="../termin.html" class="btn btn-secondary">Termin online anfragen</a>
+            <a href="tel:+4317692991" class="btn btn-secondary">Jetzt anrufen</a>
           </div>
           <p class="body-text cta-address">Kaiser-Ebersdorfer-Straße 328, 1110 Wien (Simmering) · BUS 71B/73A/76B · TRAM 11/71</p>
         </div>
@@ -250,7 +250,7 @@ ${renderSections(sectionsBefore)}
           <p class="body-text">Dr. Fadime Cenik ist Fachärztin für Physikalische Medizin und allgemeine Rehabilitation. Wir nehmen uns Zeit für Ihre Anamnese, Befunderhebung und einen individuellen Therapieplan – mit Kassenleistung (ÖGK, BVAEB, SVS) oder als Privatordination.</p>
           <div class="cta-actions">
             <a href="tel:+4317692991" class="btn btn-primary">01 / 769 29 91</a>
-            <a href="../termin.html" class="btn btn-secondary">Termin anfragen</a>
+            <a href="tel:+4317692991" class="btn btn-secondary">Termin telefonisch</a>
           </div>
         </div>
 
@@ -267,10 +267,10 @@ ${renderFaqs(page.faqs)}
 
         <div class="cta-block cta-block-large local-seo-end-cta">
           <h2 class="heading-2">${GEO.terminCta || 'Termin in 1110 Wien vereinbaren'}</h2>
-          <p class="body-text">Ob akute Beschwerden oder chronische Schmerzen: In unserer Ordination in Simmering finden wir gemeinsam den passenden Behandlungsweg – ${GEO.terminText || 'gut erreichbar aus 1100 Wien, Schwechat und dem 15-km-Umkreis.'} Rufen Sie an oder nutzen Sie unser Online-Formular.</p>
+          <p class="body-text">Ob akute Beschwerden oder chronische Schmerzen: In unserer Ordination in Simmering finden wir gemeinsam den passenden Behandlungsweg – ${GEO.terminText || 'gut erreichbar aus 1100 Wien, Schwechat und dem 15-km-Umkreis.'} Rufen Sie an oder nutzen Sie unser Telefon.</p>
           <div class="cta-actions">
             <a href="tel:+4317692991" class="btn btn-primary">Jetzt anrufen</a>
-            <a href="../termin.html" class="btn btn-secondary">Termin buchen</a>
+            <a href="tel:+4317692991" class="btn btn-secondary">Termin buchen</a>
           </div>
           <p class="body-text cta-address"><a href="https://www.google.com/maps?cid=16167401803672481750" target="_blank" rel="noopener noreferrer">Route planen (Google Maps)</a> · <a href="../kontakt.html">Kontakt &amp; Anfahrt</a></p>
         </div>
@@ -297,7 +297,7 @@ ${renderFaqs(page.faqs)}
             <li><a href="../faq.html">Häufige Fragen</a></li>
             <li><a href="../ueber-uns.html">Über uns</a></li>
             <li><a href="../kontakt.html">Kontakt</a></li>
-            <li><a href="../termin.html">Termin anfragen</a></li>
+            <li><a href="tel:+4317692991">Termin telefonisch</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -332,7 +332,7 @@ ${renderFaqs(page.faqs)}
 
   <aside class="mobile-cta" id="mobile-cta" aria-label="Schnellaktionen">
     <a href="tel:+4317692991" class="mobile-cta-btn mobile-cta-phone">Anrufen</a>
-    <a href="../termin.html" class="mobile-cta-btn mobile-cta-book">Termin</a>
+    <a href="tel:+4317692991" class="mobile-cta-btn mobile-cta-book">Termin</a>
   </aside>
 
   <script src="../scripts/main.js?v=11" defer></script>

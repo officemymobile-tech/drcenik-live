@@ -32,6 +32,13 @@
   RewriteRule ^tr/index\.html$ /tr/ [R=301,L,NC]
   RewriteRule ^en/index\.html$ /en/ [R=301,L,NC]
 
+  # Termin-Seiten entfernt – nur noch telefonische Vereinbarung
+  RewriteRule ^termin\.html$ / [R=301,L,NC]
+  RewriteRule ^tr/termin\.html$ /tr/ [R=301,L,NC]
+  RewriteRule ^en/termin\.html$ /en/ [R=301,L,NC]
+  RewriteRule ^termin-tr\.html$ /tr/ [R=301,L,NC]
+  RewriteRule ^termin-en\.html$ /en/ [R=301,L,NC]
+
   # Trailing Slash auf *.html
   RewriteRule ^(.+\.html)/+$ /$1 [R=301,L,NC]
 </IfModule>

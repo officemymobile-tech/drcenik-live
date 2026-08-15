@@ -96,7 +96,7 @@ const WEBSITE_SCHEMA = {
       "@type": "ReserveAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.drcenik.at/termin.html",
+        "urlTemplate": "tel:+4317692991",
         "actionPlatform": [
           "http://schema.org/DesktopWebPlatform",
           "http://schema.org/MobileWebPlatform"
@@ -123,7 +123,7 @@ const WEBSITE_SCHEMA = {
       "@type": "ReserveAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.drcenik.at/termin-tr.html",
+        "urlTemplate": "tel:+4317692991",
         "actionPlatform": [
           "http://schema.org/DesktopWebPlatform",
           "http://schema.org/MobileWebPlatform"
@@ -150,7 +150,7 @@ const WEBSITE_SCHEMA = {
       "@type": "ReserveAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.drcenik.at/termin-en.html",
+        "urlTemplate": "tel:+4317692991",
         "actionPlatform": [
           "http://schema.org/DesktopWebPlatform",
           "http://schema.org/MobileWebPlatform"
@@ -210,7 +210,7 @@ function addFooterTermin(html, file) {
   } else if (file !== 'termin.html') {
     footer = footer.replace(
       /<li><a href="kontakt\.html">Kontakt<\/a><\/li>(\s*<\/ul>)/,
-      '<li><a href="kontakt.html">Kontakt</a></li>\n            <li><a href="termin.html">Termin anfragen</a></li>$1'
+      '<li><a href="kontakt.html">Kontakt</a></li>\n            <li><a href="tel:+4317692991">Termin telefonisch</a></li>$1'
     );
   }
 

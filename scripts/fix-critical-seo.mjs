@@ -211,7 +211,7 @@ for (const file of ['termin-tr.html', 'termin-en.html']) {
 const kontaktEdits = {
   'kontakt.html': {
     intro:
-      'Adresse, Anfahrt und Öffnungszeiten unserer Ordination in Wien 11. Für Terminbuchungen nutzen Sie bitte unsere <a href="termin.html">Termin-Seite</a>. Allgemeine Anfragen erreichen uns per Telefon, E-Mail oder Kontaktformular.',
+      'Adresse, Anfahrt und Öffnungszeiten unserer Ordination in Wien 11. Für Terminbuchungen nutzen Sie bitte unsere <a href="tel:+4317692991">Telefonnummer 01 / 769 29 91</a>. Allgemeine Anfragen erreichen uns per Telefon, E-Mail oder Kontaktformular.',
     faqQ: 'Wo finde ich die Ordination und wie komme ich hin?',
     faqA:
       'Unsere Ordination befindet sich in der Kaiser-Ebersdorfer-Straße 328, 1110 Wien. Anfahrt mit Bus (71B, 73A, 76B, 79A, 79B) und Tram (11, 71) bis Station Kaiserebersdorf, Zinnergasse. <a href="https://www.google.com/maps/search/?api=1&amp;query=Kaiser-Ebersdorfer-Straße+328,+1110+Wien,+Österreich" target="_blank" rel="noopener noreferrer">Route in Google Maps</a>.',

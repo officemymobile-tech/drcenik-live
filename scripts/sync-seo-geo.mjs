@@ -121,7 +121,7 @@ kontakt = kontakt.replace(
 );
 kontakt = kontakt.replace(
   /<p class="body-text-lg contact-page-intro">[^<]+<\/p>/,
-  `<p class="body-text-lg contact-page-intro">${de.kontaktIntro} Für Terminbuchungen nutzen Sie bitte unsere <a href="termin.html">Termin-Seite</a>. Allgemeine Anfragen erreichen uns per Telefon, E-Mail oder Kontaktformular.</p>`
+  `<p class="body-text-lg contact-page-intro">${de.kontaktIntro} Für Terminbuchungen nutzen Sie bitte unsere <a href="tel:+4317692991">Telefonnummer 01 / 769 29 91</a>. Allgemeine Anfragen erreichen uns per Telefon, E-Mail oder Kontaktformular.</p>`
 );
 kontakt = kontakt.replace(
   /<p class="contact-faq-answer">Unsere Ordination befindet sich[^<]+<\/p>/,

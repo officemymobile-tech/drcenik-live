@@ -20,7 +20,7 @@ window.DRCENIK_I18N = {
     ctaBook: 'Jetzt Termin buchen',
     ctaBookShort: 'Termin',
     privacyPath: 'datenschutz.html',
-    terminPath: 'termin.html'
+    terminPath: 'tel:+4317692991'
   },
   tr: {
     splashSkip: 'Atlamak için dokunun',
@@ -42,7 +42,7 @@ window.DRCENIK_I18N = {
     ctaBook: 'Şimdi randevu al',
     ctaBookShort: 'Randevu',
     privacyPath: '/tr/datenschutz.html',
-    terminPath: '/tr/termin.html'
+    terminPath: 'tel:+4317692991'
   },
   en: {
     splashSkip: 'Tap to skip',
@@ -64,6 +64,6 @@ window.DRCENIK_I18N = {
     ctaBook: 'Book appointment now',
     ctaBookShort: 'Appointment',
     privacyPath: '/en/datenschutz.html',
-    terminPath: '/en/termin.html'
+    terminPath: 'tel:+4317692991'
   }
 };
