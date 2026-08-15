@@ -446,9 +446,7 @@
   }
 
   function initForms() {
-    var forms = [
-      { id: 'contact-form', subject: 'Kontaktanfrage drcenik.at', consentId: 'contact-consent' }
-    ];
+    var forms = [];
     forms.forEach(function (cfg) {
       var form = document.getElementById(cfg.id);
       if (!form) return;
