@@ -4486,6 +4486,63 @@ body.page-home.theme-ref {
   border-color: transparent;
 }
 
+/* Home: etwas engere vertikale Abstände (nur Startseite) */
+.page-home.theme-ref .section-standard,
+.page-home .section-standard {
+  padding-top: clamp(56px, 7vw, 88px);
+  padding-bottom: clamp(56px, 7vw, 88px);
+}
+.page-home.theme-ref .section-compact,
+.page-home .section-compact {
+  padding-top: clamp(40px, 5vw, 64px);
+  padding-bottom: clamp(40px, 5vw, 64px);
+}
+.page-home.theme-ref .section-standard .section-header,
+.page-home .section-standard .section-header {
+  margin-bottom: clamp(var(--space-4), 4vw, var(--space-6));
+}
+.page-home.theme-ref .section-therapie-ref .grid-services,
+.page-home.theme-ref .section-erkenntnisse-ref .article-grid,
+.page-home .section-therapie-ref .grid-services,
+.page-home .section-erkenntnisse-ref .article-grid {
+  gap: clamp(20px, 3vw, 28px);
+}
+.page-home.theme-ref .section-gutscheine-ref,
+.page-home .section-gutscheine-ref {
+  padding-top: clamp(48px, 8vw, 80px);
+  padding-bottom: clamp(48px, 8vw, 80px);
+  gap: clamp(32px, 5vw, 56px);
+}
+.page-home.theme-ref .section-zeiten-ref,
+.page-home .section-zeiten-ref {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+  gap: var(--space-5);
+}
+.page-home.theme-ref .section-kassen-ref,
+.page-home .section-kassen-ref {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+}
+.page-home .local-seo-home-grid,
+.page-home .related-treatments-grid {
+  gap: clamp(20px, 3vw, 28px);
+}
+@media (max-width: 1023px) {
+  .page-home.theme-ref .section-standard,
+  .page-home .section-standard {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+@media (max-width: 767px) {
+  .page-home.theme-ref .section-standard,
+  .page-home .section-standard {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
 /* Home: Kassen-Banner hell */
 .page-home .section-kassen-ref {
   background: var(--white);
