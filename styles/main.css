@@ -4566,17 +4566,24 @@ body.page-home.theme-ref {
 .page-home .section-cta .card-link:hover { color: var(--navy-800); }
 
 /* Home: Erster Termin (Conversion-Sektion) */
-.section-erster-termin .section-header {
+.section-erster-termin.section-standard,
+.theme-ref .section-erster-termin.section-standard {
+  padding-top: clamp(56px, 7vw, 88px);
+  padding-bottom: clamp(56px, 7vw, 88px);
+}
+.section-erster-termin .section-header,
+.theme-ref .section-erster-termin .section-header {
   text-align: center;
   max-width: 52rem;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: clamp(var(--space-5), 5vw, var(--space-6));
 }
 .section-erster-termin .erster-termin-sub {
-  margin: 0 auto var(--space-2);
+  margin: 0 auto 10px;
   max-width: none;
   width: 100%;
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
   font-weight: 600;
   line-height: 1.35;
   color: var(--navy-800);
@@ -4592,7 +4599,7 @@ body.page-home.theme-ref {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-5) var(--space-4);
+  gap: var(--space-4) var(--space-3);
   position: relative;
   counter-reset: none;
 }
@@ -4602,7 +4609,7 @@ body.page-home.theme-ref {
 @media (min-width: 1280px) {
   .erster-termin-steps {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: var(--space-5);
+    gap: var(--space-4);
   }
   .erster-termin-steps::before {
     content: none;
@@ -4612,7 +4619,7 @@ body.page-home.theme-ref {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: var(--space-3) var(--space-2);
+  padding: var(--space-2) 14px var(--space-3);
   border: 1px solid transparent;
   border-radius: 12px;
   background-color: var(--cream-100);
@@ -4625,35 +4632,39 @@ body.page-home.theme-ref {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 2.5rem;
-  height: 2.5rem;
-  margin: 0 auto var(--space-3);
-  padding: 0 0.4rem;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  margin: 0 auto 12px;
+  padding: 0 0.35rem;
   border-radius: 999px;
   background: var(--white);
   border: 1px solid var(--cream-200);
   color: var(--bronze-700);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1;
-  transition: color 200ms ease, border-color 200ms ease;
+  transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
 }
 .erster-termin-step .heading-4 {
-  margin: 0 0 6px;
+  margin: 0 0 8px;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  font-weight: 700;
+  line-height: 1.3;
   color: var(--navy-800);
   transition: color 200ms ease;
 }
 .erster-termin-kicker {
-  margin: 0 0 var(--space-2);
+  margin: 0 0 10px;
   font-size: 14px;
   font-weight: 600;
+  line-height: 1.35;
   color: var(--bronze-700);
 }
 .erster-termin-step .body-text {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--gray-700);
 }
 @media (hover: hover) and (pointer: fine) {
@@ -4673,21 +4684,21 @@ body.page-home.theme-ref {
 }
 .section-erster-termin .erster-termin-cta {
   --erster-termin-accent: #00AA55;
-  margin-top: clamp(var(--space-6), 6vw, var(--space-8));
+  margin-top: clamp(var(--space-4), 4vw, var(--space-6));
   max-width: 46rem;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
 }
 .section-erster-termin .erster-termin-info {
-  padding: clamp(var(--space-4), 4vw, var(--space-5));
+  padding: clamp(var(--space-3), 3vw, var(--space-4));
   background: rgba(0, 170, 85, 0.04);
   border: 1px solid rgba(0, 170, 85, 0.12);
   border-left: 3px solid var(--erster-termin-accent);
   border-radius: 12px;
 }
 .section-erster-termin .erster-termin-eyebrow {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -4699,10 +4710,10 @@ body.page-home.theme-ref {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  margin: 0 0 var(--space-2);
-  font-size: clamp(1.125rem, 2vw, 1.4rem);
+  margin: 0 0 12px;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.25;
   color: var(--navy-800);
 }
 .section-erster-termin .erster-termin-notice strong {
@@ -4713,13 +4724,14 @@ body.page-home.theme-ref {
   flex-shrink: 0;
   color: var(--erster-termin-accent);
   font-weight: 700;
-  line-height: 1.3;
+  font-size: 1.05em;
+  line-height: 1.25;
 }
 .section-erster-termin .erster-termin-note-text {
-  margin: 0 0 var(--space-4);
+  margin: 0 0 var(--space-3);
   max-width: 48rem;
   font-size: 15px;
-  line-height: 1.65;
+  line-height: 1.6;
   color: var(--gray-700);
   font-weight: 400;
 }
@@ -4727,7 +4739,7 @@ body.page-home.theme-ref {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 0 0 var(--space-4);
+  margin: 0 0 var(--space-3);
   padding: 8px 14px;
   font-size: 14px;
   font-weight: 700;
@@ -4759,6 +4771,11 @@ body.page-home.theme-ref {
 .erster-termin-steps .fade-in-up:nth-child(4) { transition-delay: 240ms; }
 
 @media (max-width: 767px) {
+  .section-erster-termin.section-standard,
+  .theme-ref .section-erster-termin.section-standard {
+    padding-top: clamp(48px, 10vw, 72px);
+    padding-bottom: clamp(48px, 10vw, 72px);
+  }
   .erster-termin-steps {
     grid-template-columns: 1fr;
     gap: 0;
@@ -4767,7 +4784,7 @@ body.page-home.theme-ref {
   }
   .erster-termin-step {
     text-align: left;
-    padding: var(--space-4) 0;
+    padding: var(--space-3) 0;
     border: none;
     border-radius: 0;
     transform: none !important;
@@ -4779,37 +4796,45 @@ body.page-home.theme-ref {
   .erster-termin-step:not(:last-child)::after {
     content: '↓';
     display: block;
-    margin: var(--space-3) 0 0;
+    margin: var(--space-2) 0 0;
     color: var(--bronze-700);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1;
     opacity: 0.7;
   }
   .erster-termin-num {
-    margin: 0 0 var(--space-2);
+    margin: 0 0 8px;
+  }
+  .erster-termin-step .heading-4 {
+    font-size: 1.125rem;
+  }
+  .erster-termin-step .body-text {
+    font-size: 15.5px;
+    line-height: 1.6;
   }
   .section-erster-termin .erster-termin-cta {
     max-width: none;
     padding: 0 4px;
+    margin-top: var(--space-4);
   }
   .section-erster-termin .erster-termin-info {
-    padding: var(--space-4);
+    padding: var(--space-3);
   }
   .section-erster-termin .erster-termin-eyebrow {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   .section-erster-termin .erster-termin-notice {
-    font-size: clamp(1.125rem, 4.5vw, 1.3rem);
-    margin-bottom: 12px;
+    font-size: clamp(1.2rem, 5vw, 1.4rem);
+    margin-bottom: 10px;
   }
   .section-erster-termin .erster-termin-note-text {
     max-width: none;
     font-size: 15px;
-    line-height: 1.65;
+    line-height: 1.6;
     margin-bottom: var(--space-3);
   }
   .section-erster-termin .erster-termin-trust {
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-3);
     font-size: 14px;
   }
   .section-erster-termin .erster-termin-actions {
