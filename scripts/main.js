@@ -582,9 +582,12 @@
     document.querySelectorAll('.contact-reviews-count').forEach(function (el) {
       el.textContent = meta;
     });
+    document.querySelectorAll('.contact-reviews-stand').forEach(function (el) {
+      el.hidden = true;
+    });
 
     if (data.reviewUrl) {
-      document.querySelectorAll('.contact-google-reviews-block .btn-primary').forEach(function (el) {
+      document.querySelectorAll('.contact-google-reviews-block .contact-reviews-btn, .contact-google-reviews-block .btn-primary').forEach(function (el) {
         el.setAttribute('href', data.reviewUrl);
       });
     }

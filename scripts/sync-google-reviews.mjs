@@ -24,8 +24,8 @@ const DATA_PATH = path.join(ROOT, 'data/google-reviews.json');
 
 const KONTAKT_FILES = [
   { file: 'kontakt.html', locale: 'de' },
-  { file: 'kontakt-en.html', locale: 'en' },
-  { file: 'kontakt-tr.html', locale: 'tr' },
+  { file: 'en/kontakt.html', locale: 'en' },
+  { file: 'tr/kontakt.html', locale: 'tr' },
 ];
 
 function loadEnvFile() {
@@ -71,17 +71,29 @@ function updateKontaktHtml(filePath, data, locale) {
     `$1${starsSpaced}$2`,
   );
   html = html.replace(
-    /(<p class="contact-reviews-score">)[^<]*(<\/p>)/,
+    /(<strong class="contact-reviews-score">)[^<]*(<\/strong>)/g,
     `$1${rating}$2`,
   );
   html = html.replace(
-    /(<p class="contact-reviews-count">)[^<]*(<\/p>)/,
+    /(<span class="contact-reviews-count">)[^<]*(<\/span>)/g,
+    `$1${meta}$2`,
+  );
+  html = html.replace(
+    /(<p class="contact-reviews-score">)[^<]*(<\/p>)/g,
+    `$1${rating}$2`,
+  );
+  html = html.replace(
+    /(<p class="contact-reviews-count">)[^<]*(<\/p>)/g,
     `$1${meta}$2`,
   );
 
   if (data.reviewUrl) {
     html = html.replace(
-      /(<div class="contact-google-reviews-block">[\s\S]*?<a href=")[^"]+(" target="_blank" rel="noopener noreferrer" class="btn btn-primary">)/,
+      /(<div class="contact-google-reviews-block[^"]*"[^>]*>[\s\S]*?<a href=")[^"]+(" target="_blank" rel="noopener noreferrer" class="btn[^"]*contact-reviews-btn[^"]*">)/,
+      `$1${data.reviewUrl}$2`,
+    );
+    html = html.replace(
+      /(<div class="contact-google-reviews-block[^"]*"[^>]*>[\s\S]*?<a href=")[^"]+(" target="_blank" rel="noopener noreferrer" class="btn btn-primary">)/,
       `$1${data.reviewUrl}$2`,
     );
   }

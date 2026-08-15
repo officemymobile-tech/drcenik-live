@@ -18,8 +18,8 @@ const DATA_PATH = path.join(ROOT, 'data/google-reviews.json');
 
 const KONTAKT_FILES = [
   { file: 'kontakt.html', locale: 'de' },
-  { file: 'kontakt-en.html', locale: 'en' },
-  { file: 'kontakt-tr.html', locale: 'tr' },
+  { file: 'en/kontakt.html', locale: 'en' },
+  { file: 'tr/kontakt.html', locale: 'tr' },
 ];
 
 function updateKontaktHtml(filePath, data, locale) {
@@ -30,27 +30,35 @@ function updateKontaktHtml(filePath, data, locale) {
   const starsSpaced = starsOutline(data.rating);
 
   html = html.replace(
-    /(<span class="contact-google-stars" aria-hidden="true">)[^<]*(<\/span>)/,
+    /(<span class="contact-google-stars" aria-hidden="true">)[^<]*(<\/span>)/g,
     `$1${stars}$2`,
   );
   html = html.replace(
-    /(<strong class="contact-google-score">)[^<]*(<\/strong>)/,
+    /(<strong class="contact-google-score">)[^<]*(<\/strong>)/g,
     `$1${rating}$2`,
   );
   html = html.replace(
-    /(<p class="contact-google-reviews">)[^<]*(<\/p>)/,
+    /(<p class="contact-google-reviews">)[^<]*(<\/p>)/g,
     `$1${meta}$2`,
   );
   html = html.replace(
-    /(<span class="contact-reviews-stars-outline" aria-hidden="true">)[^<]*(<\/span>)/,
+    /(<span class="contact-reviews-stars-outline" aria-hidden="true">)[^<]*(<\/span>)/g,
     `$1${starsSpaced}$2`,
   );
   html = html.replace(
-    /(<p class="contact-reviews-score">)[^<]*(<\/p>)/,
+    /(<strong class="contact-reviews-score">)[^<]*(<\/strong>)/g,
     `$1${rating}$2`,
   );
   html = html.replace(
-    /(<p class="contact-reviews-count">)[^<]*(<\/p>)/,
+    /(<span class="contact-reviews-count">)[^<]*(<\/span>)/g,
+    `$1${meta}$2`,
+  );
+  html = html.replace(
+    /(<p class="contact-reviews-score">)[^<]*(<\/p>)/g,
+    `$1${rating}$2`,
+  );
+  html = html.replace(
+    /(<p class="contact-reviews-count">)[^<]*(<\/p>)/g,
     `$1${meta}$2`,
   );
 
