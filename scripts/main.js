@@ -395,6 +395,50 @@
     });
   }
 
+  function clearConsentAndReload() {
+    try { localStorage.removeItem(CONSENT_KEY); } catch (e) {}
+    document.dispatchEvent(new CustomEvent('drcenik:consent', { detail: { value: null } }));
+    window.location.reload();
+  }
+
+  function initCookieSettingsReset() {
+    var t = L();
+    var label = t.cookieSettings || 'Cookie-Einstellungen';
+
+    document.querySelectorAll('[data-cookie-settings]').forEach(function (el) {
+      if (el._cookieBound) return;
+      el._cookieBound = true;
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        clearConsentAndReload();
+      });
+    });
+
+    var legalLists = document.querySelectorAll('.footer-col ul');
+    legalLists.forEach(function (ul) {
+      var links = ul.querySelectorAll('a[href]');
+      var isLegal = false;
+      links.forEach(function (a) {
+        var href = (a.getAttribute('href') || '').toLowerCase();
+        if (href.indexOf('datenschutz') !== -1 || href.indexOf('privacy') !== -1 || href.indexOf('impressum') !== -1) {
+          isLegal = true;
+        }
+      });
+      if (!isLegal || ul.querySelector('[data-cookie-settings]')) return;
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#cookie-settings';
+      a.setAttribute('data-cookie-settings', '');
+      a.textContent = label;
+      li.appendChild(a);
+      ul.appendChild(li);
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        clearConsentAndReload();
+      });
+    });
+  }
+
   function initCookieBanner() {
     if (getConsent()) return;
     var t = L();
@@ -624,6 +668,7 @@
     initLangSwitch();
     initFormAutoSave();
     initCookieBanner();
+    initCookieSettingsReset();
     initMapsConsent();
     initForms();
     initGoogleReviews();
