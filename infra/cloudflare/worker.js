@@ -215,6 +215,32 @@ async function handleGoogleReviews(request, env) {
   }
 }
 
+/** @param {Request} request */
+async function fetchPages(request) {
+  const url = new URL(request.url);
+  const originRequest = new Request(request.url, request);
+
+  try {
+    const originResponse = await fetch(originRequest, {
+      cf: { resolveOverride: 'officemymobile-tech.github.io' },
+      redirect: 'manual',
+    });
+    if (originResponse.status !== 525 && originResponse.status !== 526) {
+      return originResponse;
+    }
+  } catch {
+    /* Origin TLS not ready — fallback below */
+  }
+
+  const githubUrl = `${GITHUB_PAGES_ORIGIN}${url.pathname === '/' ? '/' : url.pathname}${url.search}`;
+  return fetch(githubUrl, {
+    method: request.method,
+    headers: request.headers,
+    body: request.method === 'GET' || request.method === 'HEAD' ? undefined : request.body,
+    redirect: 'follow',
+  });
+}
+
 export default {
   /** @param {Request} request @param {Record<string, string>} env */
   async fetch(request, env) {
@@ -227,13 +253,7 @@ export default {
     const blocked = normalizeRequest(request);
     if (blocked) return blocked;
 
-    const githubUrl = `${GITHUB_PAGES_ORIGIN}${url.pathname === '/' ? '/' : url.pathname}${url.search}`;
-    const originResponse = await fetch(githubUrl, {
-      method: request.method,
-      headers: request.headers,
-      body: request.method === 'GET' || request.method === 'HEAD' ? undefined : request.body,
-      redirect: 'follow',
-    });
+    const originResponse = await fetchPages(request);
 
     return withSecurityHeaders(originResponse);
   },
