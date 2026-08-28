@@ -25,10 +25,12 @@ jobs:
       - name: Deploy to Cloudflare Pages
         id: deploy
         uses: cloudflare/wrangler-action@v4
+        env:
+          CLOUDFLARE_ACCOUNT_ID: 32d1986a33941214ed1e8890189180a4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 32d1986a33941214ed1e8890189180a4
-          command: pages deploy . --project-name=drcenik-live --branch=${{ github.ref_name }}
+          command: pages deploy . --project-name=drcenik-live --branch=main
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deployment URL
