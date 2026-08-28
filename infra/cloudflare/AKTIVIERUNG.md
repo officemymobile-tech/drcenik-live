@@ -68,8 +68,8 @@ Setzt automatisch:
 
 | Typ | Name | Ziel | Proxy |
 |-----|------|------|-------|
-| CNAME | www | officemymobile-tech.github.io | ✅ orange |
-| A | @ | 185.199.108–111.153 (GitHub Pages) | ✅ |
+| CNAME | www | drcenik-live.pages.dev | ✅ orange |
+| A | @ | 185.199.108–111.153 | ✅ |
 
 ### Option B — Dashboard (ohne Token)
 
@@ -98,8 +98,8 @@ Setzt automatisch:
 
 | Typ | Name | Ziel | Proxy |
 |-----|------|------|-------|
-| CNAME | www | officemymobile-tech.github.io | ✅ |
-| A | @ | 185.199.108–111.153 (GitHub Pages) | ✅ |
+| CNAME | www | drcenik-live.pages.dev | ✅ |
+| A | @ | 185.199.108–111.153 | ✅ |
 
 E-Mail-Records (`mail`, `imap`) bleiben **DNS only**.
 
@@ -114,7 +114,7 @@ Cloudflare → `drcenik.at` → **DNS** → Records wie in `infra/cloudflare/REA
 - **SSL/TLS** → **Full (strict)**
 - **Edge Certificates** → **Always Use HTTPS**: ON
 
-GitHub Pages: **Enforce HTTPS** bleibt AN.
+Production-Origin: **Cloudflare Pages** (`drcenik-live.pages.dev`), deploy via GitHub Action auf `main`.
 
 ---
 

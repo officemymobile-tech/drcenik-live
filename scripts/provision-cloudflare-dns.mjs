@@ -1,11 +1,12 @@
 /**
- * Setzt DNS für drcenik.at in Cloudflare (GitHub Pages + E-Mail unverändert).
+ * Setzt DNS für drcenik.at in Cloudflare (Cloudflare Pages + E-Mail unverändert).
  * Auth: wrangler login (OAuth) oder CLOUDFLARE_API_TOKEN
  */
 import { execSync } from 'child_process';
 
 const ZONE_NAME = 'drcenik.at';
-const GITHUB = 'officemymobile-tech.github.io';
+const PAGES = 'drcenik-live.pages.dev';
+/** @deprecated GitHub Pages — nur noch für Legacy-Apex-Cleanup */
 const GITHUB_APEX_IPS = [
   '185.199.108.153',
   '185.199.109.153',
@@ -96,7 +97,7 @@ for (const ip of GITHUB_APEX_IPS) {
   await upsert('A', '@', ip, true);
 }
 
-await upsert('CNAME', 'www', GITHUB, true);
+await upsert('CNAME', 'www', PAGES, true);
 
 // E-Mail: nicht proxien
 for (const r of records.filter((x) => x.name.includes('mail.') || x.name.startsWith('imap.'))) {

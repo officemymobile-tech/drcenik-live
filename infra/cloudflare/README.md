@@ -1,14 +1,28 @@
 # Cloudflare — HTTP-301 für drcenik.at
 
-GitHub Pages kann keine Pfad-Redirects. Cloudflare sitzt vor GitHub und liefert echte **301**.
+Cloudflare Worker + Cloudflare Pages liefern echte **301**-Redirects und die statische Site.
 
-**Aktueller Stand (7. Juni 2026):** Zone `drcenik.at` angelegt (Free), Worker `drcenik-redirects` deployed.  
+**Produktionsarchitektur (Stand: August 2026):**
+
+```text
+https://www.drcenik.at/
+        ↓
+Cloudflare (Proxied)
+        ↓
+Worker: drcenik-redirects
+        ↓
+Cloudflare Pages: drcenik-live.pages.dev
+```
+
+GitHub Pages ist **deaktiviert** und kein Production-Origin mehr.
+
+**Aktueller Stand:** Zone `drcenik.at` aktiv (Free), Worker `drcenik-redirects` deployed.  
 **Nameserver (bei World4You eintragen):**
 
 - `aarav.ns.cloudflare.com`
 - `nancy.ns.cloudflare.com`
 
-Zone-ID (API): `b7ff8c0a0014cf9b634b109db088c392` — Status: **pending** bis NS-Umstellung.
+Zone-ID (API): `b7ff8c0a0014cf9b634b109db088c392`
 
 **Nach NS-Propagation:** `npm run audit-redirects` → Ziel 7/7.
 
@@ -19,7 +33,7 @@ Zone-ID (API): `b7ff8c0a0014cf9b634b109db088c392` — Status: **pending** bis NS
 3. Cloudflare DNS wie unten (World4You-Apex-Weiterleitung **deaktivieren**)
 4. **Option A:** `bulk-redirects.csv` importieren **oder** **Option B:** `npm run setup-cloudflare` mit API-Token **oder** **Option C:** `cd infra/cloudflare && npx wrangler deploy`
 5. SSL: Full (strict), Always Use HTTPS: ON
-6. GitHub Pages: Enforce HTTPS bleibt AN
+6. Deploy: Push auf `main` → GitHub Action deployt zu Cloudflare Pages
 7. Prüfen: `npm run audit-redirects` → 7/7
 
 ## Voraussetzungen
@@ -32,13 +46,13 @@ Zone-ID (API): `b7ff8c0a0014cf9b634b109db088c392` — Status: **pending** bis NS
 
 | Typ | Name | Inhalt | Proxy |
 |-----|------|--------|-------|
-| CNAME | `www` | `officemymobile-tech.github.io` | **Proxied** (orange Wolke) |
+| CNAME | `www` | `drcenik-live.pages.dev` | **Proxied** (orange Wolke) |
 | A | `@` | `185.199.108.153` | Proxied |
 | A | `@` | `185.199.109.153` | Proxied |
 | A | `@` | `185.199.110.153` | Proxied |
 | A | `@` | `185.199.111.153` | Proxied |
 
-(GitHub Pages Apex-IPs — alternativ Apex-Weiterleitung bei World4You, siehe `../world4you/README.md`.)
+(Apex-A-Records: Worker übernimmt Redirect `drcenik.at` → `www`. Bei Neu-Setup ggf. Cloudflare-Empfehlung für Apex prüfen.)
 
 ## Schritt 2 — SSL/TLS
 

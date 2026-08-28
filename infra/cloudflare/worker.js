@@ -1,5 +1,5 @@
 /**
- * Edge-301 + Security-Headers für drcenik.at vor GitHub Pages.
+ * Edge-301 + Security-Headers für drcenik.at vor Cloudflare Pages.
  * Deploy: npx wrangler deploy (siehe README.md, AKTIVIERUNG.md)
  *
  * Optional: GET /api/google-reviews – cached Places API proxy (Secret GOOGLE_PLACES_API_KEY).
@@ -7,8 +7,6 @@
 const CANONICAL = 'https://www.drcenik.at';
 const PAGES_ORIGIN = 'https://drcenik-live.pages.dev';
 const PAGES_HOST = 'drcenik-live.pages.dev';
-/** @deprecated GitHub Pages fallback — nur falls Pages kurzzeitig nicht erreichbar */
-const GITHUB_PAGES_ORIGIN = 'https://officemymobile-tech.github.io/drcenik-live';
 const PLACES_BASE = 'https://places.googleapis.com/v1';
 const PLACES_FIELD_MASK = 'rating,userRatingCount';
 const REVIEWS_CACHE_TTL = 60 * 60 * 6;
@@ -222,29 +220,14 @@ async function handleGoogleReviews(request, env) {
 async function fetchPages(request) {
   const url = new URL(request.url);
   const pagesPath = `${url.pathname === '' ? '/' : url.pathname}${url.search}`;
+  const pagesUrl = `${PAGES_ORIGIN}${pagesPath}`;
 
-  try {
-    const pagesUrl = `${PAGES_ORIGIN}${pagesPath}`;
-    const originResponse = await fetch(pagesUrl, {
-      method: request.method,
-      headers: request.headers,
-      body: request.method === 'GET' || request.method === 'HEAD' ? undefined : request.body,
-      redirect: 'manual',
-      cf: { resolveOverride: PAGES_HOST },
-    });
-    if (originResponse.status !== 525 && originResponse.status !== 526) {
-      return originResponse;
-    }
-  } catch {
-    /* Pages TLS/connection issue — fallback below */
-  }
-
-  const githubUrl = `${GITHUB_PAGES_ORIGIN}${pagesPath}`;
-  return fetch(githubUrl, {
+  return fetch(pagesUrl, {
     method: request.method,
     headers: request.headers,
     body: request.method === 'GET' || request.method === 'HEAD' ? undefined : request.body,
-    redirect: 'follow',
+    redirect: 'manual',
+    cf: { resolveOverride: PAGES_HOST },
   });
 }
 

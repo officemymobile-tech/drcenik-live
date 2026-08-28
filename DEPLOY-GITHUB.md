@@ -1,3 +1,7 @@
+> **Hinweis (August 2026):** GitHub Pages ist für dieses Projekt deaktiviert.  
+> Production läuft über Cloudflare Pages (`drcenik-live.pages.dev`) + Worker `drcenik-redirects`.  
+> Diese Anleitung bleibt nur als historische Referenz erhalten.
+
 # Webseite auf GitHub veröffentlichen (GitHub Pages)
 
 Deine Seite ist statisches HTML/CSS/JS und eignet sich gut für **GitHub Pages**. So geht’s:
