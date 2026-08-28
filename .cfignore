@@ -1,0 +1,16 @@
+node_modules/
+.git/
+.github/
+CNAME
+scripts/
+infra/
+tmp-gbp-verify/
+preview-erster-termin/
+preview-erster-termin.html
+lighthouse-mobile.json
+config/
+*.md
+package.json
+package-lock.json
+.env
+.env.*
