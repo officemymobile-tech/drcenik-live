@@ -227,7 +227,6 @@ export default {
     const blocked = normalizeRequest(request);
     if (blocked) return blocked;
 
-    const url = new URL(request.url);
     const githubUrl = `${GITHUB_PAGES_ORIGIN}${url.pathname === '/' ? '/' : url.pathname}${url.search}`;
     const originResponse = await fetch(githubUrl, {
       method: request.method,
