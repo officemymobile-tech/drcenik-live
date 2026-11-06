@@ -1,0 +1,107 @@
+name: Deploy Production RC
+
+# Controlled production release for approved RC only.
+# Trigger: workflow_dispatch. Environment: production (required reviewers).
+
+on:
+  workflow_dispatch:
+    inputs:
+      git_ref:
+        description: "Approved ref only: rc/seo-assistant-2026-11-06 OR cfcc7ab31ddf6ec95d61d2ca4b96d5975300c33d"
+        required: true
+        type: string
+        default: "rc/seo-assistant-2026-11-06"
+      confirm_production_deploy:
+        description: "Type exactly DEPLOY-PRODUCTION"
+        required: true
+        type: string
+      skip_api_probe:
+        description: "Emergency only"
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: cloudflare-pages-deploy
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  deployments: write
+
+env:
+  APPROVED_RC_SHA: cfcc7ab31ddf6ec95d61d2ca4b96d5975300c33d
+  APPROVED_RC_TAG: rc/seo-assistant-2026-11-06
+
+jobs:
+  validate-functions-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enforce approved RC ref input
+        run: |
+          REF="${{ github.event.inputs.git_ref }}"
+          case "$REF" in
+            "${{ env.APPROVED_RC_TAG }}"|"${{ env.APPROVED_RC_SHA }}")
+              echo "Approved ref: $REF"
+              ;;
+            *)
+              echo "Refusing unapproved git_ref: $REF"
+              exit 1
+              ;;
+          esac
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.git_ref }}
+
+      - name: Verify approved RC SHA
+        run: |
+          HEAD=$(git rev-parse HEAD)
+          test "$HEAD" = "${{ env.APPROVED_RC_SHA }}"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: node scripts/validate-pages-functions-artifact.mjs
+
+  deploy:
+    needs: validate-functions-artifact
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Require DEPLOY-PRODUCTION confirmation
+        run: |
+          test "${{ github.event.inputs.confirm_production_deploy }}" = "DEPLOY-PRODUCTION"
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.git_ref }}
+
+      - name: Verify approved RC SHA
+        run: |
+          HEAD=$(git rev-parse HEAD)
+          test "$HEAD" = "${{ env.APPROVED_RC_SHA }}"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: node scripts/validate-pages-functions-artifact.mjs
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v4
+        env:
+          CLOUDFLARE_ACCOUNT_ID: 32d1986a33941214ed1e8890189180a4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 32d1986a33941214ed1e8890189180a4
+          command: pages deploy . --project-name=drcenik-live --branch=main --commit-hash=${{ env.APPROVED_RC_SHA }} --commit-message="production: approved RC cfcc7ab SEO + patient-assistant"
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Probe patient-assistant API
+        if: ${{ github.event.inputs.skip_api_probe != true }}
+        run: node scripts/probe-patient-assistant-api.mjs "${{ steps.deploy.outputs.deployment-url }}" "https://www.drcenik.at"
+
+      - run: echo "Deployed to ${{ steps.deploy.outputs.deployment-url }}"
