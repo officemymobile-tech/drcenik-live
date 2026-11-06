@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <script src="scripts/edge-redirect.js"></script>
+  <meta http-equiv="refresh" content="0;url=https://www.drcenik.at/">
+  <link rel="canonical" href="https://www.drcenik.at/">
+  <meta name="robots" content="noindex, follow">
+  <title>Termin telefonisch – Dr. Fadime Cenik</title>
+  <meta name="description" content="Termine bitte telefonisch unter 01 / 769 29 91 vereinbaren.">
+</head>
+<body>
+  <p>Termine bitte telefonisch vereinbaren: <a href="tel:+4317692991">01 / 769 29 91</a>.</p>
+  <p><a href="https://www.drcenik.at/">Zur Startseite</a></p>
+  <script src="scripts/patient-assistant-boot.js" defer></script>
+</body>
+</html>

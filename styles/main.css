@@ -2604,11 +2604,28 @@ body.theme-ref {
   background: var(--white);
   min-height: 40px;
 }
+.kassen-facts {
+  max-width: 62ch;
+  text-align: left;
+  margin: var(--space-4) auto 0;
+}
+.kassen-facts .heading-3 {
+  text-align: center;
+  margin: 0 0 var(--space-3);
+}
+.kassen-facts .body-text {
+  margin: 0 0 var(--space-2);
+}
+.kassen-facts-links {
+  text-align: center;
+  margin-top: var(--space-3);
+}
 @media (max-width: 600px) {
   .section-kassen-ref { padding: var(--space-3) 5%; }
   .section-kassen-ref .kassen-inner { gap: var(--space-2); }
   .section-kassen-ref .kassen-badge { padding: 6px 12px; font-size: 13px; }
   .section-kassen-ref .kassen-badge img.kassen-logo { height: 32px; max-width: 100px; }
+  .kassen-facts { margin-top: var(--space-3); }
 }
 
 /* Gutscheine Sektion – ansprechende Darstellung, Gold-Rahmen, mittig */
@@ -3007,6 +3024,11 @@ body.theme-ref {
   letter-spacing: 0.04em;
 }
 .contact-page-intro { margin: 0 auto; color: var(--ref-text-muted); max-width: 60ch; text-align: center; }
+.contact-page-header .body-text {
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .contact-cards-row {
   display: grid;
@@ -3016,9 +3038,9 @@ body.theme-ref {
 }
 .contact-cards-row--3 {
   grid-template-columns: repeat(3, 1fr);
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
 }
 .contact-card {
   padding: var(--space-4);
@@ -3322,20 +3344,22 @@ body.theme-ref {
   border-radius: 24px;
 }
 .contact-map-overlay {
-  position: absolute;
-  top: var(--space-3);
-  left: var(--space-3);
-  right: auto;
-  padding: var(--space-3);
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--ref-bg);
-  border-radius: 10px;
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--navy-800);
+  border: 0;
+  border-radius: 0;
   font-size: 14px;
-  z-index: 2;
-  max-width: 260px;
 }
-.contact-map-address { display: block; font-weight: 600; margin-bottom: 8px; }
-.contact-map-link { display: block; color: var(--ref-bg); text-decoration: underline; margin-top: 4px; font-size: 13px; }
+.contact-map-address { display: inline; font-weight: 600; margin: 0; }
+.contact-map-link { display: inline; color: var(--bronze-700); text-decoration: underline; margin: 0; font-size: 13px; }
 .contact-map-link:hover { opacity: 0.8; }
 .contact-map-column .anfahrt-block { background: transparent; padding: 0; }
 
@@ -3794,7 +3818,7 @@ img, .article-card-image {
 }
 @media (max-width: 480px) {
   .contact-map-iframe { height: 280px; min-height: 280px; }
-  .contact-map-overlay { max-width: 85%; font-size: 13px; padding: var(--space-2); }
+  .contact-map-overlay { max-width: none; font-size: 13px; padding: 0; }
 }
 
 /* Kartlar & Grid: tablet 2 sütun, mobil 1 sütun */
@@ -5150,4 +5174,207 @@ body.page-home.theme-ref {
   .related-treatments-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* --- A11Y FIX: cookie-consent secondary button (WCAG 2.1 AA) ---
+   Problem: .btn-secondary sets color/border to var(--navy-800) (#234B5E).
+   The cookie banner surface is var(--ref-bg-card) (#232D3D), so the label
+   measured 1.48:1 against its own background. Fixed with the dark-surface
+   tokens the design system already defines for exactly this case.
+   No layout, spacing, type-scale, brand-hue or structural change. */
+.cookie-consent .btn-secondary,
+.cookie-consent .cookie-consent-necessary,
+.theme-ref .cookie-consent .btn-secondary,
+body:not(.theme-ref) .cookie-consent .btn-secondary {
+  color: var(--ref-text);
+  border-color: var(--ref-border);
+  background: transparent;
+}
+.cookie-consent .btn-secondary:hover,
+.cookie-consent .cookie-consent-necessary:hover,
+.theme-ref .cookie-consent .btn-secondary:hover,
+body:not(.theme-ref) .cookie-consent .btn-secondary:hover {
+  color: var(--brand-blue-dark);
+  background: var(--ref-text);
+  border-color: var(--ref-text);
+}
+.cookie-consent .btn-secondary:focus-visible,
+.cookie-consent .cookie-consent-necessary:focus-visible {
+  outline: 2px solid var(--ref-gold);
+  outline-offset: 3px;
+}
+
+/* --- A11Y FIX: cookie-consent text (WCAG 2.1 AA) ---
+   Same defect as the button, same component. Line 1938 sets
+   `.theme-ref .cookie-consent-text { color: var(--gray-700) }` while the
+   banner surface is the dark var(--ref-bg-card) -> 1.84:1. The author's own
+   intent is visible one branch further down (line 1952 already uses
+   rgba(255,255,255,.9) for the non-theme-ref banner); this applies the same
+   dark-surface treatment to the .theme-ref branch. Tokens only, no layout,
+   spacing, type-scale or brand-hue change. */
+.theme-ref .cookie-consent-text,
+.cookie-consent .cookie-consent-text {
+  color: var(--ref-text-muted);
+}
+.theme-ref .cookie-consent-text a,
+.cookie-consent .cookie-consent-text a {
+  color: var(--brand-gold-light);
+}
+.theme-ref .cookie-consent-text a:hover,
+.cookie-consent .cookie-consent-text a:hover {
+  color: var(--ref-text);
+}
+
+/* --- A11Y FIX: AA-safe gold for text on light surfaces (WCAG 2.1 AA) ---
+   Problem: gold link text used --bronze-700 (#B89968) on white cards ->
+   2.39-2.69:1. No existing gold token reaches AA on white: the darkest,
+   --brand-gold-dark (#9B7A4F), is only 3.97:1.
+   Solution: one new accessibility-specific token derived from --brand-gold
+   with the hue (36.8deg) and saturation (40.4%) held EXACTLY constant and only
+   lightness lowered (61.2% -> 37.1%). Measured: 5.26:1 on #FFFFFF,
+   5.03:1 on --cream-50, 4.99:1 on --surface-app, 4.67:1 on --cream-100,
+   4.60:1 on --bronze-100. The global brand gold is unchanged and every other
+   use of --brand-gold / --brand-gold-light / --brand-gold-dark / --bronze-700
+   is untouched. Hover stays --navy-800 as before. Text colour only:
+   no layout, spacing, type-scale, structure or brand-hue change. */
+:root {
+  --brand-gold-aa: #856738;
+}
+
+/* Resting state: card and article "read more" links */
+.card-link,
+.theme-ref .card-link,
+.theme-ref .section-cta .card-link,
+.page-home .section-therapie-ref .card-link,
+.page-home .section-cta .card-link,
+.section-erkenntnisse-ref .article-card-link,
+.theme-ref .section-erkenntnisse-ref .article-card-link,
+.page-home .section-erkenntnisse-ref .article-card-link {
+  color: var(--brand-gold-aa);
+}
+
+/* Hover unchanged: the existing navy destination, re-asserted so the
+   cascade order of this block cannot weaken it. */
+.card-link:hover,
+.theme-ref .card-link:hover,
+.theme-ref .section-cta .card-link:hover,
+.page-home .section-therapie-ref .card-link:hover,
+.page-home .section-cta .card-link:hover,
+.section-erkenntnisse-ref .article-card-link:hover,
+.theme-ref .section-erkenntnisse-ref .article-card-link:hover,
+.page-home .section-erkenntnisse-ref .article-card-link:hover {
+  color: var(--navy-800);
+}
+
+.card-link:focus-visible,
+.article-card-link:focus-visible {
+  outline: 2px solid var(--brand-gold-aa);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Active language link, desktop only. The <=768px rules render it as a solid
+   navy pill with white text (already AA) and are deliberately left alone. */
+@media (min-width: 769px) {
+  .navbar-lang-link.is-active,
+  .theme-ref .navbar-lang-link.is-active,
+  .page-home .navbar-lang-link.is-active {
+    color: var(--brand-gold-aa);
+  }
+  .navbar-lang-link:focus-visible {
+    outline: 2px solid var(--brand-gold-aa);
+    outline-offset: 2px;
+  }
+}
+
+/* --- A11Y FIX: semantic + status text on light surfaces (WCAG 2.1 AA) ---
+   Classified from the markup, not from the contrast number alone.
+   A (real readable text, gold) -> --brand-gold-aa:
+     .hero-ref-overline, .overline, .article-card-tag, .kassen-label and the
+     "Telefon" / "E-Mail" labels in the hero contact boxes, all previously
+     --bronze-700 (#B89968) at 2.39-2.69:1 on white.
+   A (real readable text, green) -> --erster-termin-accent-aa: the
+     "Gut zu wissen" eyebrow, previously --erster-termin-accent (#00AA55) at
+     2.60:1. The token itself is unchanged so the section's left border keeps
+     its colour; only the text usage is overridden.
+   C (status text) -> .open-closed-badge: "Geoeffnet" / "Geschlossen" is a live
+     status (aria-live), not decoration. Text colour darkened within the same
+     hue and saturation; backgrounds and borders untouched.
+   B/D (decorative) -> untouched on purpose: .erster-termin-num (01-04) and
+     .erster-termin-check are already aria-hidden in the markup, and the
+     .navbar-lang-sep and .hero-ref-value-dot separators were removed from the
+     accessibility tree in the HTML instead of being recoloured.
+   New colours keep the source hue and saturation exactly; only lightness moves. */
+:root {
+  --erster-termin-accent-aa: #00793C;
+}
+
+.hero-ref-overline,
+.theme-ref .hero-ref-overline,
+.hero-ref-left .hero-ref-overline,
+.page-home .hero-ref-left .hero-ref-overline,
+.overline,
+.theme-ref .overline,
+.page-home .section-erster-termin .overline,
+.section-erkenntnisse-ref .article-card-tag,
+.page-home .section-erkenntnisse-ref .article-card-tag,
+.section-kassen-ref .kassen-label,
+.page-home .section-kassen-ref .kassen-label,
+.hero-ref-contact-box > span {
+  color: var(--brand-gold-aa);
+}
+
+.section-erster-termin .erster-termin-eyebrow {
+  color: var(--erster-termin-accent-aa);
+}
+
+.open-closed-badge.is-open { color: #27773D; }
+.open-closed-badge.is-closed { color: #C92D22; }
+
+/* --- A11Y FIX round 2: specificity + status badges (WCAG 2.1 AA) ---
+   Three items the previous block did not reach, all confirmed in the browser:
+   1. "Telefon" / "E-Mail" labels: .page-home .hero-ref-contact-box span (0,3,1)
+      outranked the earlier .hero-ref-contact-box > span rule. Matched here.
+   2. "Gut zu wissen" eyebrow: #007D3E was 4.47:1 on the section's own
+      rgba(0,170,85,0.04) tint. Darkened one more step to #00793C -> 4.71:1
+      there and >=4.83:1 on every other light surface. Hue 150deg and
+      saturation 100% still identical to --erster-termin-accent.
+   3. .open-closed-badge is a live status (aria-live), not decoration:
+      - hero overlay: white label on rgba(52,168,83,.95) was 2.88:1. Fill
+        darkened within the same hue/saturation to rgba(39,126,62,.95) -> 4.60:1.
+      - inline badges in .section-zeiten-ref: #2d8a47 on the .15 tint was
+        3.72:1 -> #28793E gives 4.60:1; the closed state #d93025 was 4.18:1
+        -> #CD2D23 gives 4.60:1. Backgrounds and borders of the inline badges
+        are untouched; only the label colour moves.
+   Geometry, spacing, type and every brand token stay as they are. */
+:root {
+  --erster-termin-accent-aa: #00793C;
+}
+
+.hero-ref-contact-box span,
+.page-home .hero-ref-contact-box span {
+  color: var(--brand-gold-aa);
+}
+.hero-ref-contact-box a,
+.page-home .hero-ref-contact-box a {
+  color: var(--navy-800);
+}
+
+.page-home .hero-ref-open-badge-overlay .open-closed-badge.is-open {
+  background: rgba(39, 126, 62, 0.95);
+}
+.page-home .section-zeiten-ref .open-closed-badge.is-open { color: #28793E; }
+.page-home .section-zeiten-ref .open-closed-badge.is-closed { color: #CD2D23; }
+.open-closed-badge.is-open { color: #28793E; }
+.open-closed-badge.is-closed { color: #CD2D23; }
+
+/* --- UI FIX round 3: card-link arrow spacing ---
+   The duplicate arrow lived in the HTML; the pseudo-element keeps it, since
+   that is what carries the hover transform. Its content is ' \2192' with a
+   leading space, and a leading space at the start of inline content collapses,
+   so the label rendered as "Mehr erfahren>" with no gap once the HTML copy was
+   removed. white-space: pre preserves that single space without touching the
+   content string, the geometry or the hover animation. */
+.card-link::after {
+  white-space: pre;
 }

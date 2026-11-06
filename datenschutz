@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <script src="scripts/edge-redirect.js"></script>
+  <meta name="google-site-verification" content="_KnZVMV9x2kk0NG_q5RMmQE4ZORs3Es5juq_OwbqVUs">
+  <meta name="drcenik-ga4" content="G-4HLLNDWSS6">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <title>Datenschutzerklärung | Dr. Fadime Cenik, Wien 11</title>
+  <meta name="description" content="Datenschutzerklärung gemäß DSGVO – Dr. Fadime Cenik, Physikalische Medizin Wien 11. Informationen zu Datenverarbeitung und Ihren Rechten.">
+  <meta property="og:title" content="Datenschutzerklärung | Dr. Fadime Cenik">
+  <meta property="og:description" content="Datenschutzerklärung – Informationen zum Umgang mit Ihren Daten gemäß DSGVO. Wien 11.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.drcenik.at/datenschutz.html">
+  <meta property="og:image" content="https://www.drcenik.at/assets/logo.webp">
+  <meta name="twitter:image" content="https://www.drcenik.at/assets/logo.webp">
+  <meta property="og:locale" content="de_AT">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_AT">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Datenschutzerklärung | Dr. Fadime Cenik">
+  <meta name="twitter:description" content="Datenschutzerklärung – DSGVO. Wien 11.">
+  <link rel="alternate" hreflang="de" href="https://www.drcenik.at/datenschutz.html">
+  <link rel="alternate" hreflang="tr" href="https://www.drcenik.at/tr/datenschutz.html">
+  <link rel="alternate" hreflang="en" href="https://www.drcenik.at/en/datenschutz.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.drcenik.at/datenschutz.html">
+  <link rel="canonical" href="https://www.drcenik.at/datenschutz.html">
+    <link rel="preload" href="assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/critical.css">
+<link rel="stylesheet" href="styles/main.css?v=27">
+  <link rel="stylesheet" href="styles/mobile-navbar-fix.css?v=8">
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Datenschutzerklärung – Dr. Fadime Cenik",
+    "url": "https://www.drcenik.at/datenschutz.html",
+    "isPartOf": { "@type": "WebSite", "name": "Dr. Fadime Cenik", "url": "https://www.drcenik.at/" }
+  }
+  </script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Startseite",
+        "item": "https://www.drcenik.at/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Datenschutz",
+        "item": "https://www.drcenik.at/datenschutz.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="page page-datenschutz theme-ref">
+  <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+  <header class="site-header">
+    <nav class="navbar" id="navbar" aria-label="Hauptnavigation">
+      <div class="navbar-container">
+        <a href="/" class="navbar-logo">
+          <img src="assets/logo.webp" onerror="this.onerror=null;this.src='./assets/logo.webp';" alt="Dr. Fadime Cenik" class="navbar-logo-icon" width="140" height="58" loading="eager">
+        </a>
+        <button type="button" class="navbar-toggle" id="navbar-toggle" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar-links" id="navbar-links">
+          <li><a href="/" class="nav-link nav-link-startseite">Startseite</a></li>
+          <li><a href="therapieangebot.html" class="nav-link">Therapieangebot</a></li>
+          <li><a href="r-force.html" class="nav-link">R-Force</a></li>
+          <li><a href="wissen-news.html" class="nav-link">Wissen & News</a></li>
+          <li><a href="faq.html" class="nav-link">Häufige Fragen</a></li>
+          <li><a href="ueber-uns.html" class="nav-link">Über uns</a></li>
+          <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+          <li class="navbar-mobile-extra">
+            <a href="tel:+4317692991" class="navbar-phone">01 / 769 29 91</a>
+            <div class="navbar-lang" aria-label="Sprache wählen">
+              <a href="datenschutz.html" class="navbar-lang-link is-active">DE</a>
+              <span class="navbar-lang-sep" aria-hidden="true">|</span>
+              <a href="https://www.drcenik.at/tr/datenschutz.html" class="navbar-lang-link">TR</a>
+              <span class="navbar-lang-sep" aria-hidden="true">|</span>
+              <a href="https://www.drcenik.at/en/datenschutz.html" class="navbar-lang-link">EN</a>
+            </div>
+          </li>
+        </ul>
+        <div class="navbar-actions">
+          <a href="tel:+4317692991" class="navbar-phone">01 / 769 29 91</a>
+          <div class="navbar-lang" aria-label="Sprache wählen">
+            <a href="datenschutz.html" class="navbar-lang-link is-active" hreflang="de" lang="de">DE</a>
+            <span class="navbar-lang-sep" aria-hidden="true">|</span>
+            <a href="https://www.drcenik.at/tr/datenschutz.html" class="navbar-lang-link" hreflang="tr" lang="tr">TR</a>
+            <span class="navbar-lang-sep" aria-hidden="true">|</span>
+            <a href="https://www.drcenik.at/en/datenschutz.html" class="navbar-lang-link" hreflang="en" lang="en">EN</a>
+          </div>
+          <a href="tel:+4317692991" class="btn btn-primary">Termin buchen</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="section-standard section-page" aria-labelledby="page-heading">
+      <div class="container">
+        <a href="/" class="faq-back-link">← Zurück zur Startseite</a>
+        <div class="section-header">
+          <h1 class="heading-1" id="page-heading">Datenschutzerklärung</h1>
+          <p class="body-text-lg">Informationen zum Umgang mit Ihren Daten gemäß DSGVO.</p>
+        </div>
+        <div class="legal-content body-text">
+          <h2 class="heading-4 legal-h2">1. Verantwortliche Stelle</h2>
+          <p>Verantwortlich für die Datenverarbeitung auf dieser Website:</p>
+          <p><strong>Dr. med. univ. Fadime Cenik</strong><br>Kaiser-Ebersdorfer-Straße 328, 1110 Wien, Österreich<br>Telefon: <a href="tel:+4317692991">01 / 769 29 91</a><br>E-Mail: <a href="mailto:office@drcenik.at">office@drcenik.at</a></p>
+
+          <h2 class="heading-4 legal-h2">2. Allgemeines / Rechtsgrundlage</h2>
+          <p>Personenbezogene Daten werden nur im erforderlichen Umfang, rechtmäßig und transparent verarbeitet. Rechtsgrundlagen sind insbesondere: Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), Vertragserfüllung bzw. vorvertragliche Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO), berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO) sowie ggf. gesetzliche Verpflichtungen (z. B. Aufbewahrungspflichten).</p>
+
+          <h2 class="heading-4 legal-h2">3. Kontaktaufnahme</h2>
+          <p>Termine und Anfragen erfolgen telefonisch unter <a href="tel:+4317692991">01 / 769 29 91</a> bzw. per E-Mail an <a href="mailto:office@drcenik.at">office@drcenik.at</a>. Die dabei übermittelten Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage bzw. Terminvereinbarung verarbeitet. Rechtsgrundlage sind vorvertragliche Maßnahmen bzw. Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO) sowie ggf. berechtigte Interessen (Art. 6 Abs. 1 lit. f DSGVO). Eine Weitergabe an Dritte erfolgt nicht, sofern nicht gesetzlich vorgesehen.</p>
+
+          <h2 class="heading-4 legal-h2">4. Google Maps</h2>
+          <p>Auf der Kontaktseite können Karten von Google Maps (Google Ireland Limited, Irland) eingebunden werden. Die Karte wird <strong>erst nach Ihrer ausdrücklichen Einwilligung</strong> geladen („Alles akzeptieren“ im Cookie-Hinweis oder Button „Karte laden“). Beim Laden werden Daten (u. a. IP-Adresse, Geräteinformationen) an Google übertragen. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>. Rechtsgrundlage bei Einwilligung: Art. 6 Abs. 1 lit. a DSGVO.</p>
+
+          <h2 class="heading-4 legal-h2">5. Cookies und lokale Speicherung</h2>
+          <p>Wir speichern Ihre Cookie-Einstellung (<code>drcenik-cookie-consent</code>) lokal im Browser. Rechtsgrundlage: technische Notwendigkeit bzw. Ihre Einwilligung (Art. 6 Abs. 1 lit. f bzw. lit. a DSGVO). Analyse-Cookies (Google Analytics) werden nur nach Ihrer Einwilligung („Alles akzeptieren“) gesetzt. Sie können Ihre Einwilligung jederzeit widerrufen oder ändern über den Link <strong>Cookie-Einstellungen</strong> im Fußbereich der Website (löscht die gespeicherte Einstellung und lädt die Seite neu, sodass der Cookie-Hinweis erneut erscheint).</p>
+
+          <h2 class="heading-4 legal-h2">6. Analyse / Tracking (Google Analytics 4)</h2>
+          <p>Bei Einwilligung nutzen wir <strong>Google Analytics 4</strong> (Google Ireland Limited / Google LLC, USA) zur anonymisierten Auswertung der Website-Nutzung (z. B. Seitenaufrufe, ungefähre Herkunft, Gerätetyp). Die IP-Adresse wird gekürzt übermittelt. Google Analytics wird <strong>erst nach „Alles akzeptieren“</strong> im Cookie-Hinweis geladen. Rechtsgrundlage: Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können die Einwilligung jederzeit widerrufen über <strong>Cookie-Einstellungen</strong> im Fußbereich oder indem Sie im Browser gespeicherte Website-Daten für drcenik.at löschen. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>, <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Browser-Add-on zur Deaktivierung</a>.</p>
+
+          <h2 class="heading-4 legal-h2">7. Hosting / Server-Logdaten</h2>
+          <p>Beim Besuch unserer Website erhebt der Hosting-Anbieter bzw. der Server automatisch Zugriffsdaten (z. B. IP-Adresse, Datum/Uhrzeit, aufgerufene Seite, Browsertyp). Diese werden zur Gewährleistung des Betriebs und der Sicherheit nur in dem dafür erforderlichen Umfang und für eine begrenzte Dauer gespeichert (berechtigtes Interesse / ggf. gesetzliche Pflicht).</p>
+
+          <h2 class="heading-4 legal-h2">8. Ihre Rechte (DSGVO)</h2>
+          <p>Sie haben das Recht auf <strong>Auskunft</strong> (Art. 15 DSGVO), <strong>Berichtigung</strong> (Art. 16), <strong>Löschung</strong> (Art. 17), <strong>Einschränkung der Verarbeitung</strong> (Art. 18), <strong>Datenübertragbarkeit</strong> (Art. 20) sowie auf <strong>Widerspruch</strong> (Art. 21) und das Recht, eine <strong>Beschwerde bei einer Aufsichtsbehörde</strong> einzulegen (in Österreich: Österreichische Datenschutzbehörde, Barichgasse 40–42, 1030 Wien, <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">dsb.gv.at</a>). Zur Ausübung Ihrer Rechte wenden Sie sich bitte an die oben genannte verantwortliche Stelle.</p>
+
+          <h2 class="heading-4 legal-h2">9. Änderungen</h2>
+          <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen. Die jeweils aktuelle Version finden Sie auf dieser Seite.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer-ref" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo-link"><img src="assets/logo.webp" onerror="this.onerror=null;this.src='./assets/logo.webp';" alt="Dr. Fadime Cenik – Fachärztin für Physikalische Medizin und allgemeine Rehabilitation" class="footer-logo" width="180" height="180" loading="lazy"></a>
+            <p class="footer-desc">Fachärztin für Physikalische Medizin und allgemeine Rehabilitation in Wien.</p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="/">Startseite</a></li>
+            <li><a href="therapieangebot.html">Therapieangebot</a></li>
+            <li><a href="r-force.html">R-Force</a></li>
+            <li><a href="wissen-news.html">Wissen &amp; News</a></li>
+            <li><a href="faq.html">Häufige Fragen</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+                      <li><a href="tel:+4317692991">Termin anfragen</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Kontakt</h5>
+          <ul>
+            <li><a href="tel:+4317692991">01 / 769 29 91</a></li>
+            <li><a href="mailto:office@drcenik.at">office@drcenik.at</a></li>
+            <li><a href="https://www.google.com/maps?cid=16167401803672481750" target="_blank" rel="noopener noreferrer">Google Maps</a></li>
+            <li><a href="https://www.google.com/maps/place/Dr.Fadime+Cenik/@48.1588483,16.4717764,17z/data=!4m6!3m5!1s0x476dabdc170b5eb7:0xe05e264828e86fd6!8m2!3d48.1588483!4d16.4717764!16s%2Fg%2F11yx9rm5zy!9m1!1b1" target="_blank" rel="noopener noreferrer">Google-Bewertung abgeben</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-col-address">
+          <h5>Adresse</h5>
+          <p class="footer-address">Kaiser-Ebersdorfer-Straße 328, 1110 Wien, Österreich</p>
+          <p class="footer-public"><strong>Öffentlich erreichbar:</strong><br>BUS: 71B / 73A / 76B / 79A / 79B<br>TRAM: 11 / 71<br>Station: Kaiserebersdorf, Zinnergasse</p>
+        </div>
+        <div class="footer-col">
+          <h5>Rechtliches</h5>
+          <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+            <li><a href="agb.html">AGB</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-since">Seit 1990 für Sie da.</p>
+        <p>© 2026 Dr. Fadime Cenik. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <aside class="mobile-cta" id="mobile-cta" aria-label="Schnellaktionen">
+    <a href="tel:+4317692991" class="mobile-cta-btn mobile-cta-phone">Anrufen</a>
+    <a href="tel:+4317692991" class="mobile-cta-btn mobile-cta-book">Termin</a>
+  </aside>
+  <script src="scripts/analytics.js" defer></script>
+
+  <script src="scripts/site-i18n.js" defer></script>
+  <script src="scripts/main.js?v=14" defer></script>
+  <script src="scripts/patient-assistant-boot.js" defer></script>
+</body>
+</html>

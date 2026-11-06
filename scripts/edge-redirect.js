@@ -9,6 +9,10 @@
   var search = location.search;
   var hash = location.hash;
 
+  if (host === '127.0.0.1' || host === 'localhost') {
+    return;
+  }
+
   if (host === 'drcenik.at') {
     location.replace('https://www.drcenik.at' + path + search + hash);
     return;
