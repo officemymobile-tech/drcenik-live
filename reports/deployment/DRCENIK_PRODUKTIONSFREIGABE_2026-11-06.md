@@ -2,9 +2,10 @@
 
 **Tarih:** 6 Kasım 2026  
 **Dal:** `release/seo-physikalische-therapie-wien-11`  
-**Release commit:** `562070dac7cad87f826aac769465d0cb5b1264be`  
+**Release commit (HEAD):** `8eb25c29bcc039e59f9c859e824a77f0278a68fb`  
+**İçerik commit (telefon düzeltmesi):** `562070dac7cad87f826aac769465d0cb5b1264be`  
 **Canlı production deployment (değişmedi):** `9d68e71d-82e9-4206-a2ec-e6f1a407c151`  
-**Nihai preview deployment:** `b3ddea8b-d631-4977-8e70-9655445f1d4a` (kaynak `562070d`)  
+**Nihai preview deployment:** `622da5c9-3914-4ed5-b1cb-148a68870857` (kaynak `8eb25c2`)  
 **Preview alias:** https://seo-preview-2026-11-06.drcenik-live.pages.dev  
 
 **Genel sonuç: CONDITIONAL PASS** (teknik olarak yayına hazır; „alle Kassen“ içerik onayı açık)  
@@ -108,10 +109,11 @@ Gelecekteki bir production deploy sonrası `9d68e71d…` geçerli geri alma hede
 
 | Alan | Değer |
 | --- | --- |
-| Yerel HEAD | `562070dac7cad87f826aac769465d0cb5b1264be` |
-| Preview kaynağı | `562070d` |
-| Preview ID | `b3ddea8b-d631-4977-8e70-9655445f1d4a` |
+| Yerel HEAD | `8eb25c29bcc039e59f9c859e824a77f0278a68fb` |
+| Preview kaynağı | `8eb25c2` |
+| Preview ID | `622da5c9-3914-4ed5-b1cb-148a68870857` |
 | Alias | https://seo-preview-2026-11-06.drcenik-live.pages.dev |
+| Önceki içerik preview | `b3ddea8b…` / `562070d` (telefon düzeltmesi smoke) |
 
 ---
 
