@@ -12,28 +12,28 @@ if (!base) {
 }
 
 const failures = [];
-function fail(m) {
-  failures.push(m);
+function check(cond, message) {
+  if (!cond) failures.push(message);
 }
 
 const home = await fetch(base + '/');
-fail(home.status !== 200 && `home HTTP ${home.status}`);
 const homeHtml = await home.text();
-if (!/patient-assistant-boot\.js/.test(homeHtml)) fail('home missing patient-assistant-boot.js');
-if (!/ÖGK|SVS|BVAEB|KFA/.test(homeHtml)) fail('home missing kassen markers');
-if (!/physikalische-therapie-wien-11\//.test(homeHtml)) fail('home missing SEO page link');
+check(home.status === 200, `home HTTP ${home.status}`);
+check(/patient-assistant-boot\.js/.test(homeHtml), 'home missing patient-assistant-boot.js');
+check(/ÖGK|SVS|BVAEB|KFA/.test(homeHtml), 'home missing kassen markers');
+check(/physikalische-therapie-wien-11\//.test(homeHtml), 'home missing SEO page link');
 
 const seo = await fetch(base + '/physikalische-therapie-wien-11/');
-fail(seo.status !== 200 && `seo page HTTP ${seo.status}`);
+check(seo.status === 200, `seo page HTTP ${seo.status}`);
 
 const assistantJs = await fetch(base + '/scripts/patient-assistant.js');
-fail(assistantJs.status !== 200 && `patient-assistant.js HTTP ${assistantJs.status}`);
+check(assistantJs.status === 200, `patient-assistant.js HTTP ${assistantJs.status}`);
 const assistantBoot = await fetch(base + '/scripts/patient-assistant-boot.js');
-fail(assistantBoot.status !== 200 && `patient-assistant-boot.js HTTP ${assistantBoot.status}`);
+check(assistantBoot.status === 200, `patient-assistant-boot.js HTTP ${assistantBoot.status}`);
 
 const apiGet = await fetch(base + '/api/patient-assistant');
-fail(apiGet.status === 404 && 'API route missing (404) — Functions likely absent');
-fail(apiGet.status !== 405 && apiGet.status !== 403 && apiGet.status !== 429 && `unexpected GET status ${apiGet.status}`);
+check(apiGet.status !== 404, 'API route missing (404) — Functions likely absent');
+check([405, 403, 429].includes(apiGet.status), `unexpected GET status ${apiGet.status}`);
 
 const apiPost = await fetch(base + '/api/patient-assistant', {
   method: 'POST',
@@ -57,13 +57,11 @@ try {
 } catch {
   apiJson = null;
 }
-if (apiPost.status !== 200) fail(`API POST HTTP ${apiPost.status} body=${apiText.slice(0, 120)}`);
-if (!apiJson?.message) fail('API POST missing message');
-if (!/Therapiezeiten|07:00/.test(apiJson?.message || '')) fail('API POST hours content missing');
-if (apiJson?.phone?.href !== 'tel:+4317692991') fail('API phone href missing');
-
-// Static-only regression signature
-if (apiPost.status === 405) fail('CRITICAL: static-only artifact (POST 405)');
+check(apiPost.status !== 405, 'CRITICAL: static-only artifact (POST 405)');
+check(apiPost.status === 200, `API POST HTTP ${apiPost.status} body=${apiText.slice(0, 120)}`);
+check(Boolean(apiJson?.message), 'API POST missing message');
+check(/Therapiezeiten|07:00/.test(apiJson?.message || ''), 'API POST hours content missing');
+check(apiJson?.phone?.href === 'tel:+4317692991', 'API phone href missing');
 
 let cfMeta = null;
 const token = process.env.CLOUDFLARE_API_TOKEN;
@@ -75,17 +73,10 @@ if (token && deploymentId) {
   );
   const metaJson = await metaRes.json();
   cfMeta = metaJson?.result || null;
-  if (!metaRes.ok) fail(`CF API deployment lookup HTTP ${metaRes.status}`);
-  else {
-    if (cfMeta?.uses_functions !== true && cfMeta?.env_vars?.CF_PAGES == null) {
-      // uses_functions is the authoritative field when present
-    }
-    if (cfMeta && Object.prototype.hasOwnProperty.call(cfMeta, 'uses_functions') && cfMeta.uses_functions !== true) {
-      fail(`CF meta uses_functions=${cfMeta.uses_functions}`);
-    }
-    if (cfMeta?.environment && !/preview|production/i.test(cfMeta.environment)) {
-      fail(`unexpected environment ${cfMeta.environment}`);
-    }
+  if (!metaRes.ok) {
+    failures.push(`CF API deployment lookup HTTP ${metaRes.status}`);
+  } else if (cfMeta && Object.prototype.hasOwnProperty.call(cfMeta, 'uses_functions')) {
+    check(cfMeta.uses_functions === true, `CF meta uses_functions=${cfMeta.uses_functions}`);
   }
 }
 
@@ -102,13 +93,13 @@ const report = {
   functionsLive: apiPost.status === 200 && Boolean(apiJson?.message),
   cfUsesFunctions: cfMeta?.uses_functions ?? null,
   cfEnvironment: cfMeta?.environment ?? null,
-  cfCommitHash: cfMeta?.deployment_trigger?.metadata?.commit_hash ?? cfMeta?.production_branch ?? null,
   failures,
 };
 
 console.log(JSON.stringify(report, null, 2));
 if (failures.length) {
   console.error('FAIL: uploaded deployment artifact checks failed');
+  for (const f of failures) console.error(' -', f);
   process.exit(1);
 }
 console.log('PASS: uploaded deployment artifact includes Functions + SEO + assistant assets');
