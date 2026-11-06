@@ -1,10 +1,25 @@
 name: Deploy Cloudflare Pages
 
+# Permanent Functions gate (incident 2026-11-06):
+# Validation MUST pass before wrangler pages deploy. Static-only trees fail closed.
+#
+# Manual approval gate (prepared, non-destructive):
+# - Job uses GitHub Environment "production". Owner can enable required reviewers
+#   in GitHub → Settings → Environments without further workflow edits.
+# - workflow_dispatch remains available for explicit runs.
+# Existing push→main trigger is retained (not disabled). Validation alone blocks
+# broken Functions-less publishes until source is restored.
+
 on:
   push:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      skip_api_probe:
+        description: 'Set true only for emergency diagnostics (not for real releases)'
+        required: false
+        default: 'false'
 
 concurrency:
   group: cloudflare-pages-deploy
@@ -15,12 +30,37 @@ permissions:
   deployments: write
 
 jobs:
-  deploy:
+  validate-functions-artifact:
     runs-on: ubuntu-latest
-    name: Deploy drcenik-live to Cloudflare Pages
+    name: Validate Pages Functions artifact
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fail closed if Functions are missing
+        run: node scripts/validate-pages-functions-artifact.mjs
+
+  deploy:
+    needs: validate-functions-artifact
+    runs-on: ubuntu-latest
+    name: Deploy drcenik-live to Cloudflare Pages
+    environment: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Re-validate immediately before upload
+        run: node scripts/validate-pages-functions-artifact.mjs
 
       - name: Deploy to Cloudflare Pages
         id: deploy
@@ -32,6 +72,10 @@ jobs:
           accountId: 32d1986a33941214ed1e8890189180a4
           command: pages deploy . --project-name=drcenik-live --branch=main
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Probe patient-assistant API on deployment URL
+        if: github.event.inputs.skip_api_probe != 'true'
+        run: node scripts/probe-patient-assistant-api.mjs "${{ steps.deploy.outputs.deployment-url }}" "https://www.drcenik.at"
 
       - name: Deployment URL
         run: echo "Deployed to ${{ steps.deploy.outputs.deployment-url }}"
