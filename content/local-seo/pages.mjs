@@ -104,7 +104,7 @@ export const PAGES = [
         h2: 'Kombination mit weiteren Therapien',
         paragraphs: [
           `R-Force wirkt am besten im Verbund: Heilgymnastik stärkt Muskulatur und Beweglichkeit, Manuelle Lymphdrainage unterstützt bei Schwellungen nach OP, Stoßwellentherapie kann bei chronischen Sehnenansatzbeschwerden sinnvoll sein. Für Rücken- oder Nackenprobleme, die den Gang beeinflussen, verweisen wir auf unsere thematischen Informationsseiten – die Behandlung bleibt jedoch stets individuell.`,
-          `Ausführliche technische Informationen zum Gerät finden Sie auf unserer <a href="../r-force.html">R-Force Produktseite</a>. Für einen Termin in Wien 11 nutzen Sie <a href="tel:+4317692991">unser Telefon</a> oder rufen Sie uns direkt an.`,
+          `Ausführliche technische Informationen zum Gerät finden Sie auf unserer <a href="../r-force.html">R-Force Produktseite</a>. Für einen Termin in Wien 11 rufen Sie uns unter <a href="tel:+4317692991">01 / 769 29 91</a> an.`,
         ],
       },
     ],

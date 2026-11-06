@@ -1,0 +1,14 @@
+{
+  "backupFileCount": 87,
+  "identical": 83,
+  "different": 4,
+  "missing": 0,
+  "intentionalDiffs": [
+    "index.html",
+    "sitemap.xml",
+    "therapieangebot",
+    "therapieangebot.html"
+  ],
+  "unexpectedDiffs": [],
+  "missingFiles": []
+}

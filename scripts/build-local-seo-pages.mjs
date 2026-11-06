@@ -267,7 +267,7 @@ ${renderFaqs(page.faqs)}
 
         <div class="cta-block cta-block-large local-seo-end-cta">
           <h2 class="heading-2">${GEO.terminCta || 'Termin in 1110 Wien vereinbaren'}</h2>
-          <p class="body-text">Ob akute Beschwerden oder chronische Schmerzen: In unserer Ordination in Simmering finden wir gemeinsam den passenden Behandlungsweg – ${GEO.terminText || 'gut erreichbar aus 1100 Wien, Schwechat und dem 15-km-Umkreis.'} Rufen Sie an oder nutzen Sie unser Telefon.</p>
+          <p class="body-text">Ob akute Beschwerden oder chronische Schmerzen: In unserer Ordination in Simmering finden wir gemeinsam den passenden Behandlungsweg – ${GEO.terminText || 'gut erreichbar aus 1100 Wien, Schwechat und dem 15-km-Umkreis.'} Terminvereinbarung telefonisch unter <a href="tel:+4317692991">01 / 769 29 91</a>.</p>
           <div class="cta-actions">
             <a href="tel:+4317692991" class="btn btn-primary">Jetzt anrufen</a>
             <a href="tel:+4317692991" class="btn btn-secondary">Termin buchen</a>
