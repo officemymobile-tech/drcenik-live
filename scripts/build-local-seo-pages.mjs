@@ -224,7 +224,7 @@ ${buildSchemas(page, url)}
         <div class="local-trust-bar" role="note" aria-label="Vertrauensmerkmale">
           <span>Seit 1990 in 1110 Wien</span>
           <span>Fachärztin für Physikalische Medizin</span>
-          <span>Kassen: ÖGK · BVAEB · SVS</span>
+          <span>Kassen: ÖGK · SVS · BVAEB · KFA</span>
         </div>
         <div class="section-header">
           <span class="overline">${GEO.overline}</span>
@@ -247,7 +247,7 @@ ${renderSections(sectionsBefore)}
 
         <div class="cta-block cta-block-large local-seo-mid-cta">
           <h2 class="heading-2">Persönliche Beratung in Simmering</h2>
-          <p class="body-text">Dr. Fadime Cenik ist Fachärztin für Physikalische Medizin und allgemeine Rehabilitation. Wir nehmen uns Zeit für Ihre Anamnese, Befunderhebung und einen individuellen Therapieplan – mit Kassenleistung (ÖGK, BVAEB, SVS) oder als Privatordination.</p>
+          <p class="body-text">Dr. Fadime Cenik ist Fachärztin für Physikalische Medizin und allgemeine Rehabilitation. Wir nehmen uns Zeit für Ihre Anamnese, Befunderhebung und einen individuellen Therapieplan – mit Kassenleistung (ÖGK · SVS · BVAEB · KFA) oder als Privatordination.</p>
           <div class="cta-actions">
             <a href="tel:+4317692991" class="btn btn-primary">01 / 769 29 91</a>
             <a href="tel:+4317692991" class="btn btn-secondary">Termin telefonisch</a>

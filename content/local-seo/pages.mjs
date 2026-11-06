@@ -24,7 +24,7 @@ const baseRelated = [
   { slug: 'faszienschmerzen', title: 'Faszienschmerzen', desc: 'Myofasziale Beschwerden, Triggerpunkte und manuelle Therapie.' },
   { slug: 'stosswellentherapie-wien', title: 'Stoßwellentherapie Wien', desc: 'ESWT bei Sehnenansatz- und chronischen Schmerzen.' },
   { slug: 'r-force-therapie-wien', title: 'R-Force Therapie Wien', desc: 'Gehtraining mit Gewichtsentlastung nach Verletzung oder OP.' },
-  { href: '../therapieangebot.html', title: 'Therapieangebot', desc: 'Alle Kassen- und Privatleistungen der Ordination.' },
+  { href: '../therapieangebot.html', title: 'Therapieangebot', desc: 'ÖGK · SVS · BVAEB · KFA und Privatleistungen der Ordination.' },
   { slug: 'physikalische-therapie-wien-11', title: 'Physikalische Therapie Wien 11', desc: 'Fachärztliche physikalische Therapie in Simmering.' },
 ];
 
@@ -594,7 +594,7 @@ export const PAGES = [
       },
       {
         q: 'Übernimmt die ÖGK jede Behandlung?',
-        a: 'Nein. Die Ordination nimmt unter anderem ÖGK, BVAEB, SVS und KFA an. Nicht jede Therapie wird von jeder Kasse bezahlt. Die Übernahme hängt von Indikation, Verordnung und den Regeln Ihrer Versicherung ab.',
+        a: 'Nein. Die Ordination hat Kassenverträge mit ÖGK, SVS, BVAEB und KFA und behandelt auch privat. Nicht jede Therapie wird von jeder Kasse bezahlt. Die Übernahme hängt von Indikation, Verordnung und den Regeln Ihrer Versicherung ab.',
       },
       {
         q: 'Wie vereinbare ich einen Termin?',
