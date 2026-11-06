@@ -1,0 +1,25 @@
+PAT=assistant_message :: C:\Users\kassa\Desktop\WEBSITE_BACKUPS\github\drcenik-live\scripts\probe-patient-assistant-api.mjs:58:  (json.type === 'assistant_message' || json.type === 'workflow' || typeof json.type === 'string');
+PAT=suggestedActions :: C:\Users\kassa\Desktop\WEBSITE_BACKUPS\github\drcenik-live\scripts\probe-patient-assistant-api.mjs:32:const actions = Array.isArray(json?.suggestedActions) ? json.suggestedActions : [];
+PAT=suggestedActions :: C:\Users\kassa\Desktop\WEBSITE_BACKUPS\github\drcenik-live\scripts\patient-assistant.js:444:    renderActions(data.suggestedActions);
+PAT=safetyState :: C:\Users\kassa\Desktop\WEBSITE_BACKUPS\github\drcenik-live\scripts\patient-assistant.js:441:    var kind = data.safetyState === 'emergency' ? 'emergency' : '';
+PAT=safetyState :: C:\Users\kassa\Desktop\WEBSITE_BACKUPS\github\drcenik-live\scripts\patient-assistant.js:448:    if (data.safetyState === 'emergency') {
+PAT=pages-worker--18518054 :: C:\Users\kassa\Desktop\WEBSITE_BACKUPS\_inventory\cloudflare-pages-projects.json:443:                       "production_script_name":  "pages-worker--18518054-production",
+PAT=pages-worker--18518054 :: C:\Users\kassa\Desktop\WEBSITE_BACKUPS\_inventory\cloudflare-pages-projects.json:444:                       "preview_script_name":  "pages-worker--18518054-preview",
+PAT=suggestedActions :: C:\Users\kassa\Desktop\DRCENIK_LIVE_FULL_BACKUP_2026-11-06\05_PUBLIC_SITE_SNAPSHOT\www.drcenik.at\scripts\patient-assistant.js:444:    renderActions(data.suggestedActions);
+PAT=suggestedActions :: C:\Users\kassa\Desktop\DRCENIK_LIVE_FULL_BACKUP_2026-11-06\01_LIVE_DEPLOYMENT_FILES\9d68e71d-82e9-4206-a2ec-e6f1a407c151\scripts\patient-assistant.js:444:    renderActions(data.suggestedActions);
+PAT=safetyState :: C:\Users\kassa\Desktop\DRCENIK_LIVE_FULL_BACKUP_2026-11-06\01_LIVE_DEPLOYMENT_FILES\9d68e71d-82e9-4206-a2ec-e6f1a407c151\scripts\patient-assistant.js:441:    var kind = data.safetyState === 'emergency' ? 'emergency' : '';
+PAT=safetyState :: C:\Users\kassa\Desktop\DRCENIK_LIVE_FULL_BACKUP_2026-11-06\01_LIVE_DEPLOYMENT_FILES\9d68e71d-82e9-4206-a2ec-e6f1a407c151\scripts\patient-assistant.js:448:    if (data.safetyState === 'emergency') {
+PAT=safetyState :: C:\Users\kassa\Desktop\DRCENIK_LIVE_FULL_BACKUP_2026-11-06\05_PUBLIC_SITE_SNAPSHOT\www.drcenik.at\scripts\patient-assistant.js:441:    var kind = data.safetyState === 'emergency' ? 'emergency' : '';
+PAT=safetyState :: C:\Users\kassa\Desktop\DRCENIK_LIVE_FULL_BACKUP_2026-11-06\05_PUBLIC_SITE_SNAPSHOT\www.drcenik.at\scripts\patient-assistant.js:448:    if (data.safetyState === 'emergency') {
+PAT=pages-worker--18518054 :: C:\Users\kassa\Desktop\DRCENIK_LIVE_FULL_BACKUP_2026-11-06\04_CLOUDFLARE_CONFIGURATION\pages-project.json:190:      "production_script_name": "pages-worker--18518054-production",
+PAT=pages-worker--18518054 :: C:\Users\kassa\Desktop\DRCENIK_LIVE_FULL_BACKUP_2026-11-06\04_CLOUDFLARE_CONFIGURATION\pages-project.json:191:      "preview_script_name": "pages-worker--18518054-preview",
+PAT=suggestedActions :: C:\Users\kassa\AppData\Local\Temp\drcenik-full-stage\05_PUBLIC_SITE_SNAPSHOT\www.drcenik.at\scripts\patient-assistant.js:444:    renderActions(data.suggestedActions);
+PAT=suggestedActions :: C:\Users\kassa\AppData\Local\Temp\drcenik-full-stage\01_LIVE_DEPLOYMENT_FILES\9d68e71d-82e9-4206-a2ec-e6f1a407c151\scripts\patient-assistant.js:444:    renderActions(data.suggestedActions);
+PAT=safetyState :: C:\Users\kassa\AppData\Local\Temp\drcenik-full-stage\05_PUBLIC_SITE_SNAPSHOT\www.drcenik.at\scripts\patient-assistant.js:441:    var kind = data.safetyState === 'emergency' ? 'emergency' : '';
+PAT=safetyState :: C:\Users\kassa\AppData\Local\Temp\drcenik-full-stage\05_PUBLIC_SITE_SNAPSHOT\www.drcenik.at\scripts\patient-assistant.js:448:    if (data.safetyState === 'emergency') {
+PAT=safetyState :: C:\Users\kassa\AppData\Local\Temp\drcenik-full-stage\01_LIVE_DEPLOYMENT_FILES\9d68e71d-82e9-4206-a2ec-e6f1a407c151\scripts\patient-assistant.js:441:    var kind = data.safetyState === 'emergency' ? 'emergency' : '';
+PAT=safetyState :: C:\Users\kassa\AppData\Local\Temp\drcenik-full-stage\01_LIVE_DEPLOYMENT_FILES\9d68e71d-82e9-4206-a2ec-e6f1a407c151\scripts\patient-assistant.js:448:    if (data.safetyState === 'emergency') {
+PAT=pages-worker--18518054 :: C:\Users\kassa\AppData\Local\Temp\drcenik-cf-zip\04_CLOUDFLARE_CONFIGURATION\pages-project.json:190:      "production_script_name": "pages-worker--18518054-production",
+PAT=pages-worker--18518054 :: C:\Users\kassa\AppData\Local\Temp\drcenik-cf-zip\04_CLOUDFLARE_CONFIGURATION\pages-project.json:191:      "preview_script_name": "pages-worker--18518054-preview",
+PAT=pages-worker--18518054 :: C:\Users\kassa\AppData\Local\Temp\drcenik-full-stage\04_CLOUDFLARE_CONFIGURATION\pages-project.json:190:      "production_script_name": "pages-worker--18518054-production",
+PAT=pages-worker--18518054 :: C:\Users\kassa\AppData\Local\Temp\drcenik-full-stage\04_CLOUDFLARE_CONFIGURATION\pages-project.json:191:      "preview_script_name": "pages-worker--18518054-preview",

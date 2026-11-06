@@ -1,0 +1,41 @@
+[
+  {
+    "file": "C-client-ui/patient-assistant.js",
+    "class": "C",
+    "sha256": "95E90E45DBD3613843B11A524132430214FFCE06928457C1CD4688788B0322AC",
+    "bytes": 21400,
+    "implements_api_route": false,
+    "notes": "Browser UI only; calls POST /api/patient-assistant"
+  },
+  {
+    "file": "C-client-ui/backup-9d68-patient-assistant.js",
+    "class": "C",
+    "sha256": "95E90E45DBD3613843B11A524132430214FFCE06928457C1CD4688788B0322AC",
+    "bytes": 21400,
+    "implements_api_route": false,
+    "notes": "Identical to repo client; from 9d68 crawl backup"
+  },
+  {
+    "file": "C-client-ui/patient-assistant-boot.js",
+    "class": "C",
+    "sha256": "29308A98B1B436EBC29E21097ACECE0F30B1D0B92A7AC517E0863058EC187847",
+    "bytes": 1613,
+    "implements_api_route": false,
+    "notes": "Lazy loader for UI assets"
+  },
+  {
+    "file": "C-related-worker/drcenik-redirects.api-export.js",
+    "class": "D",
+    "sha256": "6428A10C725A793B284A6EEB8AFDB25E8D68C8E73BA941F69902BCE90F51E186",
+    "bytes": 11932,
+    "implements_api_route": false,
+    "notes": "Authorized Workers API export; implements google-reviews only; no patient-assistant"
+  },
+  {
+    "file": "live-api-contract-sanitized.json",
+    "class": "C",
+    "sha256": null,
+    "implements_api_route": false,
+    "notes": "Sanitized public response envelope from working production; not source"
+  }
+]

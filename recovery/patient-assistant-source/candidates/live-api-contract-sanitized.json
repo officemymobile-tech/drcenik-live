@@ -1,0 +1,22 @@
+{
+  "status": 200,
+  "type": "assistant_message",
+  "language": "de",
+  "messageLen": 128,
+  "hasMessage": true,
+  "suggestedActionIds": [
+    "call",
+    "appointment",
+    "hours"
+  ],
+  "suggestedActionLabels": [
+    "Anrufen",
+    "Termin vereinbaren",
+    "Öffnungszeiten"
+  ],
+  "hasTelHref": true,
+  "workflow": null,
+  "safetyState": "normal",
+  "linkKeys": [],
+  "phonePresent": false
+}

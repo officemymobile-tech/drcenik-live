@@ -1,0 +1,2 @@
+04_published_snapshot\live\_assets\scripts\patient-assistant-boot.js
+04_published_snapshot\pages_dev\_assets\scripts\patient-assistant-boot.js

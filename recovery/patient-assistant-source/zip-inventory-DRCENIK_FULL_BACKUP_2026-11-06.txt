@@ -1,0 +1,6 @@
+01_LIVE_DEPLOYMENT_FILES\9d68e71d-82e9-4206-a2ec-e6f1a407c151\scripts\patient-assistant-boot.js
+01_LIVE_DEPLOYMENT_FILES\9d68e71d-82e9-4206-a2ec-e6f1a407c151\scripts\patient-assistant.js
+01_LIVE_DEPLOYMENT_FILES\9d68e71d-82e9-4206-a2ec-e6f1a407c151\styles\patient-assistant.css
+05_PUBLIC_SITE_SNAPSHOT\www.drcenik.at\scripts\patient-assistant-boot.js
+05_PUBLIC_SITE_SNAPSHOT\www.drcenik.at\scripts\patient-assistant.js
+05_PUBLIC_SITE_SNAPSHOT\www.drcenik.at\styles\patient-assistant.css
