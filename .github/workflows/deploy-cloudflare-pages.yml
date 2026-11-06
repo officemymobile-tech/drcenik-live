@@ -1,10 +1,7 @@
 name: Deploy Cloudflare Pages
 
-# Production gate (2026-11-06 RC):
-# - workflow_dispatch ONLY (no push→main auto-publish)
-# - Must deploy approved RC commit cfcc7ab… / tag rc/seo-assistant-2026-11-06
-# - GitHub Environment "production" + confirm input DEPLOY-PRODUCTION
-# - validate-pages-functions-artifact.mjs fail-closed blocks static-only trees
+# Production gate for approved RC cfcc7ab / tag rc/seo-assistant-2026-11-06
+# workflow_dispatch only. Environment: production (required reviewers).
 
 on:
   workflow_dispatch:
@@ -12,15 +9,17 @@ on:
       git_ref:
         description: "Approved ref only: rc/seo-assistant-2026-11-06 OR cfcc7ab31ddf6ec95d61d2ca4b96d5975300c33d"
         required: true
-        default: 'rc/seo-assistant-2026-11-06'
+        type: string
+        default: "rc/seo-assistant-2026-11-06"
       confirm_production_deploy:
         description: "Type exactly DEPLOY-PRODUCTION to allow a production Pages deploy"
         required: true
-        default: ''
+        type: string
       skip_api_probe:
-        description: 'Set true only for emergency diagnostics (not for real releases)'
+        description: "Set true only for emergency diagnostics (not for real releases)"
         required: false
-        default: 'false'
+        type: boolean
+        default: false
 
 concurrency:
   group: cloudflare-pages-deploy
@@ -69,7 +68,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Fail closed if Functions are missing
         run: node scripts/validate-pages-functions-artifact.mjs
@@ -103,7 +102,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Re-validate immediately before upload
         run: node scripts/validate-pages-functions-artifact.mjs
@@ -120,7 +119,7 @@ jobs:
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Probe patient-assistant API on deployment URL
-        if: github.event.inputs.skip_api_probe != 'true'
+        if: ${{ github.event.inputs.skip_api_probe != 'true' }}
         run: node scripts/probe-patient-assistant-api.mjs "${{ steps.deploy.outputs.deployment-url }}" "https://www.drcenik.at"
 
       - name: Deployment URL
