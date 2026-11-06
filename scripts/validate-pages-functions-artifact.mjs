@@ -102,8 +102,14 @@ if (exists('package.json')) {
   try {
     const pkg = JSON.parse(read('package.json'));
     const deploy = pkg.scripts?.['deploy-pages'] || '';
-    if (deploy && !/validate-pages-functions/.test(deploy)) {
-      warn('package.json deploy-pages should run validate-pages-functions before wrangler pages deploy.');
+    const approved = pkg.scripts?.['deploy-pages-production-approved-rc'] || '';
+    const deploySafe =
+      /validate-pages-functions/.test(deploy) ||
+      /refuse-unsafe-production-deploy/.test(deploy) ||
+      /refuse-unsafe-production-deploy/.test(approved) ||
+      /deploy-approved-rc-production/.test(approved);
+    if (deploy && !deploySafe) {
+      warn('package.json deploy-pages should refuse unsafe deploys or run validate-pages-functions.');
     }
   } catch {
     warn('package.json could not be parsed.');
