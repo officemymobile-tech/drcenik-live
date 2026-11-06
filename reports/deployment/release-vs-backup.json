@@ -1,0 +1,23 @@
+{
+  "backupFiles": 87,
+  "unexpectedDiffs": [],
+  "missingFromRelease": [],
+  "intentionalTouchedPresent": [
+    "index.html",
+    "therapieangebot.html",
+    "therapieangebot",
+    "sitemap.xml",
+    "infra/cloudflare/worker.js",
+    "_redirects",
+    "content/local-seo/pages.mjs",
+    "content/local-seo/manifest.json",
+    "scripts/build-local-seo-pages.mjs",
+    "scripts/generate-sitemap.mjs",
+    "scripts/audit-seo-regression-2026-11-06.mjs",
+    "docs/PRODUCTION_RECOVERY_2026-10-14.md",
+    "reports/seo/DRCENIK_KEYWORD_TRACKING_2026-11-06.md",
+    "reports/seo/DRCENIK_SEO_AUDIT_2026-11-06.md",
+    "reports/seo/DRCENIK_SEO_IMPLEMENTATION_2026-11-06.md"
+  ],
+  "newLandingPage": true
+}

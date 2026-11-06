@@ -81,6 +81,12 @@ function normalizeRequest(request) {
     return redirect301(url, '/', search);
   }
 
+  // Canonical therapy catalog is the .html URL used by navigation, sitemap and rel=canonical.
+  // Live production already redirects this path; keep the rule in source for redeploys.
+  if (path === '/therapieangebot' || path === '/therapieangebot/') {
+    return redirect301(url, '/therapieangebot.html', search);
+  }
+
   if (path === '/267059-geschenkgutschein-vorlage.html') {
     return redirect301(url, '/geschenkgutschein.html', search);
   }

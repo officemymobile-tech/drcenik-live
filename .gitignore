@@ -9,3 +9,6 @@ config/gsc-service-account.json
 config/google-places.env
 .env
 .env.*
+
+.wrangler/
+

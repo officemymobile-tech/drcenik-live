@@ -91,7 +91,7 @@ function buildSchemas(page, url) {
     url,
     inLanguage: 'de-AT',
     about: { '@type': 'MedicalCondition', name: page.conditionName || page.h1 },
-    lastReviewed: '2026-06-07',
+    lastReviewed: page.lastReviewed || '2026-06-07',
     reviewedBy: { '@id': PHYSICIAN_ID },
     publisher: { '@id': PHYSICIAN_ID },
   };
@@ -336,14 +336,22 @@ ${renderFaqs(page.faqs)}
   </aside>
 
   <script src="../scripts/main.js?v=11" defer></script>
+  <script src="../scripts/patient-assistant-boot.js" defer></script>
 </body>
 </html>`;
 
   return { slug: page.slug, html, wordCount: wc };
 }
 
+const onlySlug = process.env.SEO_ONLY || '';
+const pagesToBuild = onlySlug ? PAGES.filter((page) => page.slug === onlySlug) : PAGES;
+if (onlySlug && pagesToBuild.length === 0) {
+  console.error('SEO_ONLY slug not found:', onlySlug);
+  process.exit(1);
+}
+
 const results = [];
-for (const page of PAGES) {
+for (const page of pagesToBuild) {
   if (page.title.length > 60) console.warn(`WARN ${page.slug}: title ${page.title.length} chars (>60)`);
   if (page.metaDescription.length > 155) console.warn(`WARN ${page.slug}: meta ${page.metaDescription.length} chars (>155)`);
 
@@ -355,9 +363,22 @@ for (const page of PAGES) {
   console.log(`✓ ${page.slug}/index.html (${built.wordCount} Wörter)`);
 }
 
+const manifestPath = path.join(root, 'content/local-seo/manifest.json');
+let previousPages = [];
+if (onlySlug && fs.existsSync(manifestPath)) {
+  try {
+    previousPages = JSON.parse(fs.readFileSync(manifestPath, 'utf8')).pages || [];
+  } catch {
+    previousPages = [];
+  }
+}
+const mergedPages = [
+  ...previousPages.filter((entry) => !results.some((built) => built.slug === entry.slug)),
+  ...results.map((built) => ({ slug: built.slug, wordCount: built.wordCount })),
+];
 const manifest = {
   generatedAt: new Date().toISOString(),
-  pages: results.map((r) => ({ slug: r.slug, wordCount: r.wordCount })),
+  pages: mergedPages,
   slugs: ALL_SLUGS,
 };
 fs.writeFileSync(path.join(root, 'content/local-seo/manifest.json'), JSON.stringify(manifest, null, 2));

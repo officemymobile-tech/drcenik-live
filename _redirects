@@ -1,0 +1,3 @@
+# Cloudflare Pages. Canonical therapy URL is the .html path used in navigation and sitemap.
+/therapieangebot /therapieangebot.html 301
+/therapieangebot/ /therapieangebot.html 301

@@ -34,6 +34,7 @@ const localSeoSingles = [
   ['knieschmerzen-behandlung/', 'monthly', '0.88'],
   ['schulter-schmerzen/', 'monthly', '0.88'],
   ['faszienschmerzen/', 'monthly', '0.88'],
+  ['physikalische-therapie-wien-11/', 'monthly', '0.9'],
 ];
 
 function loc(file) {

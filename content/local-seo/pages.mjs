@@ -25,6 +25,7 @@ const baseRelated = [
   { slug: 'stosswellentherapie-wien', title: 'Stoßwellentherapie Wien', desc: 'ESWT bei Sehnenansatz- und chronischen Schmerzen.' },
   { slug: 'r-force-therapie-wien', title: 'R-Force Therapie Wien', desc: 'Gehtraining mit Gewichtsentlastung nach Verletzung oder OP.' },
   { href: '../therapieangebot.html', title: 'Therapieangebot', desc: 'Alle Kassen- und Privatleistungen der Ordination.' },
+  { slug: 'physikalische-therapie-wien-11', title: 'Physikalische Therapie Wien 11', desc: 'Fachärztliche physikalische Therapie in Simmering.' },
 ];
 
 function relatedFor(slug, extra = []) {
@@ -499,6 +500,119 @@ export const PAGES = [
       { q: 'Termin in Simmering?', a: `${LOCAL.phone}.` },
     ],
     related: relatedFor('faszienschmerzen'),
+  },
+
+  {
+    slug: 'physikalische-therapie-wien-11',
+    title: 'Physikalische Therapie Wien 11 | Dr. Fadime Cenik',
+    metaDescription:
+      'Physikalische Therapie in Wien 11 bei Dr. Fadime Cenik. Fachärztliche Betreuung, individuelle Therapieplanung und Rehabilitation. Termin: 01 769 29 91.',
+    h1: 'Physikalische Therapie in Wien 11 – Simmering',
+    breadcrumbName: 'Physikalische Therapie Wien 11',
+    schemaName: 'Physikalische Therapie',
+    schemaType: 'MedicalTherapy',
+    conditionName: 'Funktionelle Beschwerden des Bewegungsapparats',
+    lastReviewed: '2026-11-06',
+    heroIntro: `Physikalische Therapie ist die gezielte Behandlung mit Bewegung, Wärme, Massage und weiteren physikalischen Mitteln. In unserer Ordination in Simmering plant Dr. med. univ. Fadime Cenik diese Therapie fachärztlich – nach Untersuchung und im Rahmen der physikalischen Medizin und Rehabilitation. Die Ordination liegt in der Kaiser-Ebersdorfer-Straße 328, 1110 Wien.`,
+    sections: [
+      {
+        h2: 'Was physikalische Therapie in dieser Ordination bedeutet',
+        paragraphs: [
+          `Physikalische Medizin ist das ärztliche Fachgebiet. Dr. Fadime Cenik ist Fachärztin für Physikalische Medizin und allgemeine Rehabilitation. Physikalische Therapie bezeichnet die Behandlungen, die in diesem Fach zur Anwendung kommen: unter anderem Heilgymnastik, Heilmassage, Wärme und, wenn es zum Befund passt, weitere Verfahren aus unserem <a href="../therapieangebot.html">Therapieangebot</a>.`,
+          `Physiotherapie ist ein eigener Gesundheitsberuf. In der Ordination wird Physiotherapie nach fachärztlicher Abklärung angeboten. Sie ist nicht dasselbe wie die fachärztliche Untersuchung und ersetzt diese nicht. Wer nach einem physikalischen Institut in Wien 11 sucht, meint meist eine Stelle für physikalische Therapie. Unsere Praxis ist eine fachärztliche Ordination in Kaiserebersdorf, nicht ein Institut unter diesem Namen.`,
+          `Die Informationen auf dieser Seite beschreiben das Angebot der Ordination. Sie ersetzen keine persönliche Untersuchung und versprechen keinen bestimmten Behandlungserfolg.`,
+        ],
+      },
+      {
+        h2: 'Welche physikalischen Therapien angeboten werden',
+        paragraphs: [
+          `Zum veröffentlichten Angebot gehören Physiotherapie, Heilmassage und Heilgymnastik. Zur Heilgymnastik zählen in der Ordination unter anderem Atemgymnastik, Bewegungstherapie, Dehnübungen, Kraft-, Koordinations- und Gleichgewichtstraining, propriozeptives Training und Wirbelsäulengymnastik.`,
+          `Als weitere Verfahren sind auf der Therapieangebotsseite unter anderem Indiba, Lasertherapie, Magnetfeldtherapie, Medi-Taping, Paraffinbad, Stoßwellentherapie und Hochton angeführt. Das <a href="../r-force.html">R-Force-Gehtraining</a> mit Gewichtsentlastung ist eine eigene Rehabilitationsleistung. Welche Methode sinnvoll ist, entscheidet der ärztliche Befund – nicht jede Behandlung ist für jede Beschwerde geeignet.`,
+          `Ausführliche Beschreibungen stehen im <a href="../therapieangebot.html">Therapieangebot</a>. Zu einzelnen Beschwerden gibt es eigene Seiten, etwa zu <a href="../rueckenschmerzen-wien/">Rückenschmerzen</a>, <a href="../nackenschmerzen-ursachen/">Nackenschmerzen</a>, <a href="../knieschmerzen-behandlung/">Knieschmerzen</a> und <a href="../schulter-schmerzen/">Schulterschmerzen</a>.`,
+        ],
+      },
+      {
+        h2: 'Bei welchen Beschwerden eine Abklärung sinnvoll sein kann',
+        paragraphs: [
+          `Häufig kommen Patientinnen und Patienten mit Schmerzen oder Funktionseinschränkungen an Rücken, Nacken, Schulter oder Knie, nach einer Operation oder Verletzung, oder wenn Alltagsbewegungen unsicher geworden sind. Ob physikalische Therapie medizinisch passt, lässt sich erst nach Anamnese und Untersuchung sagen.`,
+          `Warnzeichen wie Lähmungen, eine neu aufgetretene Störung von Blase oder Darm, Fieber, ein Unfall mit starker Fehlstellung oder Brustschmerz gehören nicht in eine aufgeschobene Therapieserie. In solchen Fällen ist eine sofortige ärztliche Abklärung nötig. Rufen Sie den Notruf, wenn es ein Notfall ist.`,
+        ],
+      },
+      {
+        h2: 'Untersuchung und individueller Therapieplan',
+        paragraphs: [
+          `Vor Beginn einer Therapie erfolgt in der Ordination eine fachärztliche Untersuchung und Befundbesprechung. Dabei werden die aktuellen Beschwerden, bisherige Behandlungen und der körperliche Befund eingeordnet. Darauf aufbauend wird der weitere Behandlungsweg gemeinsam festgelegt.`,
+          `Ein Plan kann Heilgymnastik, Massage und andere Verfahren aus dem Therapieangebot verbinden. Häufigkeit und Dauer richten sich nach dem Befund. Es gibt keine einheitliche Sitzungszahl für alle Patientinnen und Patienten.`,
+        ],
+      },
+      {
+        h2: 'So läuft die Behandlung ab',
+        paragraphs: [
+          `Zuerst besprechen wir Ihre Beschwerden und bisherigen Behandlungen. Danach folgt die ärztliche Untersuchung. Die Ergebnisse werden verständlich erklärt. Erst dann wird der Therapieplan festgelegt und mit der Behandlung begonnen.`,
+          `Termine zur Erstuntersuchung werden telefonisch unter <a href="tel:+4317692991">01 / 769 29 91</a> vereinbart. Laut der Praxisinformation ist für den ersten Termin keine Überweisung erforderlich. Für die Kostenübernahme durch eine Krankenkasse kann dennoch eine ärztliche Verordnung nötig sein.`,
+        ],
+      },
+      {
+        h2: 'Kassenleistung und Privatordination',
+        paragraphs: [
+          `Die Ordination in 1110 Wien nimmt ÖGK, BVAEB, SVS und die KFA an und behandelt auch privat. Dass Kassenpatientinnen und Kassenpatienten aufgenommen werden, bedeutet nicht, dass jede einzelne Therapie von jeder Kasse bezahlt wird. Das hängt von Indikation, Verordnung und den Regeln der jeweiligen Versicherung ab.`,
+          `Ohne Verordnung oder wo keine Kassenübernahme besteht, gibt es Privatordination und Privatleistungen. Die aktuellen Kosten nennen wir vor Beginn der Behandlung. Bitte klären Sie die Übernahme im konkreten Fall mit Ihrer Kasse und mit uns.`,
+        ],
+      },
+      {
+        h2: 'Ärztliche Verantwortung',
+        paragraphs: [
+          `Für die fachlichen Inhalte dieser Website ist Dr. med. univ. Fadime Cenik verantwortlich, Fachärztin für Physikalische Medizin und allgemeine Rehabilitation. Das Medizinstudium wurde an der MedUni Wien abgeschlossen. Der berufliche Werdegang steht auf der Seite <a href="../ueber-uns.html">Über uns</a>.`,
+          `Der Standort in der Kaiser-Ebersdorfer-Straße 328 besteht seit 1990. Dr. Cenik führt die Versorgung mit einem erfahrenen Team fort. Die fachärztliche Untersuchung und die Therapien finden in derselben Ordination statt.`,
+        ],
+      },
+      {
+        h2: 'Ordination in Simmering und Anfahrt',
+        paragraphs: [
+          `Die Adresse lautet Kaiser-Ebersdorfer-Straße 328, 1110 Wien, im Bezirksteil Kaiserebersdorf (Simmering). Telefon: <a href="tel:+4317692991">01 / 769 29 91</a>. E-Mail: <a href="mailto:office@drcenik.at">office@drcenik.at</a>.`,
+          `Öffentlich erreichbar mit den Bussen 71B, 73A, 76B, 79A und 79B sowie den Straßenbahnlinien 11 und 71, Station Kaiserebersdorf, Zinnergasse. Eine Wegbeschreibung steht auf der <a href="../kontakt.html">Kontaktseite</a> und in <a href="https://www.google.com/maps?cid=16167401803672481750">Google Maps</a>.`,
+          `Therapiezeiten: Montag 07:00–19:00 Uhr, Dienstag bis Donnerstag 06:30–19:00 Uhr, Freitag 06:30–17:00 Uhr. Samstag und Sonntag geschlossen. Ordinationszeiten: Montag und Mittwoch 13:00–18:00 Uhr, Dienstag 08:00–13:00 Uhr, Donnerstag 07:00–12:00 Uhr.`,
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'Was ist der Unterschied zwischen physikalischer Therapie und Physiotherapie?',
+        a: 'Physikalische Therapie umfasst die physikalischen Behandlungsverfahren im Rahmen der physikalischen Medizin. Physiotherapie ist ein eigener Gesundheitsberuf. In der Ordination von Dr. Fadime Cenik wird Physiotherapie nach fachärztlicher Abklärung angeboten.',
+      },
+      {
+        q: 'Ist die Ordination ein physikalisches Institut?',
+        a: 'Nein. Es handelt sich um die fachärztliche Ordination von Dr. med. univ. Fadime Cenik in der Kaiser-Ebersdorfer-Straße 328, 1110 Wien. Physikalische Therapie wird dort unter fachärztlicher Leitung angeboten.',
+      },
+      {
+        q: 'Welche Beschwerden können abgeklärt werden?',
+        a: 'Häufig sind Beschwerden an Rücken, Nacken, Schulter oder Knie sowie Einschränkungen nach Verletzung oder Operation. Ob eine physikalische Therapie sinnvoll ist, ergibt sich erst aus Untersuchung und Befund.',
+      },
+      {
+        q: 'Brauche ich eine Überweisung?',
+        a: 'Für den ersten Termin ist nach der Praxisinformation keine Überweisung erforderlich. Ob Ihre Krankenkasse für die Therapie eine Verordnung verlangt, hängt vom Versicherungsträger und von der Leistung ab.',
+      },
+      {
+        q: 'Übernimmt die ÖGK jede Behandlung?',
+        a: 'Nein. Die Ordination nimmt unter anderem ÖGK, BVAEB, SVS und KFA an. Nicht jede Therapie wird von jeder Kasse bezahlt. Die Übernahme hängt von Indikation, Verordnung und den Regeln Ihrer Versicherung ab.',
+      },
+      {
+        q: 'Wie vereinbare ich einen Termin?',
+        a: 'Telefonisch unter 01 / 769 29 91. Termine zur Erstuntersuchung werden nach telefonischer Vereinbarung vergeben.',
+      },
+      {
+        q: 'Wie komme ich mit öffentlichen Verkehrsmitteln hin?',
+        a: 'Mit Bus 71B, 73A, 76B, 79A oder 79B und mit den Straßenbahnlinien 11 und 71 bis Kaiserebersdorf, Zinnergasse. Die Ordination liegt in der Kaiser-Ebersdorfer-Straße 328, 1110 Wien.',
+      },
+    ],
+    related: [
+      { href: '../therapieangebot.html', title: 'Therapieangebot', desc: 'Physiotherapie, Heilmassage, Heilgymnastik und weitere Verfahren.' },
+      { href: '../ueber-uns.html', title: 'Über die Fachärztin', desc: 'Ausbildung, Ordination und fachliche Verantwortung.' },
+      { href: '../kontakt.html', title: 'Kontakt und Anfahrt', desc: 'Adresse, Telefon und öffentliche Verbindungen in Simmering.' },
+      { slug: 'rueckenschmerzen-wien', title: 'Rückenschmerzen Wien', desc: 'Konservative Abklärung und Behandlung in Wien 11.' },
+      { slug: 'stosswellentherapie-wien', title: 'Stoßwellentherapie Wien', desc: 'ESWT, wenn sie nach dem Befund infrage kommt.' },
+      { href: '../r-force.html', title: 'R-Force', desc: 'Gehtraining mit Gewichtsentlastung in der Ordination.' },
+    ],
   },
 ];
 
