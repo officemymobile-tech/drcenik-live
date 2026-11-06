@@ -76,7 +76,7 @@ Canlı doğrulama (entegrasyon sonrası, yayın yokken):
 - Yerel: `http://127.0.0.1:4191/` (oturum sırasında)
 - Cloudflare Pages (production değil):  
   `https://seo-preview-2026-11-06.drcenik-live.pages.dev`  
-  `https://0aaaa4f3.drcenik-live.pages.dev`
+  `https://07e185fc.drcenik-live.pages.dev`
 
 ## 8. Canlı yayın planı (onay sonrası)
 
