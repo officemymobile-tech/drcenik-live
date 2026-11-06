@@ -1,21 +1,19 @@
 name: Deploy Cloudflare Pages
 
-# Permanent Functions gate (incident 2026-11-06):
-# Validation MUST pass before wrangler pages deploy. Static-only trees fail closed.
-#
-# Manual approval gate (prepared, non-destructive):
-# - Job uses GitHub Environment "production". Owner can enable required reviewers
-#   in GitHub → Settings → Environments without further workflow edits.
-# - workflow_dispatch remains available for explicit runs.
-# Existing push→main trigger is retained (not disabled). Validation alone blocks
-# broken Functions-less publishes until source is restored.
+# Release Candidate gate (2026-11-06):
+# - Production deploys are workflow_dispatch ONLY (no automatic push→main publish).
+# - Job uses GitHub Environment "production" — enable Required reviewers in
+#   GitHub → Settings → Environments → production for human approval.
+# - validate-pages-functions-artifact.mjs fail-closed blocks static-only trees
+#   (prevents publishing outdated / Functions-less GitHub snapshots).
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
     inputs:
+      confirm_production_deploy:
+        description: "Type exactly DEPLOY-PRODUCTION to allow a production Pages deploy"
+        required: true
+        default: ''
       skip_api_probe:
         description: 'Set true only for emergency diagnostics (not for real releases)'
         required: false
@@ -51,6 +49,13 @@ jobs:
     name: Deploy drcenik-live to Cloudflare Pages
     environment: production
     steps:
+      - name: Require explicit production confirmation
+        run: |
+          if [ "${{ github.event.inputs.confirm_production_deploy }}" != "DEPLOY-PRODUCTION" ]; then
+            echo "Refusing production deploy: confirmation input must be exactly DEPLOY-PRODUCTION."
+            exit 1
+          fi
+
       - name: Checkout
         uses: actions/checkout@v4
 

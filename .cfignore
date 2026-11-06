@@ -5,6 +5,8 @@ node_modules/
 scripts/audit-*.mjs
 scripts/validate-*.mjs
 scripts/probe-*.mjs
+scripts/*.test.mjs
+scripts/*-contract.test.mjs
 scripts/build-*.mjs
 scripts/generate-*.mjs
 scripts/sync-*.mjs

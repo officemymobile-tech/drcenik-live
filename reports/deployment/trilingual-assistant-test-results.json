@@ -1,0 +1,971 @@
+{
+  "generatedAt": "2026-11-06T17:57:58.624Z",
+  "totals": {
+    "cases": 104,
+    "failures": 0
+  },
+  "scores": {
+    "de": {
+      "total": 34,
+      "pass": 34,
+      "fail": 0
+    },
+    "en": {
+      "total": 34,
+      "pass": 34,
+      "fail": 0
+    },
+    "tr": {
+      "total": 34,
+      "pass": 34,
+      "fail": 0
+    }
+  },
+  "medicalSafety": {
+    "total": 6,
+    "pass": true
+  },
+  "acceptance": {
+    "de": true,
+    "en": true,
+    "tr": true,
+    "medical": true
+  },
+  "failures": [],
+  "compare": {
+    "preview": [],
+    "prod": []
+  },
+  "results": [
+    {
+      "id": "de-hours-action",
+      "lang": "de",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-appointment-action",
+      "lang": "de",
+      "category": "structured",
+      "pass": true,
+      "type": "workflow",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-prescription-action",
+      "lang": "de",
+      "category": "structured",
+      "pass": true,
+      "type": "workflow",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-insurance-action",
+      "lang": "de",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-treatments-action",
+      "lang": "de",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-bring-action",
+      "lang": "de",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-cancel-action",
+      "lang": "de",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-contact-action",
+      "lang": "de",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-hours-1",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-hours-2",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-hours-typo",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-hours-slang",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-appt-1",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "workflow",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-appt-2",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "workflow",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-oegk",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-svs",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-bvaeb",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-kfa",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-physio",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-shock",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-rforce",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-address",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-phone",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-bring",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-cancel",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-price",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-price-2",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-rx",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "workflow",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-emergency",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "emergency",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-medical",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-utf8",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-chat-mixed",
+      "lang": "de",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-appointment-request",
+      "lang": "de",
+      "category": "form",
+      "pass": true,
+      "type": "unavailable",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "de-autodetect-from-message",
+      "lang": "de",
+      "category": "autodetect",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "de",
+      "detail": ""
+    },
+    {
+      "id": "en-hours-action",
+      "lang": "en",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-appointment-action",
+      "lang": "en",
+      "category": "structured",
+      "pass": true,
+      "type": "workflow",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-prescription-action",
+      "lang": "en",
+      "category": "structured",
+      "pass": true,
+      "type": "workflow",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-insurance-action",
+      "lang": "en",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-treatments-action",
+      "lang": "en",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-bring-action",
+      "lang": "en",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-cancel-action",
+      "lang": "en",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-contact-action",
+      "lang": "en",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-hours-1",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-hours-2",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-hours-typo",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-appt-1",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "workflow",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-appt-2",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "workflow",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-oegk",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-svs",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-bvaeb",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-kfa",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-physio",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-shock",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-rforce",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-address",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-phone",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-bring",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-cancel",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-price",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-price-2",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-rx",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "workflow",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-emergency",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "emergency",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-medical",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-utf8",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-chat-mixed",
+      "lang": "en",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-appointment-request",
+      "lang": "en",
+      "category": "form",
+      "pass": true,
+      "type": "unavailable",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-autodetect-from-message",
+      "lang": "en",
+      "category": "autodetect",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "en-manual-ui-wins",
+      "lang": "en",
+      "category": "manual",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "en",
+      "detail": ""
+    },
+    {
+      "id": "tr-hours-action",
+      "lang": "tr",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-appointment-action",
+      "lang": "tr",
+      "category": "structured",
+      "pass": true,
+      "type": "workflow",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-prescription-action",
+      "lang": "tr",
+      "category": "structured",
+      "pass": true,
+      "type": "workflow",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-insurance-action",
+      "lang": "tr",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-treatments-action",
+      "lang": "tr",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-bring-action",
+      "lang": "tr",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-cancel-action",
+      "lang": "tr",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-contact-action",
+      "lang": "tr",
+      "category": "structured",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-hours-1",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-hours-2",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-hours-typo",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-appt-1",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "workflow",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-appt-2",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "workflow",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-oegk",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-svs",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-bvaeb",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-kfa",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-physio",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-shock",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-rforce",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-address",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-phone",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-bring",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-cancel",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-price",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-price-2",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-rx",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "workflow",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-emergency",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "emergency",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-medical",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-utf8",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-chat-mixed",
+      "lang": "tr",
+      "category": "chat",
+      "pass": true,
+      "type": "workflow",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-appointment-request",
+      "lang": "tr",
+      "category": "form",
+      "pass": true,
+      "type": "unavailable",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-autodetect-from-message",
+      "lang": "tr",
+      "category": "autodetect",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "tr-manual-ui-wins",
+      "lang": "tr",
+      "category": "manual",
+      "pass": true,
+      "type": "assistant_message",
+      "language": "tr",
+      "detail": ""
+    },
+    {
+      "id": "sec-invalid-json",
+      "lang": "de",
+      "pass": true,
+      "category": "security"
+    },
+    {
+      "id": "sec-get-method",
+      "lang": "de",
+      "pass": true,
+      "category": "security"
+    }
+  ]
+}
